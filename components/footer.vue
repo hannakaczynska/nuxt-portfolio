@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>&copy; 2025 My Nuxt Portfolio</p>
+    <p>Made with ❤️ using Nuxt.js</p>
   </footer>
 </template>
 
@@ -8,10 +8,9 @@
 // No script logic needed for the footer
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 footer {
-  background-color: #333;
-  color: white;
+  background-color: $white;
   text-align: center;
   padding: 1rem;
   margin-top: auto;
