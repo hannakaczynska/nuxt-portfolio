@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Home Page</h1>
-    <p>Welcome to your Nuxt 3 app!</p>
+    <h1>{{$t("hero.title") }}</h1>
+    <p>{{$t("hero.subtitle") }}</p>
   </div>
 </template>
 

@@ -1,0 +1,15 @@
+ {
+      "nav": {
+        "home": "Strona główna",
+        "about": "O mnie",
+        "projects": "Projekty",
+        "contact": "Kontakt"
+      },
+      "hero": {
+        "title": "Cześć, jestem Hanna Kaczyńska 👋",
+        "subtitle": "Junior Frontend Developer skupiona na tworzeniu intuicyjnych i skalowalnych interfejsów."
+      },
+      "footer": {
+        "madeWith": "Stworzone z ❤️ przy użyciu Nuxt.js"
+      }
+    }

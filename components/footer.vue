@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Made with ❤️ using Nuxt.js</p>
+    <p>{{$t("footer.madeWith") }}</p>
   </footer>
 </template>
 

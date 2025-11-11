@@ -11,8 +11,10 @@ body {
 a {
   text-decoration: none;
   color: $text-color;
-  &:hover {
-    text-decoration: underline;
+  &:hover, 
+  &:focus,
+  &:active {
+    font-weight: bold;
   }
 }
 

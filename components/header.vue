@@ -8,29 +8,29 @@
     />
     <MobileMenu v-if="isMenuOpen" />
     <nav class="header_nav">
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/about">About</NuxtLink>
-      <NuxtLink to="/projects">Projects</NuxtLink>
-      <NuxtLink to="/contact">Contact</NuxtLink>
+      <NuxtLink to="/">{{$t("nav.home") }}</NuxtLink>
+      <NuxtLink to="/about">{{$t("nav.about") }}</NuxtLink>
+      <NuxtLink to="/projects">{{$t("nav.projects") }}</NuxtLink>
+      <NuxtLink to="/contact">{{$t("nav.contact") }}</NuxtLink>
     </nav>
-    <button class="header_button" @click="switchLanguage">
+    <button class="header_button" @click="switchLanguage(locale === 'en' ? 'pl' : 'en')">
       <UIcon name="i-lucide-globe" size="20" />
-      {{ currentLanguage === "en" ? "PL" : "EN" }}
+      {{ locale === "en" ? "EN" : "PL" }}
     </button>
   </header>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import MobileMenu from "/components/mobile-menu.vue";
+import MobileMenu from "~/components/mobile-menu.vue";
+import { useLanguage } from "~/composables/useLanguage";
 
 const isMenuOpen = ref(false);
+// const { t, locale: i18nLocale } = useI18n();
+const { locale, switchLanguage } = useLanguage();
 
-const currentLanguage = ref("en");
-
-const switchLanguage = () => {
-  currentLanguage.value = currentLanguage.value === "en" ? "pl" : "en";
-};
+// Debug: Check what's available
+console.log('Current locale:', locale.value);
 </script>
 
 <style lang="scss" scoped>
