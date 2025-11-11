@@ -1,14 +1,46 @@
 <template>
-  <nav class="mobile-menu">
-      <NuxtLink to="/">{{$t("nav.home") }}</NuxtLink>
-      <NuxtLink to="/about">{{$t("nav.about") }}</NuxtLink>
-      <NuxtLink to="/projects">{{$t("nav.projects") }}</NuxtLink>
-      <NuxtLink to="/contact">{{$t("nav.contact") }}</NuxtLink>
+  <nav class="mobile-menu" @click="navigate">
+    <NuxtLink to="/" class="mobile-menu_link">{{ $t("nav.home") }}</NuxtLink>
+    <NuxtLink to="/about" class="mobile-menu_link">{{
+      $t("nav.about")
+    }}</NuxtLink>
+    <NuxtLink to="/projects" class="mobile-menu_link">{{
+      $t("nav.projects")
+    }}</NuxtLink>
+    <NuxtLink to="/contact" class="mobile-menu_link">{{
+      $t("nav.contact")
+    }}</NuxtLink>
   </nav>
 </template>
 
 <script setup>
+import { onMounted, onBeforeUnmount } from "vue";
+const emit = defineEmits(["closeMenu"]);
 
+const handleWindowClick = (e) => {
+  if (e.target.closest(".mobile-menu") ||
+    e.target.closest(".header_button") ||
+    e.target.className.includes("header_menu-icon")
+  ) {
+    return;
+  }
+  emit("closeMenu");
+};
+
+onMounted(() => {
+  window.addEventListener("click", handleWindowClick);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("click", handleWindowClick);
+});
+
+const navigate = (e) => {
+  if (e.target.className.includes("mobile-menu_link")) {
+    emit("closeMenu");
+  }
+  return;
+};
 </script>
 
 <style lang="scss" scoped>

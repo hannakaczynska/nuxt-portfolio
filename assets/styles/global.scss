@@ -8,12 +8,14 @@ body {
   box-sizing: border-box;
 }
 
+span, div, p {
+  box-sizing: border-box;
+}
 a {
   text-decoration: none;
   color: $text-color;
   &:hover, 
-  &:focus,
-  &:active {
+  &:focus {
     font-weight: bold;
   }
 }
@@ -42,7 +44,7 @@ p {
   font-weight: 400;
 }
 
-small {
+.small {
   font-size: 0.875rem;
   line-height: 1.5;
 }

@@ -6,7 +6,7 @@
       size="24"
       @click="isMenuOpen = !isMenuOpen"
     />
-    <MobileMenu v-if="isMenuOpen" />
+    <MobileMenu v-if="isMenuOpen" @closeMenu="closeMenu" />
     <nav class="header_nav">
       <NuxtLink to="/">{{$t("nav.home") }}</NuxtLink>
       <NuxtLink to="/about">{{$t("nav.about") }}</NuxtLink>
@@ -15,7 +15,7 @@
     </nav>
     <button class="header_button" @click="switchLanguage(locale === 'en' ? 'pl' : 'en')">
       <UIcon name="i-lucide-globe" size="20" />
-      {{ locale === "en" ? "EN" : "PL" }}
+  <span class="header_button-text">{{ locale === "en" ? "EN" : "PL" }}</span>
     </button>
   </header>
 </template>
@@ -26,11 +26,13 @@ import MobileMenu from "~/components/mobile-menu.vue";
 import { useLanguage } from "~/composables/useLanguage";
 
 const isMenuOpen = ref(false);
-// const { t, locale: i18nLocale } = useI18n();
+
 const { locale, switchLanguage } = useLanguage();
 
-// Debug: Check what's available
-console.log('Current locale:', locale.value);
+const closeMenu = () => {
+  isMenuOpen.value = false;
+};
+
 </script>
 
 <style lang="scss" scoped>
@@ -77,5 +79,10 @@ nav a {
   font-size: 18px;
   cursor: pointer;
   padding-inline: 0;
+&-text {
+  line-height: 1.3;
+  box-sizing: border-box;
+  padding-top: 1px;
+}
 }
 </style>
