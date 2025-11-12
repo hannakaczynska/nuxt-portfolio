@@ -74,7 +74,7 @@ nav a {
   align-items: center;
   gap: 0.25rem;
   border: none;
-  color: $dark-grey-color;
+  color: $light-grey-color;
   background: none;
   font-size: 18px;
   cursor: pointer;

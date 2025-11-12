@@ -1,9 +1,12 @@
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@nuxtjs/i18n"],
   css: ["~/assets/styles/main.css", "~/assets/styles/global.scss"],
   vite: {
+    plugins: [tailwindcss()],
     css: {
       preprocessorOptions: {
         scss: {
@@ -23,3 +26,5 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
   },
 });
+
+

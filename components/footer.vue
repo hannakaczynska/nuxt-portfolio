@@ -46,6 +46,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: $light-grey-color;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
@@ -60,11 +61,11 @@ footer {
   gap: 1rem;
   
   a {
-    color: $text-color;
+    color: $light-grey-color;
     transition: color 0.3s ease;
     
     &:hover {
-      color: $primary-color;
+      color: $third-color;
     }
   }
 }

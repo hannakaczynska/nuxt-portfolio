@@ -21,19 +21,19 @@ a {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.3;
   font-weight: 600;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.4;
   font-weight: 600;
 }
@@ -50,15 +50,15 @@ p {
 }
 
 @media (min-width: $breakpoint-tablet) {
-  h1 { font-size: 2.5rem; }     
-  h2 { font-size: 2rem; }       
-  h3 { font-size: 1.5rem; }     
+  h1 { font-size: 2rem; }     
+  h2 { font-size: 1.5rem; }       
+  h3 { font-size: 1.25rem; }     
   p  { font-size: 1.0625rem; }  
 }
 
 @media (min-width: $breakpoint-desktop) {
-  h1 { font-size: 3rem; }       
-  h2 { font-size: 2.25rem; }    
-  h3 { font-size: 1.75rem; }    
+  h1 { font-size: 2.5rem; }       
+  h2 { font-size: 2rem; }    
+  h3 { font-size: 1.5rem; }    
   p  { font-size: 1.125rem; }   
 }
