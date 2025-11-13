@@ -1,15 +1,19 @@
 {
-      "nav": {
-        "home": "Home",
-        "about": "About",
-        "projects": "Projects",
-        "contact": "Contact"
-      },
-      "hero": {
-        "title": "Hi, I'm Hanna Kaczyńska 👋",
-        "subtitle": "I code front-end and explore full-stack. Check out my projects and get to know me better."
-      },
-      "footer": {
-        "madeWith": "Made with ❤️ using Nuxt.js"
-      }
-    }
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi, I'm Hanna Kaczyńska 👋",
+    "subtitle": "I code front-end and explore full-stack. Check out my projects and get to know me better."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let’s build something together 🌿"
+  },
+  "footer": {
+    "madeWith": "Made with ❤️ using Nuxt.js"
+  }
+}

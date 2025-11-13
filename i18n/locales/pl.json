@@ -1,15 +1,19 @@
- {
-      "nav": {
-        "home": "Strona główna",
-        "about": "O mnie",
-        "projects": "Projekty",
-        "contact": "Kontakt"
-      },
-      "hero": {
-        "title": "Cześć, jestem Hanna Kaczyńska 👋",
-        "subtitle": "Koduję front-end i kombinuję z full-stackiem. Zobacz moje projekty i poznaj mnie bliżej."
-      },
-      "footer": {
-        "madeWith": "Stworzone z ❤️ przy użyciu Nuxt.js"
-      }
-    }
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Cześć, jestem Hanna Kaczyńska 👋",
+    "subtitle": "Koduję front-end i kombinuję z full-stackiem. Zobacz moje projekty i poznaj mnie bliżej."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Zbudujmy coś razem 🌿"
+  },
+  "footer": {
+    "madeWith": "Stworzone z ❤️ przy użyciu Nuxt.js"
+  }
+}
