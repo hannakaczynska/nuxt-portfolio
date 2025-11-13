@@ -1,72 +1,105 @@
 <template>
-  <UForm :schema="schema" :state="state" class="contact-form" @submit="onSubmit">
+  <UForm
+    :schema="schema"
+    :state="state"
+    class="contact-form"
+    @submit="onSubmit"
+  >
     <UFormField name="name" class="form-field">
-      <UInput v-model="state.name" :placeholder="locale === 'en' ? 'Name' : 'Imię'" class="form-input" />
+      <UInput
+        v-model="state.name"
+        :placeholder="locale === 'en' ? 'Name' : 'Imię'"
+        class="form-input"
+      />
     </UFormField>
 
     <UFormField name="email" class="form-field">
-      <UInput v-model="state.email" type="email" placeholder="Email" class="form-input" />
+      <UInput
+        v-model="state.email"
+        type="email"
+        placeholder="Email"
+        class="form-input"
+      />
     </UFormField>
 
     <UFormField name="message" class="form-field">
-      <UTextarea :rows="12" v-model="state.message" :placeholder="locale === 'en' ? 'Your message...' : 'Twoja wiadomość...'" class="form-input" />
+      <UTextarea
+        :rows="12"
+        v-model="state.message"
+        :placeholder="
+          locale === 'en' ? 'Your message...' : 'Twoja wiadomość...'
+        "
+        class="form-input"
+      />
     </UFormField>
 
-  <button type="submit" class="form-btn">{{ locale === 'en' ? 'Submit' : 'Wyślij' }}</button>
+    <button type="submit" class="form-btn">
+      {{ locale === "en" ? "Submit" : "Wyślij" }}
+    </button>
+    <p v-if="status" class="form_status small">{{ status }}</p>
   </UForm>
 </template>
 
 <script setup>
-import {reactive} from "vue";
-import Joi from "joi";
+import { reactive, computed, ref } from "vue";
+import emailjs from "@emailjs/browser";
 import { useLanguage } from "~/composables/useLanguage";
+import {createValidationSchema} from "~/composables/validationSchema";
 
 const { locale } = useLanguage();
 
+const config = useRuntimeConfig()
 
-const schema = Joi.object({
-  name: Joi.string().min(2).required().messages({
-    'string.empty': 'Name is required',
-    'string.min': 'Name must be at least 2 characters long'
-  }),
-  email: Joi.string().email({ tlds: { allow: false } }).required().messages({
-    'string.empty': 'Email is required',
-    'string.email': 'Please enter a valid email address'
-  }),
-  message: Joi.string().min(10).required().messages({
-    'string.empty': 'Message is required',
-    'string.min': 'Message must be at least 10 characters long'
-  })
-});
+const schema = computed(() => createValidationSchema());
+
+const status = ref("");
 
 const state = reactive({
-  name: undefined,
-  email: undefined,
-  message: undefined
+  name: "",
+  email: "",
+  message: "",
 });
 
-const onSubmit = () => {
-        console.log("message:", state.value);
-}
-</script>
+const onSubmit = async () => {
+  console.log("message:", state.message);
 
+  try {
+    await emailjs.send(
+      config.public.emailjsServiceId,
+      config.public.emailjsTemplateId,
+      {
+        from_name: state.name,
+        from_email: state.email,
+        message: state.message,
+      },
+      config.public.emailjsPublicKey
+    );
+
+    status.value = locale === "en" ? "Message sent!" : "Wiadomość wysłana!";
+    state.name = state.email = state.message = "";
+  } catch (err) {
+    console.error(err);
+    status.value = locale === "en" ? "❌ Something went wrong. Please try again." : "❌ Coś poszło nie tak. Spróbuj ponownie.";
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .form-field {
-    width: 100%;
+  width: 100%;
 }
 
 .form-input {
-    width: 100%;
+  width: 100%;
 }
 
 .form-btn {
@@ -78,7 +111,7 @@ const onSubmit = () => {
   padding-block: 5px;
   box-sizing: border-box;
   font-weight: 400;
-    background-color: $primary-color;
+  background-color: $primary-color;
   color: $white;
 
   &:hover {
@@ -87,15 +120,19 @@ const onSubmit = () => {
   }
 }
 
+.form_status {
+    color: $light-grey-color;
+}
+
 @media (min-width: 500px) {
-    .contact-form {
-        width: 80%;
-    }
+  .contact-form {
+    width: 80%;
+  }
 }
 
 @media (min-width: 900px) {
-    .contact-form {
-        width: 70%;
-    }
+  .contact-form {
+    width: 70%;
+  }
 }
 </style>

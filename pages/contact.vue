@@ -68,7 +68,6 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
 .card {
-  margin: 20px auto;
   padding: 2rem 0;
 }
 
