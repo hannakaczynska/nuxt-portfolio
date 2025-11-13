@@ -9,6 +9,7 @@
       <UInput
         v-model="state.name"
         :placeholder="locale === 'en' ? 'Name' : 'Imię'"
+        color="neutral"
         class="form-input"
       />
     </UFormField>
@@ -18,6 +19,7 @@
         v-model="state.email"
         type="email"
         placeholder="Email"
+        color="neutral"
         class="form-input"
       />
     </UFormField>
@@ -30,6 +32,7 @@
           locale === 'en' ? 'Your message...' : 'Twoja wiadomość...'
         "
         class="form-input"
+        color="neutral"
       />
     </UFormField>
 
@@ -61,8 +64,6 @@ const state = reactive({
 });
 
 const onSubmit = async () => {
-  console.log("message:", state.message);
-
   try {
     await emailjs.send(
       config.public.emailjsServiceId,

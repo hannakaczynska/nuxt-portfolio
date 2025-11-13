@@ -194,7 +194,7 @@ onBeforeUnmount(() => {
   .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 300px auto;
     grid-column-gap: 50px;
   }
 
@@ -207,6 +207,7 @@ onBeforeUnmount(() => {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     width: 70%;
+    align-self: start;
   }
 
   .contact_form {
