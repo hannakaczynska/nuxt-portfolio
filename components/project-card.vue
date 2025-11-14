@@ -1,22 +1,24 @@
 <template>
-      <UCard v-for="(card, index) in cards" :key="index" v-bind="card">
+    <NuxtLink v-for="(card, index) in cards" :key="index" :to="card.to">
+      <UCard>
         <section>
         <h3>{{ card.title }}</h3>
-        <p>{{ card.description }}</p>
+        <p class="project_description">{{ card.description }}</p>
         </section>
-        <section class="tech-badges">
+        <section class="stack-badges">
         <UBadge
           v-for="(stack, stackIndex) in card.stack"
           :key="stackIndex"
-          size="md"
+          size="lg"
           color="neutral"
           variant="outline"
         >
           {{ stack.name || stack }}
-          <UIcon :name="stack.icon || 'i-lucide-rocket'" size="16" :style="{ color: '#70af7a' }" />
+          <UIcon :name="stack.icon || 'i-lucide-rocket'" class="stack_icon" :style="{ color: '#70af7a' }" />
         </UBadge>
     </section>
       </UCard>
+       </NuxtLink>
 </template>
 
 <script setup>
@@ -30,8 +32,22 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.tech-badges {
+.project_description {
+    margin-block: 20px;
+}
+
+.stack-badges {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 5px;
 }
+
+.stack_icon {
+    width: 20px;
+    height: 20px;
+}
+
 </style>
+
+//v-for="(card, index) in cards" :key="index" v-bind="card"

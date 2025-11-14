@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <Header />
-    <main>
+    <main :key="$route.fullPath">
       <slot />
     </main>
     <Footer />
