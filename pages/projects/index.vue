@@ -17,12 +17,12 @@
 <script setup>
 import {computed} from "vue";
 import { useLanguage } from "~/composables/useLanguage";
-import {createSoloCards} from "~/composables/projectsData";
+import {createCards} from "~/composables/projectsData";
 import ProjectCard from "~/components/project-card.vue";
 
 const { locale } = useLanguage();
 
-const projectData = computed(() => createSoloCards());
+const projectData = computed(() => createCards());
 const soloCards = computed(() => projectData.value.soloCards.value);
 const teamCards = computed(() => projectData.value.teamCards.value);
 </script>

@@ -15,5 +15,52 @@
   },
   "footer": {
     "madeWith": "Made with ❤️ using Nuxt.js"
+  },
+  "projects": {
+    "destillapp": {
+      "title": "DestillApp",
+      "description": "This is description",
+      "img": {
+        "avif": "/images/wallet-app.avif",
+        "webp": "/images/wallet-app.webp",
+        "png": "/images/wallet-app.png"
+      }
+    },
+    "wallet-app": {
+      "title": "Wallet App",
+      "description": "This is description",
+      "img": {
+        "avif": "/images/wallet-app.avif",
+        "webp": "/images/wallet-app.webp",
+        "png": "/images/wallet-app.png"
+      }
+    },
+    "portfolio": {
+      "title": "Developer Portfolio",
+      "description": "This is description",
+      "img": {
+        "avif": "/images/wallet-app.avif",
+        "webp": "/images/wallet-app.webp",
+        "png": "/images/wallet-app.png"
+      }
+    },
+    "filmoteka": {
+      "title": "Filmoteka",
+      "description": "This is description",
+      "img": {
+        "avif": "/images/filmoteka.avif",
+        "webp": "/images/filmoteka.webp",
+        "png": "/images/filmoteka.png"
+      }
+    },
+    "icecream-shop": {
+      "title": "Icecream Shop",
+      "description": "This is description",
+      "img": {
+        "avif": "/images/icecream-shop.avif",
+        "webp": "/images/icecream-shop.webp",
+        "png": "/images/icecream-shop.png"
+      }
+    }
   }
 }

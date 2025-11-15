@@ -1,7 +1,7 @@
 import { useLanguage } from "~/composables/useLanguage";
 import { ref } from "vue";
 
-export const createSoloCards = () => {
+export const createCards = () => {
   const { locale } = useLanguage();
 
   const soloCards = ref([
