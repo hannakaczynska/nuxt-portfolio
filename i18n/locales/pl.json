@@ -16,10 +16,18 @@
   "footer": {
     "madeWith": "Stworzone z ❤️ przy użyciu Nuxt.js"
   },
- "projects": {
+  "projects": {
     "destillapp": {
       "title": "DestillApp",
       "description": "To jest opis",
+      "work": "solo",
+      "year": "2024/2025",
+      "stack": {
+        "frontend": [
+          { "name": "Vue.js", "description": "progressive framework" },
+          { "name": "TypeScript", "description": "type safety" }
+        ]
+      },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -28,7 +36,30 @@
     },
     "wallet-app": {
       "title": "Wallet App",
-      "description": "To jest opis",
+      "description": "Full-stack menedżer finansów osobistych stworzony z myślą o wygodnym śledzeniu przychodów, wydatków i nawyków zakupowych w przejrzystym, intuicyjnym interfejsie. \nAplikacja oferuje bezpieczne logowanie, interaktywne wykresy, aktualne kursy walut oraz czytelny UX dostosowany do szybkiego, codziennego użytku. \nProjekt zrealizowany w ramach kursu GoIT, na podstawie dostarczonego projektu w Figma, a następnie samodzielnie rozwinięty jako kompletne rozwiązanie end-to-end — od architektury po wdrożenie.",
+      "work": "solo",
+      "year": "2025",
+            "stack": {
+"frontend": [
+        { "name": "React.js", "description": "architektura interfejsu i komponenty wielokrotnego użytku" },
+        { "name": "Redux Toolkit", "description": "zarządzanie stanem globalnym (transakcje i autoryzacja)" },
+        { "name": "React Router", "description": "nawigacja w SPA" },
+        { "name": "Formik + Yup", "description": "obsługa formularzy i walidacja danych" },
+        { "name": "Recharts", "description": "wizualizacja danych" },
+        { "name": "Axios", "description": "komunikacja z REST API" },
+        { "name": "CSS Modules", "description": "izolowane style komponentów" }
+      ],
+      "backend": [
+        { "name": "Node.js + Express", "description": "implementacja REST API" },
+        { "name": "MongoDB + Mongoose", "description": "modelowanie danych i ich przechowywanie" },
+        { "name": "JWT + bcrypt", "description": "autoryzacja oraz hashowanie haseł" },
+        { "name": "Swagger", "description": "interaktywna dokumentacja API" }
+      ],
+      "devops": [
+        "Frontend wdrożony na Netlify",
+        "Backend wdrożony na Heroku"
+      ]
+      },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -38,6 +69,14 @@
     "portfolio": {
       "title": "Developer Portfolio",
       "description": "To jest opis",
+      "work": "solo",
+      "year": "2025",
+        "stack": {
+    "frontend": [
+      { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
+      { "name": "Nuxt UI", "icon": "simple-icons:nuxt" }
+    ]
+  },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -47,6 +86,15 @@
     "filmoteka": {
       "title": "Filmoteka",
       "description": "To jest opis",
+      "work": "grupowy",
+      "year": "2023",
+      "stack": {
+        "frontend": [
+          { "name": "HTML", "description": "markup structure" },
+          { "name": "CSS", "description": "styling and layout" },
+          { "name": "JavaScript", "description": "interactive functionality" }
+        ]
+      },
       "img": {
         "avif": "/images/filmoteka.avif",
         "webp": "/images/filmoteka.webp",
@@ -56,6 +104,14 @@
     "icecream-shop": {
       "title": "Icecream Shop",
       "description": "To jest opis",
+      "work": "grupowy",
+      "year": "2022",
+      "stack": {
+        "frontend": [
+          { "name": "HTML", "description": "semantic markup" },
+          { "name": "CSS", "description": "responsive design" }
+        ]
+      },
       "img": {
         "avif": "/images/icecream-shop.avif",
         "webp": "/images/icecream-shop.webp",

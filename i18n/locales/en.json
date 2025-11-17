@@ -20,6 +20,14 @@
     "destillapp": {
       "title": "DestillApp",
       "description": "This is description",
+      "work": "solo",
+      "year": "2024/2025",
+      "stack": {
+        "frontend": [
+          { "name": "Vue.js", "description": "progressive framework" },
+          { "name": "TypeScript", "description": "type safety" }
+        ]
+      },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -28,7 +36,47 @@
     },
     "wallet-app": {
       "title": "Wallet App",
-      "description": "This is description",
+      "description": "A full-stack personal finance manager designed to help users track income, expenses, and spending habits in a clear, intuitive interface. \nThe application offers secure authentication, interactive charts, real-time currency conversion, and a clean UX optimized for quick daily use. \nDeveloped as part of the GoIT course, based on a provided Figma design, and built independently as a complete end-to-end product — from architecture to deployment.",
+      "work": "solo",
+      "year": "2025",
+      "stack": {
+        "frontend": [
+          {
+            "name": "React.js",
+            "description": "UI architecture and reusable components"
+          },
+          {
+            "name": "Redux Toolkit",
+            "description": "global state management for transactions & auth"
+          },
+          { "name": "React Router", "description": "SPA routing" },
+          {
+            "name": "Formik + Yup",
+            "description": "form handling and validation"
+          },
+          {
+            "name": "Recharts",
+            "description": "data visualization with charts"
+          },
+          { "name": "Axios", "description": "communication with REST API" }
+        ],
+        "backend": [
+          {
+            "name": "Node.js + Express",
+            "description": "REST API implementation"
+          },
+          {
+            "name": "MongoDB + Mongoose",
+            "description": "data modeling and persistence"
+          },
+          {
+            "name": "JWT + bcrypt",
+            "description": "authentication & password hashing"
+          },
+          { "name": "Swagger", "description": "interactive API documentation" }
+        ],
+        "devops": ["Frontend deployed on Netlify", "Backend deployed on Heroku"]
+      },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -38,6 +86,17 @@
     "portfolio": {
       "title": "Developer Portfolio",
       "description": "This is description",
+      "work": "solo",
+      "year": "2025",
+      "stack": {
+        "frontend": [
+          { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
+          { "name": "Nuxt UI", "icon": "simple-icons:nuxt" },
+          { "name": "SCSS", "icon": "simple-icons:sass" },
+          { "name": "i18n", "icon": "simple-icons:i18next" },
+          { "name": "EmailJS", "icon": "i-lucide-send" }
+        ]
+      },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -47,6 +106,15 @@
     "filmoteka": {
       "title": "Filmoteka",
       "description": "This is description",
+      "work": "team",
+      "year": "2023",
+      "stack": {
+        "frontend": [
+          { "name": "HTML", "description": "markup structure" },
+          { "name": "CSS", "description": "styling and layout" },
+          { "name": "JavaScript", "description": "interactive functionality" }
+        ]
+      },
       "img": {
         "avif": "/images/filmoteka.avif",
         "webp": "/images/filmoteka.webp",
@@ -56,6 +124,14 @@
     "icecream-shop": {
       "title": "Icecream Shop",
       "description": "This is description",
+      "work": "team",
+      "year": "2022",
+      "stack": {
+        "frontend": [
+          { "name": "HTML", "description": "semantic markup" },
+          { "name": "CSS", "description": "responsive design" }
+        ]
+      },
       "img": {
         "avif": "/images/icecream-shop.avif",
         "webp": "/images/icecream-shop.webp",

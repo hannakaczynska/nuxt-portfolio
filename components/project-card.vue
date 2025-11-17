@@ -49,5 +49,3 @@ const props = defineProps({
 }
 
 </style>
-
-//v-for="(card, index) in cards" :key="index" v-bind="card"
