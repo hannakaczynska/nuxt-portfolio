@@ -36,6 +36,8 @@
     },
     "wallet-app": {
       "title": "Wallet App",
+            "demo": "https://wallet-app-project.netlify.app/login",
+      "github": "https://github.com/hannakaczynska/WalletApp-react-node",
       "description": "A full-stack personal finance manager designed to help users track income, expenses, and spending habits in a clear, intuitive interface. \nThe application offers secure authentication, interactive charts, real-time currency conversion, and a clean UX optimized for quick daily use. \nDeveloped as part of the GoIT course, based on a provided Figma design, and built independently as a complete end-to-end product — from architecture to deployment.",
       "work": "solo",
       "year": "2025",

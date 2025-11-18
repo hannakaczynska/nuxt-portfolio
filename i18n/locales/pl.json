@@ -36,6 +36,8 @@
     },
     "wallet-app": {
       "title": "Wallet App",
+      "demo": "https://wallet-app-project.netlify.app/login",
+      "github": "https://github.com/hannakaczynska/WalletApp-react-node",
       "description": "Full-stack menedżer finansów osobistych stworzony z myślą o wygodnym śledzeniu przychodów, wydatków i nawyków zakupowych w przejrzystym, intuicyjnym interfejsie. \nAplikacja oferuje bezpieczne logowanie, interaktywne wykresy, aktualne kursy walut oraz czytelny UX dostosowany do szybkiego, codziennego użytku. \nProjekt zrealizowany w ramach kursu GoIT, na podstawie dostarczonego projektu w Figma, a następnie samodzielnie rozwinięty jako kompletne rozwiązanie end-to-end — od architektury po wdrożenie.",
       "work": "solo",
       "year": "2025",
@@ -90,12 +92,12 @@
         }
       ],
       "responsibilities": {
-        "overview": "Ponieważ był to projekt realizowany samodzielnie, odpowiadałem za cały proces tworzenia:",
+        "overview": "Ponieważ był to projekt realizowany samodzielnie, odpowiadałam za cały proces tworzenia:",
         "list": [
           "Zaprojektowałam architekturę systemu (frontend, backend, przepływ uwierzytelniania)",
           "Przeniosłam projekt z Figma do responsywnego i dostępnego interfejsu UI",
           "Zaimplementowałam całą logikę UI w React z wykorzystaniem Redux Toolkit",
-          "Stworzyłem backend w Node.js z użyciem Express, MongoDB i Mongoose",
+          "Stworzyłam backend w Node.js z użyciem Express, MongoDB i Mongoose",
           "Wdrożyłam bezpieczne uwierzytelnianie JWT z odświeżaniem i unieważnianiem tokenów",
           "Utworzyłam endpointy REST API oraz dokumentację Swagger",
           "Wdrożyłam frontend (Netlify) i backend (Heroku)"

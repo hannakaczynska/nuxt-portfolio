@@ -1,12 +1,12 @@
 <template>
-<section>
-       <h2 class="project_title">{{ $t(`projects.${projectTitle}.title`) }}</h2>
+  <section class="section_intro">
+    <h2 class="project_title">{{ $t(`projects.${projectTitle}.title`) }}</h2>
     <nav class="project_nav">
-      <NuxtLink to="https://wallet-app-demo.com" class="project_link"
+      <NuxtLink :to="$t(`projects.${projectTitle}.demo`)" class="project_link"
         >[Live Demo]</NuxtLink
       >
       <span>•</span>
-      <NuxtLink to="https://github.com/..." class="project_link"
+      <NuxtLink :to="$t(`projects.${projectTitle}.github`)" class="project_link"
         >[GitHub]</NuxtLink
       >
     </nav>
@@ -30,18 +30,18 @@
         class="project_img"
       />
     </picture>
-</section>
-    </template>
+  </section>
+</template>
 
-    <script setup>
+<script setup>
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 const projectTitle = route.params.title;
-    </script>
+</script>
 
-    <style lang="scss" scoped>
-    .project_title {
+<style lang="scss" scoped>
+.project_title {
   margin-top: 2rem;
 }
 
@@ -84,4 +84,44 @@ const projectTitle = route.params.title;
     color: $third-color;
   }
 }
-    </style>
+
+@media (min-width: $breakpoint-desktop) {
+  .section_intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 100px auto;
+    grid-column-gap: 20px;
+  }
+
+  .project_title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: 0;
+  }
+  .project_nav {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .project_info {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+  }
+  .project_picture {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .project_img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
+</style>

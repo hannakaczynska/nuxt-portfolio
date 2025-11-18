@@ -81,4 +81,34 @@ const projectFeatures = computed(() => {
 .feature_description {
   text-align: center;
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .card_container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 0 auto;
+  }
+  .feature_card {
+    width: 100%;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .section_title {
+    margin-bottom: 20px;
+  }
+
+  .card_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .feature_icon {
+    width: 30px;
+    height: 30px;
+  }
+}
 </style>
