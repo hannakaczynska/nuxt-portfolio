@@ -19,15 +19,104 @@
   "projects": {
     "destillapp": {
       "title": "DestillApp",
-      "description": "This is description",
+      "demo": "",
+      "github": "https://github.com/DestillApp/main",
+      "description": "A full-stack application designed to manage and document the distillation of aromatic plants. \nThe system centralizes plant data, distillation batches, results, and user settings — offering an efficient workflow for small-scale distillation studios or botanical research environments. \nBuilt with a modern TypeScript–powered Vue 3 frontend and a GraphQL API backend, DestillationApp delivers a clean, structured, and reliable tool for handling the entire distillation lifecycle. \nDesigned and implemented end-to-end as a solo project — from concept and architecture to API design, UI development, documentation, and deployment preparation.",
       "work": "solo",
       "year": "2024/2025",
-      "stack": {
-        "frontend": [
-          { "name": "Vue.js", "description": "progressive framework" },
-          { "name": "TypeScript", "description": "type safety" }
+     "features": [
+  {
+    "name": "Authentication & Security",
+    "icon": "i-lucide-lock-keyhole",
+    "list": [
+      "Secure JWT and bcrypt-based authentication",
+      "Route protection within the application",
+      "Sanitization of data sent to the database",
+      "Ability for users to change their password"
+    ]
+  },
+  {
+    "name": "Plant & Distillation Management",
+    "icon": "i-lucide-leaf",
+    "list": [
+      "Managing plant inventory: add, edit, delete",
+      "Recording, editing, and deleting distillation processes",
+      "Assigning and managing distillation results",
+      "Filtering and sorting plants, distillations, and results by name or date"
+    ]
+  },
+  {
+    "name": "Frontend Application",
+    "icon": "i-lucide-monitor",
+    "list": [
+      "Vue 3 + TypeScript for modular and typed components",
+      "Vuex for centralized state management",
+      "Apollo Client for communicating with the GraphQL backend",
+      "Selected Vuetify components and responsive design"
+    ]
+  },
+  {
+    "name": "GraphQL API Ecosystem",
+    "icon": "i-lucide-layers",
+    "list": [
+      "Modular architecture of GraphQL resolvers and schemas",
+      "Flexible management of distillation, plant, and result data",
+      "MongoDB and Mongoose for structured data modeling"
+    ]
+  },
+  {
+    "name": "Documentation & Code Quality",
+    "icon": "i-lucide-file-text",
+    "list": [
+      "Automatic frontend documentation with VitePress",
+      "TypeDoc generating documentation for TypeScript files",
+      "JSDoc for backend modules and utilities",
+      "Frontend testing environment with Vitest"
+    ]
+  },
+  {
+    "name": "Error Monitoring",
+    "icon": "i-lucide-alert-triangle",
+    "list": [
+      "Sentry integration for frontend error reporting"
+    ]
+  }
+],
+      "responsibilities": {
+        "overview": "Since this was a solo project, I handled the entire development process:",
+        "list": [
+          "Designed the full system architecture (frontend, backend, GraphQL API, data layer)",
+          "Created a complete user interface in Vue 3 and TypeScript, ensuring modularity and type safety.",
+          "Implemented all application logic using Vuex, Apollo Client, and Vuetify components",
+          "Developed the backend using Node.js, Express, and Apollo Server with a complete GraphQL schema",
+          "Created database models and data operations using MongoDB and Mongoose",
+          "Implemented secure JWT-based authentication with permission checks and data sanitization",
+          "Prepared technical documentation (VitePress, TypeDoc, JSDoc) and foundational unit testing setup (Vitest)",
+          "Integrated Sentry for error and performance monitoring",
+          "Collaborated with a DevOps engineer on deployment planning and workflow design"
         ]
       },
+  "stack": {
+    "frontend": [
+      { "name": "Vue 3 + TypeScript", "description": "type-safe, modular component architecture" },
+      { "name": "Vuex", "description": "centralized state management" },
+      { "name": "Vue Router", "description": "application routing" },
+      { "name": "Vuetify", "description": "Material Design UI framework" },
+      { "name": "Apollo Client", "description": "GraphQL communication layer" },
+      { "name": "Vite", "description": "fast development and build tooling" },
+      { "name": "VitePress + TypeDoc", "description": "automatic documentation generation" },
+      { "name": "Sentry", "description": "error monitoring" }
+    ],
+    "backend": [
+      { "name": "Node.js + Express", "description": "server foundation and middleware layer" },
+      { "name": "Apollo Server (GraphQL)", "description": "API implementation with resolvers & schemas" },
+      { "name": "MongoDB + Mongoose", "description": "schema-based data modeling and database access" },
+      { "name": "JWT + bcrypt", "description": "authentication & password hashing" },
+      { "name": "Axios", "description": "requests for external API" },
+      { "name": "validator", "description": "data sanitization" },
+      { "name": "JSDoc", "description": "automatic documentation generation" }
+    ]
+  },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -36,7 +125,7 @@
     },
     "wallet-app": {
       "title": "Wallet App",
-            "demo": "https://wallet-app-project.netlify.app/login",
+      "demo": "https://wallet-app-project.netlify.app/login",
       "github": "https://github.com/hannakaczynska/WalletApp-react-node",
       "description": "A full-stack personal finance manager designed to help users track income, expenses, and spending habits in a clear, intuitive interface. \nThe application offers secure authentication, interactive charts, real-time currency conversion, and a clean UX optimized for quick daily use. \nDeveloped as part of the GoIT course, based on a provided Figma design, and built independently as a complete end-to-end product — from architecture to deployment.",
       "work": "solo",
@@ -53,7 +142,7 @@
         },
         {
           "name": "Transaction Management",
-           "icon": "i-lucide-arrow-left-right",
+          "icon": "i-lucide-arrow-left-right",
           "list": [
             "Add, edit, delete transactions",
             "Income/expense categorization",
@@ -63,18 +152,12 @@
         {
           "name": "Analytics Dashboard",
           "icon": "i-lucide-chart-no-axes-combined",
-          "list": [
-            "Interactive Recharts visualizations",
-            "Spending summaries"
-          ]
+          "list": ["Interactive Recharts visualizations", "Spending summaries"]
         },
         {
           "name": "Currency Rates",
           "icon": "i-lucide-circle-dollar-sign",
-          "list": [
-            "Up-to-date EUR/GBP rates",
-            "Automatic hourly rate updates"
-          ]
+          "list": ["Up-to-date EUR/GBP rates", "Automatic hourly rate updates"]
         },
         {
           "name": "User-Friendly UI & UX",
@@ -85,24 +168,24 @@
             "Demo mode for instant app exploration"
           ]
         },
-                {
+        {
           "name": "Developer Tools",
           "icon": "i-lucide-wrench",
-          "list": [
-            "Full Swagger API documentation"
-          ]
-        }      
+          "list": ["Full Swagger API documentation"]
+        }
       ],
-      "responsibilities": {"overview": "Since this was a solo project, I handled the entire development process:",
-    "list": [
-  "Designed the system architecture (frontend, backend, authentication flow)",
-  "Converted Figma designs into a responsive and accessible UI",
-  "Implemented all UI logic in React with Redux Toolkit",
-  "Built the backend in Node.js using Express, MongoDB, and Mongoose",
-  "Implemented secure JWT authentication with token refresh and revocation",
-  "Created REST API endpoints and Swagger documentation",
-  "Deployed the frontend (Netlify) and backend (Heroku)"
-]},
+      "responsibilities": {
+        "overview": "Since this was a solo project, I handled the entire development process:",
+        "list": [
+          "Designed the system architecture (frontend, backend, authentication flow)",
+          "Converted Figma designs into a responsive and accessible UI",
+          "Implemented all UI logic in React with Redux Toolkit",
+          "Built the backend in Node.js using Express, MongoDB, and Mongoose",
+          "Implemented secure JWT authentication with token refresh and revocation",
+          "Created REST API endpoints and Swagger documentation",
+          "Deployed the frontend (Netlify) and backend (Heroku)"
+        ]
+      },
       "stack": {
         "frontend": [
           {

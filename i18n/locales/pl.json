@@ -19,13 +19,141 @@
   "projects": {
     "destillapp": {
       "title": "DestillApp",
-      "description": "To jest opis",
+      "demo": "",
+      "github": "https://github.com/DestillApp/main",
+      "description": "Aplikacja full-stack zaprojektowana do zarządzania i dokumentowania destylacji roślin aromatycznych. \nSystem centralizuje dane o roślinach, partie destylacji, wyniki oraz ustawienia użytkowników — oferując efektywny workflow dla małoskalowych pracowni destylacyjnych lub środowisk badawczych. \nZbudowana z nowoczesnym frontendem w Vue 3 z TypeScript oraz backendem z API GraphQL, DestillationApp zapewnia przejrzyste, uporządkowane i niezawodne narzędzie do obsługi całego cyklu destylacji. \nProjekt i implementacja wykonane w pełni samodzielnie — od koncepcji i architektury, przez projekt API, rozwój interfejsu, dokumentację, aż po przygotowanie do wdrożenia.",
       "work": "solo",
       "year": "2024/2025",
+"features": [
+  {
+    "name": "Autoryzacja i bezpieczeństwo",
+    "icon": "i-lucide-lock-keyhole",
+    "list": [
+      "Bezpieczna autoryzacja z JWT i bcrypt",
+      "Ochrona tras w aplikacji",
+      "Sanityzacja danych przesyłanych do bazy danych",
+      "Możliwość zmiany hasła przez użytkownika"
+    ]
+  },
+  {
+    "name": "Zarządzanie roślinami i destylacjami",
+    "icon": "i-lucide-leaf",
+    "list": [
+      "Zarządzanie magazynem roślin: dodawanie, edycja, usuwanie",
+      "Rejestrowanie, edycja i usuwanie procesów destylacji",
+      "Przypisywanie i zarządzanie wynikami destylacji",
+      "Filtrowanie i sortowanie roślin, destylacji i wyników po nazwie lub dacie"
+    ]
+  },
+    {
+    "name": "Aplikacja frontendowa",
+    "icon": "i-lucide-monitor",
+    "list": [
+      "Vue 3 + TypeScript dla modularnych i typowanych komponentów",
+      "Vuex do centralnego zarządzania stanem aplikacji",
+      "Apollo Client do komunikacji z backendem GraphQL",
+      "Wybrane komponenty Vuetify oraz responsywny design"
+    ]
+  },
+  {
+    "name": "Ekosystem API GraphQL",
+    "icon": "i-lucide-layers",
+    "list": [
+      "Modułowa architektura resolverów i schematów GraphQL",
+      "Elastyczne zarządzanie danymi destylacji, roślin i wyników",
+      "MongoDB i Mongoose dla strukturalnego modelowania danych"
+    ]
+  },
+  {
+    "name": "Dokumentacja i jakość kodu",
+    "icon": "i-lucide-file-text",
+    "list": [
+      "Automatyczna dokumentacja frontendowa VitePress",
+      "TypeDoc generujący dokumentację dla plików TypeScript",
+      "JSDoc dla backendowych modułów i narzędzi",
+      "Środowisko testowe frontendowe z Vitest"
+    ]
+  },
+  {
+    "name": "Monitoring błędów",
+    "icon": "i-lucide-alert-triangle",
+    "list": [
+      "Integracja z Sentry dla raportowania błędów na frontendzie"
+    ]
+  }
+],
+      "responsibilities": {
+        "overview": "Ponieważ był to projekt realizowany samodzielnie, odpowiadałam za cały proces tworzenia aplikacji:",
+        "list": [
+          "Zaprojektowałam architekturę całego systemu (frontend, backend, GraphQL API, warstwa danych)",
+          "Stworzyłam kompletny interfejs użytkownika w Vue 3 i TypeScript, dbając o modularność i typowanie",
+          "Zaimplementowałam logikę aplikacji z wykorzystaniem Vuex, Apollo Client i komponentów Vuetify",
+          "Zbudowałam backend w Node.js, Express oraz Apollo Server z pełnym schematem GraphQL",
+          "Opracowałam modele danych i operacje na bazie z użyciem MongoDB i Mongoose",
+          "Wdrożyłam bezpieczne logowanie oparte na JWT, wraz z kontrolą uprawnień i sanityzacją danych",
+          "Przygotowałam dokumentację techniczną (VitePress, TypeDoc, JSDoc) oraz strukturę pod dalsze testy (Vitest)",
+          "Zintegrowałam narzędzia monitorujące błędy (Sentry)",
+          "Współpracowałam z inżynierem DevOps w zakresie planowania procesu wdrożenia"
+        ]
+      },
       "stack": {
         "frontend": [
-          { "name": "Vue.js", "description": "progressive framework" },
-          { "name": "TypeScript", "description": "type safety" }
+          {
+            "name": "Vue 3 + TypeScript",
+            "description": "bezpieczna typowo, modularna architektura komponentów"
+          },
+          {
+            "name": "Vuex",
+            "description": "scentralizowane zarządzanie stanem"
+          },
+          { "name": "Vue Router", "description": "routing aplikacji" },
+          {
+            "name": "Vuetify",
+            "description": "framework UI oparty na Material Design"
+          },
+          {
+            "name": "Apollo Client",
+            "description": "warstwa komunikacji GraphQL"
+          },
+          {
+            "name": "Vite",
+            "description": "szybkie narzędzie do developmentu i budowania"
+          },
+          {
+            "name": "VitePress + TypeDoc",
+            "description": "automatyczne generowanie dokumentacji"
+          },
+          {
+            "name": "Sentry",
+            "description": "monitorowanie błędów"
+          }
+        ],
+        "backend": [
+          {
+            "name": "Node.js + Express",
+            "description": "podstawa serwera i warstwa middleware"
+          },
+          {
+            "name": "Apollo Server (GraphQL)",
+            "description": "implementacja API z resolverami i schematami"
+          },
+          {
+            "name": "MongoDB + Mongoose",
+            "description": "modelowanie danych i dostęp do bazy danych"
+          },
+          {
+            "name": "JWT + bcrypt",
+            "description": "uwierzytelnianie i hashowanie haseł"
+          },
+          {
+            "name": "Axios",
+            "description": "pobieranie danych z zewnętrznego API"
+          },
+          {
+            "name": "validator",
+            "description": "sanityzacja danych"
+          },
+          { "name": "JSDoc", "description": "automatyczne generowanie dokumentacji" }
         ]
       },
       "img": {
@@ -103,99 +231,102 @@
           "Wdrożyłam frontend (Netlify) i backend (Heroku)"
         ]
       },
-    "stack": {
-      "frontend": [
-        {
-          "name": "React.js",
-          "description": "architektura interfejsu i komponenty wielokrotnego użytku"
-        },
-        {
-          "name": "Redux Toolkit",
-          "description": "zarządzanie stanem globalnym (transakcje i autoryzacja)"
-        },
-        { "name": "React Router", "description": "nawigacja w SPA" },
-        {
-          "name": "Formik + Yup",
-          "description": "obsługa formularzy i walidacja danych"
-        },
-        { "name": "Recharts", "description": "wizualizacja danych" },
-        { "name": "Axios", "description": "komunikacja z REST API" },
-        { "name": "CSS Modules", "description": "izolowane style komponentów" }
-      ],
-      "backend": [
-        {
-          "name": "Node.js + Express",
-          "description": "implementacja REST API"
-        },
-        {
-          "name": "MongoDB + Mongoose",
-          "description": "modelowanie danych i ich przechowywanie"
-        },
-        {
-          "name": "JWT + bcrypt",
-          "description": "autoryzacja oraz hashowanie haseł"
-        },
-        { "name": "Swagger", "description": "interaktywna dokumentacja API" }
-      ],
-      "devops": ["Frontend wdrożony na Netlify", "Backend wdrożony na Heroku"]
+      "stack": {
+        "frontend": [
+          {
+            "name": "React.js",
+            "description": "architektura interfejsu i komponenty wielokrotnego użytku"
+          },
+          {
+            "name": "Redux Toolkit",
+            "description": "zarządzanie stanem globalnym (transakcje i autoryzacja)"
+          },
+          { "name": "React Router", "description": "nawigacja w SPA" },
+          {
+            "name": "Formik + Yup",
+            "description": "obsługa formularzy i walidacja danych"
+          },
+          { "name": "Recharts", "description": "wizualizacja danych" },
+          { "name": "Axios", "description": "komunikacja z REST API" },
+          {
+            "name": "CSS Modules",
+            "description": "izolowane style komponentów"
+          }
+        ],
+        "backend": [
+          {
+            "name": "Node.js + Express",
+            "description": "implementacja REST API"
+          },
+          {
+            "name": "MongoDB + Mongoose",
+            "description": "modelowanie danych i ich przechowywanie"
+          },
+          {
+            "name": "JWT + bcrypt",
+            "description": "autoryzacja oraz hashowanie haseł"
+          },
+          { "name": "Swagger", "description": "interaktywna dokumentacja API" }
+        ],
+        "devops": ["Frontend wdrożony na Netlify", "Backend wdrożony na Heroku"]
+      },
+      "img": {
+        "avif": "/images/wallet-app.avif",
+        "webp": "/images/wallet-app.webp",
+        "png": "/images/wallet-app.png"
+      }
     },
-    "img": {
-      "avif": "/images/wallet-app.avif",
-      "webp": "/images/wallet-app.webp",
-      "png": "/images/wallet-app.png"
-    }
-  },
-  "portfolio": {
-    "title": "Developer Portfolio",
-    "description": "To jest opis",
-    "work": "solo",
-    "year": "2025",
-    "stack": {
-      "frontend": [
-        { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
-        { "name": "Nuxt UI", "icon": "simple-icons:nuxt" }
-      ]
+    "portfolio": {
+      "title": "Developer Portfolio",
+      "description": "To jest opis",
+      "work": "solo",
+      "year": "2025",
+      "stack": {
+        "frontend": [
+          { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
+          { "name": "Nuxt UI", "icon": "simple-icons:nuxt" }
+        ]
+      },
+      "img": {
+        "avif": "/images/wallet-app.avif",
+        "webp": "/images/wallet-app.webp",
+        "png": "/images/wallet-app.png"
+      }
     },
-    "img": {
-      "avif": "/images/wallet-app.avif",
-      "webp": "/images/wallet-app.webp",
-      "png": "/images/wallet-app.png"
-    }
-  },
-  "filmoteka": {
-    "title": "Filmoteka",
-    "description": "To jest opis",
-    "work": "grupowy",
-    "year": "2023",
-    "stack": {
-      "frontend": [
-        { "name": "HTML", "description": "markup structure" },
-        { "name": "CSS", "description": "styling and layout" },
-        { "name": "JavaScript", "description": "interactive functionality" }
-      ]
+    "filmoteka": {
+      "title": "Filmoteka",
+      "description": "To jest opis",
+      "work": "grupowy",
+      "year": "2023",
+      "stack": {
+        "frontend": [
+          { "name": "HTML", "description": "markup structure" },
+          { "name": "CSS", "description": "styling and layout" },
+          { "name": "JavaScript", "description": "interactive functionality" }
+        ]
+      },
+      "img": {
+        "avif": "/images/filmoteka.avif",
+        "webp": "/images/filmoteka.webp",
+        "png": "/images/filmoteka.png"
+      }
     },
-    "img": {
-      "avif": "/images/filmoteka.avif",
-      "webp": "/images/filmoteka.webp",
-      "png": "/images/filmoteka.png"
-    }
-  },
-  "icecream-shop": {
-    "title": "Icecream Shop",
-    "description": "To jest opis",
-    "work": "grupowy",
-    "year": "2022",
-    "stack": {
-      "frontend": [
-        { "name": "HTML", "description": "semantic markup" },
-        { "name": "CSS", "description": "responsive design" }
-      ]
-    },
-    "img": {
-      "avif": "/images/icecream-shop.avif",
-      "webp": "/images/icecream-shop.webp",
-      "png": "/images/icecream-shop.png"
+    "icecream-shop": {
+      "title": "Icecream Shop",
+      "description": "To jest opis",
+      "work": "grupowy",
+      "year": "2022",
+      "stack": {
+        "frontend": [
+          { "name": "HTML", "description": "semantic markup" },
+          { "name": "CSS", "description": "responsive design" }
+        ]
+      },
+      "img": {
+        "avif": "/images/icecream-shop.avif",
+        "webp": "/images/icecream-shop.webp",
+        "png": "/images/icecream-shop.png"
+      }
     }
   }
-}
 }
