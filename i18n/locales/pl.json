@@ -39,84 +39,161 @@
       "description": "Full-stack menedżer finansów osobistych stworzony z myślą o wygodnym śledzeniu przychodów, wydatków i nawyków zakupowych w przejrzystym, intuicyjnym interfejsie. \nAplikacja oferuje bezpieczne logowanie, interaktywne wykresy, aktualne kursy walut oraz czytelny UX dostosowany do szybkiego, codziennego użytku. \nProjekt zrealizowany w ramach kursu GoIT, na podstawie dostarczonego projektu w Figma, a następnie samodzielnie rozwinięty jako kompletne rozwiązanie end-to-end — od architektury po wdrożenie.",
       "work": "solo",
       "year": "2025",
-            "stack": {
-"frontend": [
-        { "name": "React.js", "description": "architektura interfejsu i komponenty wielokrotnego użytku" },
-        { "name": "Redux Toolkit", "description": "zarządzanie stanem globalnym (transakcje i autoryzacja)" },
+      "features": [
+        {
+          "name": "Uwierzytelnianie i Bezpieczeństwo",
+          "icon": "i-lucide-lock-keyhole",
+          "list": [
+            "JWT z obsługą access i refresh tokenów",
+            "Blacklist tokenów dla bezpiecznego wylogowania",
+            "Hasła szyfrowane (bcrypt)"
+          ]
+        },
+        {
+          "name": "Zarządzanie Transakcjami",
+          "icon": "i-lucide-arrow-left-right",
+          "list": [
+            "Dodawanie, edytowanie, usuwanie transakcji",
+            "Kategoryzacja przychodów i wydatków",
+            "Obliczanie salda z filtrowaniem po dacie i kategorii"
+          ]
+        },
+        {
+          "name": "Panel Analityczny",
+          "icon": "i-lucide-chart-no-axes-combined",
+          "list": [
+            "Interaktywne wizualizacje w Recharts",
+            "Podsumowania wydatków"
+          ]
+        },
+        {
+          "name": "Kursy walut",
+          "icon": "i-lucide-circle-dollar-sign",
+          "list": [
+            "Aktualne kursy EUR/GBP",
+            "Automatyczne odświeżanie kursów co godzinę"
+          ]
+        },
+        {
+          "name": "Przyjazny Interfejs i UX",
+          "icon": "i-lucide-contact-round",
+          "list": [
+            "Responsywny design: mobile → desktop",
+            "Walidacja formularzy (Formik + Yup)",
+            "Tryb demo do szybkiego przetestowania aplikacji"
+          ]
+        },
+        {
+          "name": "Narzędzia Deweloperskie",
+          "icon": "i-lucide-wrench",
+          "list": ["Pełna dokumentacja API w Swagger"]
+        }
+      ],
+      "responsibilities": {
+        "overview": "Ponieważ był to projekt realizowany samodzielnie, odpowiadałem za cały proces tworzenia:",
+        "list": [
+          "Zaprojektowałam architekturę systemu (frontend, backend, przepływ uwierzytelniania)",
+          "Przeniosłam projekt z Figma do responsywnego i dostępnego interfejsu UI",
+          "Zaimplementowałam całą logikę UI w React z wykorzystaniem Redux Toolkit",
+          "Stworzyłem backend w Node.js z użyciem Express, MongoDB i Mongoose",
+          "Wdrożyłam bezpieczne uwierzytelnianie JWT z odświeżaniem i unieważnianiem tokenów",
+          "Utworzyłam endpointy REST API oraz dokumentację Swagger",
+          "Wdrożyłam frontend (Netlify) i backend (Heroku)"
+        ]
+      },
+    "stack": {
+      "frontend": [
+        {
+          "name": "React.js",
+          "description": "architektura interfejsu i komponenty wielokrotnego użytku"
+        },
+        {
+          "name": "Redux Toolkit",
+          "description": "zarządzanie stanem globalnym (transakcje i autoryzacja)"
+        },
         { "name": "React Router", "description": "nawigacja w SPA" },
-        { "name": "Formik + Yup", "description": "obsługa formularzy i walidacja danych" },
+        {
+          "name": "Formik + Yup",
+          "description": "obsługa formularzy i walidacja danych"
+        },
         { "name": "Recharts", "description": "wizualizacja danych" },
         { "name": "Axios", "description": "komunikacja z REST API" },
         { "name": "CSS Modules", "description": "izolowane style komponentów" }
       ],
       "backend": [
-        { "name": "Node.js + Express", "description": "implementacja REST API" },
-        { "name": "MongoDB + Mongoose", "description": "modelowanie danych i ich przechowywanie" },
-        { "name": "JWT + bcrypt", "description": "autoryzacja oraz hashowanie haseł" },
+        {
+          "name": "Node.js + Express",
+          "description": "implementacja REST API"
+        },
+        {
+          "name": "MongoDB + Mongoose",
+          "description": "modelowanie danych i ich przechowywanie"
+        },
+        {
+          "name": "JWT + bcrypt",
+          "description": "autoryzacja oraz hashowanie haseł"
+        },
         { "name": "Swagger", "description": "interaktywna dokumentacja API" }
       ],
-      "devops": [
-        "Frontend wdrożony na Netlify",
-        "Backend wdrożony na Heroku"
-      ]
-      },
-      "img": {
-        "avif": "/images/wallet-app.avif",
-        "webp": "/images/wallet-app.webp",
-        "png": "/images/wallet-app.png"
-      }
+      "devops": ["Frontend wdrożony na Netlify", "Backend wdrożony na Heroku"]
     },
-    "portfolio": {
-      "title": "Developer Portfolio",
-      "description": "To jest opis",
-      "work": "solo",
-      "year": "2025",
-        "stack": {
-    "frontend": [
-      { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
-      { "name": "Nuxt UI", "icon": "simple-icons:nuxt" }
-    ]
+    "img": {
+      "avif": "/images/wallet-app.avif",
+      "webp": "/images/wallet-app.webp",
+      "png": "/images/wallet-app.png"
+    }
   },
-      "img": {
-        "avif": "/images/wallet-app.avif",
-        "webp": "/images/wallet-app.webp",
-        "png": "/images/wallet-app.png"
-      }
+  "portfolio": {
+    "title": "Developer Portfolio",
+    "description": "To jest opis",
+    "work": "solo",
+    "year": "2025",
+    "stack": {
+      "frontend": [
+        { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
+        { "name": "Nuxt UI", "icon": "simple-icons:nuxt" }
+      ]
     },
-    "filmoteka": {
-      "title": "Filmoteka",
-      "description": "To jest opis",
-      "work": "grupowy",
-      "year": "2023",
-      "stack": {
-        "frontend": [
-          { "name": "HTML", "description": "markup structure" },
-          { "name": "CSS", "description": "styling and layout" },
-          { "name": "JavaScript", "description": "interactive functionality" }
-        ]
-      },
-      "img": {
-        "avif": "/images/filmoteka.avif",
-        "webp": "/images/filmoteka.webp",
-        "png": "/images/filmoteka.png"
-      }
+    "img": {
+      "avif": "/images/wallet-app.avif",
+      "webp": "/images/wallet-app.webp",
+      "png": "/images/wallet-app.png"
+    }
+  },
+  "filmoteka": {
+    "title": "Filmoteka",
+    "description": "To jest opis",
+    "work": "grupowy",
+    "year": "2023",
+    "stack": {
+      "frontend": [
+        { "name": "HTML", "description": "markup structure" },
+        { "name": "CSS", "description": "styling and layout" },
+        { "name": "JavaScript", "description": "interactive functionality" }
+      ]
     },
-    "icecream-shop": {
-      "title": "Icecream Shop",
-      "description": "To jest opis",
-      "work": "grupowy",
-      "year": "2022",
-      "stack": {
-        "frontend": [
-          { "name": "HTML", "description": "semantic markup" },
-          { "name": "CSS", "description": "responsive design" }
-        ]
-      },
-      "img": {
-        "avif": "/images/icecream-shop.avif",
-        "webp": "/images/icecream-shop.webp",
-        "png": "/images/icecream-shop.png"
-      }
+    "img": {
+      "avif": "/images/filmoteka.avif",
+      "webp": "/images/filmoteka.webp",
+      "png": "/images/filmoteka.png"
+    }
+  },
+  "icecream-shop": {
+    "title": "Icecream Shop",
+    "description": "To jest opis",
+    "work": "grupowy",
+    "year": "2022",
+    "stack": {
+      "frontend": [
+        { "name": "HTML", "description": "semantic markup" },
+        { "name": "CSS", "description": "responsive design" }
+      ]
+    },
+    "img": {
+      "avif": "/images/icecream-shop.avif",
+      "webp": "/images/icecream-shop.webp",
+      "png": "/images/icecream-shop.png"
     }
   }
+}
 }

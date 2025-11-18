@@ -39,6 +39,68 @@
       "description": "A full-stack personal finance manager designed to help users track income, expenses, and spending habits in a clear, intuitive interface. \nThe application offers secure authentication, interactive charts, real-time currency conversion, and a clean UX optimized for quick daily use. \nDeveloped as part of the GoIT course, based on a provided Figma design, and built independently as a complete end-to-end product — from architecture to deployment.",
       "work": "solo",
       "year": "2025",
+      "features": [
+        {
+          "name": "Authentication & Security",
+          "icon": "i-lucide-lock-keyhole",
+          "list": [
+            "JWT access & refresh token flow",
+            "Token blacklisting for logout safety",
+            "Encrypted passwords (bcrypt)"
+          ]
+        },
+        {
+          "name": "Transaction Management",
+           "icon": "i-lucide-arrow-left-right",
+          "list": [
+            "Add, edit, delete transactions",
+            "Income/expense categorization",
+            "Balance calculations with filtering by date"
+          ]
+        },
+        {
+          "name": "Analytics Dashboard",
+          "icon": "i-lucide-chart-no-axes-combined",
+          "list": [
+            "Interactive Recharts visualizations",
+            "Spending summaries"
+          ]
+        },
+        {
+          "name": "Currency Rates",
+          "icon": "i-lucide-circle-dollar-sign",
+          "list": [
+            "Up-to-date EUR/GBP rates",
+            "Automatic hourly rate updates"
+          ]
+        },
+        {
+          "name": "User-Friendly UI & UX",
+          "icon": "i-lucide-contact-round",
+          "list": [
+            "Responsive design: mobile → desktop",
+            "Form validation (Formik + Yup)",
+            "Demo mode for instant app exploration"
+          ]
+        },
+                {
+          "name": "Developer Tools",
+          "icon": "i-lucide-wrench",
+          "list": [
+            "Full Swagger API documentation"
+          ]
+        }      
+      ],
+      "responsibilities": {"overview": "Since this was a solo project, I handled the entire development process:",
+    "list": [
+  "Designed the system architecture (frontend, backend, authentication flow)",
+  "Converted Figma designs into a responsive and accessible UI",
+  "Implemented all UI logic in React with Redux Toolkit",
+  "Built the backend in Node.js using Express, MongoDB, and Mongoose",
+  "Implemented secure JWT authentication with token refresh and revocation",
+  "Created REST API endpoints and Swagger documentation",
+  "Deployed the frontend (Netlify) and backend (Heroku)"
+]},
       "stack": {
         "frontend": [
           {
