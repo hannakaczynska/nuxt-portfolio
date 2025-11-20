@@ -4,7 +4,7 @@
     <div class="stack_container">
       <UCard v-if="frontendStack.length" class="stack_card">
         <ul class="stack_list stack_list--frontend">
-          <h3 class="list_title">Frontend</h3>
+          <h3 v-if="backendStack.length" class="list_title">Frontend</h3>
           <li v-for="(stack, index) in frontendStack" :key="index">
             <span class="stack_name">{{ stack.name }}</span
             >: <span>{{ stack.description }}</span>

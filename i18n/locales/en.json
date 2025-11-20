@@ -24,64 +24,62 @@
       "description": "A full-stack application designed to manage and document the distillation of aromatic plants. \nThe system centralizes plant data, distillation batches, results, and user settings — offering an efficient workflow for small-scale distillation studios or botanical research environments. \nBuilt with a modern TypeScript–powered Vue 3 frontend and a GraphQL API backend, DestillationApp delivers a clean, structured, and reliable tool for handling the entire distillation lifecycle. \nDesigned and implemented end-to-end as a solo project — from concept and architecture to API design, UI development, documentation, and deployment preparation.",
       "work": "solo",
       "year": "2024/2025",
-     "features": [
-  {
-    "name": "Authentication & Security",
-    "icon": "i-lucide-lock-keyhole",
-    "list": [
-      "Secure JWT and bcrypt-based authentication",
-      "Route protection within the application",
-      "Sanitization of data sent to the database",
-      "Ability for users to change their password"
-    ]
-  },
-  {
-    "name": "Plant & Distillation Management",
-    "icon": "i-lucide-leaf",
-    "list": [
-      "Managing plant inventory: add, edit, delete",
-      "Recording, editing, and deleting distillation processes",
-      "Assigning and managing distillation results",
-      "Filtering and sorting plants, distillations, and results by name or date"
-    ]
-  },
-  {
-    "name": "Frontend Application",
-    "icon": "i-lucide-monitor",
-    "list": [
-      "Vue 3 + TypeScript for modular and typed components",
-      "Vuex for centralized state management",
-      "Apollo Client for communicating with the GraphQL backend",
-      "Selected Vuetify components and responsive design"
-    ]
-  },
-  {
-    "name": "GraphQL API Ecosystem",
-    "icon": "i-lucide-layers",
-    "list": [
-      "Modular architecture of GraphQL resolvers and schemas",
-      "Flexible management of distillation, plant, and result data",
-      "MongoDB and Mongoose for structured data modeling"
-    ]
-  },
-  {
-    "name": "Documentation & Code Quality",
-    "icon": "i-lucide-file-text",
-    "list": [
-      "Automatic frontend documentation with VitePress",
-      "TypeDoc generating documentation for TypeScript files",
-      "JSDoc for backend modules and utilities",
-      "Frontend testing environment with Vitest"
-    ]
-  },
-  {
-    "name": "Error Monitoring",
-    "icon": "i-lucide-alert-triangle",
-    "list": [
-      "Sentry integration for frontend error reporting"
-    ]
-  }
-],
+      "features": [
+        {
+          "name": "Authentication & Security",
+          "icon": "i-lucide-lock-keyhole",
+          "list": [
+            "Secure JWT and bcrypt-based authentication",
+            "Route protection within the application",
+            "Sanitization of data sent to the database",
+            "Ability for users to change their password"
+          ]
+        },
+        {
+          "name": "Plant & Distillation Management",
+          "icon": "i-lucide-leaf",
+          "list": [
+            "Managing plant inventory: add, edit, delete",
+            "Recording, editing, and deleting distillation processes",
+            "Assigning and managing distillation results",
+            "Filtering and sorting plants, distillations, and results by name or date"
+          ]
+        },
+        {
+          "name": "Frontend Application",
+          "icon": "i-lucide-monitor",
+          "list": [
+            "Vue 3 + TypeScript for modular and typed components",
+            "Vuex for centralized state management",
+            "Apollo Client for communicating with the GraphQL backend",
+            "Selected Vuetify components and responsive design"
+          ]
+        },
+        {
+          "name": "GraphQL API Ecosystem",
+          "icon": "i-lucide-layers",
+          "list": [
+            "Modular architecture of GraphQL resolvers and schemas",
+            "Flexible management of distillation, plant, and result data",
+            "MongoDB and Mongoose for structured data modeling"
+          ]
+        },
+        {
+          "name": "Documentation & Code Quality",
+          "icon": "i-lucide-file-text",
+          "list": [
+            "Automatic frontend documentation with VitePress",
+            "TypeDoc generating documentation for TypeScript files",
+            "JSDoc for backend modules and utilities",
+            "Frontend testing environment with Vitest"
+          ]
+        },
+        {
+          "name": "Error Monitoring",
+          "icon": "i-lucide-alert-triangle",
+          "list": ["Sentry integration for frontend error reporting"]
+        }
+      ],
       "responsibilities": {
         "overview": "Since this was a solo project, I handled the entire development process:",
         "list": [
@@ -96,27 +94,54 @@
           "Collaborated with a DevOps engineer on deployment planning and workflow design"
         ]
       },
-  "stack": {
-    "frontend": [
-      { "name": "Vue 3 + TypeScript", "description": "type-safe, modular component architecture" },
-      { "name": "Vuex", "description": "centralized state management" },
-      { "name": "Vue Router", "description": "application routing" },
-      { "name": "Vuetify", "description": "Material Design UI framework" },
-      { "name": "Apollo Client", "description": "GraphQL communication layer" },
-      { "name": "Vite", "description": "fast development and build tooling" },
-      { "name": "VitePress + TypeDoc", "description": "automatic documentation generation" },
-      { "name": "Sentry", "description": "error monitoring" }
-    ],
-    "backend": [
-      { "name": "Node.js + Express", "description": "server foundation and middleware layer" },
-      { "name": "Apollo Server (GraphQL)", "description": "API implementation with resolvers & schemas" },
-      { "name": "MongoDB + Mongoose", "description": "schema-based data modeling and database access" },
-      { "name": "JWT + bcrypt", "description": "authentication & password hashing" },
-      { "name": "Axios", "description": "requests for external API" },
-      { "name": "validator", "description": "data sanitization" },
-      { "name": "JSDoc", "description": "automatic documentation generation" }
-    ]
-  },
+      "stack": {
+        "frontend": [
+          {
+            "name": "Vue 3 + TypeScript",
+            "description": "type-safe, modular component architecture"
+          },
+          { "name": "Vuex", "description": "centralized state management" },
+          { "name": "Vue Router", "description": "application routing" },
+          { "name": "Vuetify", "description": "Material Design UI framework" },
+          {
+            "name": "Apollo Client",
+            "description": "GraphQL communication layer"
+          },
+          {
+            "name": "Vite",
+            "description": "fast development and build tooling"
+          },
+          {
+            "name": "VitePress + TypeDoc",
+            "description": "automatic documentation generation"
+          },
+          { "name": "Sentry", "description": "error monitoring" }
+        ],
+        "backend": [
+          {
+            "name": "Node.js + Express",
+            "description": "server foundation and middleware layer"
+          },
+          {
+            "name": "Apollo Server (GraphQL)",
+            "description": "API implementation with resolvers & schemas"
+          },
+          {
+            "name": "MongoDB + Mongoose",
+            "description": "schema-based data modeling and database access"
+          },
+          {
+            "name": "JWT + bcrypt",
+            "description": "authentication & password hashing"
+          },
+          { "name": "Axios", "description": "requests for external API" },
+          { "name": "validator", "description": "data sanitization" },
+          {
+            "name": "JSDoc",
+            "description": "automatic documentation generation"
+          }
+        ]
+      },
       "img": {
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
@@ -205,7 +230,15 @@
             "name": "Recharts",
             "description": "data visualization with charts"
           },
-          { "name": "Axios", "description": "communication with REST API" }
+          { "name": "Axios", "description": "communication with REST API" },
+          {
+            "name": "CSS Modules",
+            "description": "isolated component styles"
+          },
+          {
+            "name": "Figma",
+            "description": "use of pre-made graphics and UI assets"
+          }
         ],
         "backend": [
           {
@@ -252,14 +285,85 @@
     },
     "filmoteka": {
       "title": "Filmoteka",
-      "description": "This is description",
+      "demo": "https://wallet-app-project.netlify.app/login",
+      "github": "https://github.com/hannakaczynska/WalletApp-react-node",
+      "description": "A team project as part of the GOIT course, creating a dynamic movie search application with trailer previews, detailed film information, and a personalized watchlist feature. \nBuilt using vanilla JavaScript with Axios for API communication, it follows a mobile-first approach and provides a responsive, interactive interface. \nUsers can search for films, watch trailers, explore detailed descriptions, and manage their personal “watched” or “to-watch” lists. \nThis project demonstrates practical teamwork, frontend logic implementation, and integration of third-party libraries for UI and pagination enhancements.",
       "work": "team",
       "year": "2023",
+      "features": [
+        {
+          "name": "Movie Discovery & Watchlist",
+          "icon": "i-lucide-film",
+          "list": [
+            "Search and filter movies from an external API",
+            "Add movies to “watched” or “to-watch” lists",
+            "Trailer playback for selected movies",
+            "Detailed film information"
+          ]
+        },
+        {
+          "name": "Responsive Interface",
+          "icon": "i-lucide-monitor-smartphone",
+          "list": [
+            "Dynamic movie cards rendering based on search results",
+            "Adaptive layout optimized for mobile and desktop devices",
+            "Smooth interaction with modals and pagination"
+          ]
+        },
+        {
+          "name": "Interactive Components & UI Enhancements",
+          "icon": "i-lucide-sliders",
+          "list": [
+            "Loading spinners using spin.js for better UX",
+            "Notifications and alerts via Notiflix",
+            "Pagination handled by tui-pagination",
+            "Modal windows for trailers and additional movie info"
+          ]
+        }
+      ],
+      "responsibilities": {
+        "overview": "In this project:",
+        "list": [
+          "Implemented movie search functionality with dynamic rendering of results in responsive cards",
+          "Added movie trailer playback in modal window",
+          "Assisted with watchlist functionality and loading spinner behavior",
+          "Collaborated with teammates on debugging and refining interactive features"
+        ]
+      },
       "stack": {
         "frontend": [
-          { "name": "HTML", "description": "markup structure" },
-          { "name": "CSS", "description": "styling and layout" },
-          { "name": "JavaScript", "description": "interactive functionality" }
+          {
+            "name": "Vanilla JavaScript",
+            "description": "dynamic UI rendering and state handling"
+          },
+          {
+            "name": "Axios",
+            "description": "fetching data from an external movie API"
+          },
+          {
+            "name": "Parcel",
+            "description": "project bundler and development server"
+          },
+          {
+            "name": "CSS",
+            "description": "styling with mobile-first responsive layout"
+          },
+          {
+            "name": "Notiflix",
+            "description": "notifications and user feedback"
+          },
+          {
+            "name": "Spin.js",
+            "description": "loading spinner functionality"
+          },
+          {
+            "name": "TUI Pagination",
+            "description": "pagination for navigating large datasets"
+          },
+          {
+            "name": "Figma",
+            "description": "use of pre-made graphics and UI assets"
+          }
         ]
       },
       "img": {
@@ -270,13 +374,67 @@
     },
     "icecream-shop": {
       "title": "Icecream Shop",
-      "description": "This is description",
+      "demo": "https://jacek-85.github.io/Ice_Muuu/",
+      "github": "https://github.com/Jacek-85/Ice_Muuu/",
+      "description": "A promotional landing page website created for a fictional ice-cream brand, developed as a team project during the GoIT course. \nThe site was built based on detailed Figma mockups and follows strict UI and branding guidelines. \nDesigned with a mobile-first approach, it features clean visuals, structured content sections, and smooth responsiveness across devices.",
       "work": "team",
       "year": "2022",
+  "features": [
+    {
+      "name": "Responsive Layout",
+      "icon": "i-lucide-smartphone",
+      "list": [
+        "Mobile-first design",
+        "Smooth adaptation across devices",
+        "Clean and structured sections"
+      ]
+    },
+    {
+      "name": "Figma-based UI",
+      "icon": "i-lucide-layout",
+      "list": [
+        "Pixel-perfect sections matching mockups",
+        "Consistent branding and layout",
+        "Team coordination based on shared design"
+      ]
+    },
+    {
+      "name": "Interactive Elements",
+      "icon": "i-lucide-mouse-pointer",
+      "list": [
+        "Navigation linking to specific page sections",
+        "Mobile menu available on smaller devices",
+        "Intro animation displayed on initial page load"
+      ]
+    }
+  ],
+      "responsibilities": {
+        "overview": "In this project:",
+        "list": [
+          "Implemented the footer based on Figma mockups",
+          "Added contact information and social media links",
+          "Ensured proper footer display on both mobile and desktop devices",
+          "Collaborated with the team to maintain overall visual consistency"
+        ]
+      },
       "stack": {
         "frontend": [
-          { "name": "HTML", "description": "semantic markup" },
-          { "name": "CSS", "description": "responsive design" }
+          {
+            "name": "HTML5",
+            "description": "semantic structure for page sections"
+          },
+          {
+            "name": "CSS",
+            "description": "responsive styling and layout"
+          },
+          {
+            "name": "Parcel",
+            "description": "project bundler and development server"
+          },
+          {
+            "name": "Figma",
+            "description": "pixel-perfect implementation from design mockups"
+          }
         ]
       },
       "img": {

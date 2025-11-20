@@ -24,64 +24,62 @@
       "description": "Aplikacja full-stack zaprojektowana do zarządzania i dokumentowania destylacji roślin aromatycznych. \nSystem centralizuje dane o roślinach, partie destylacji, wyniki oraz ustawienia użytkowników — oferując efektywny workflow dla małoskalowych pracowni destylacyjnych lub środowisk badawczych. \nZbudowana z nowoczesnym frontendem w Vue 3 z TypeScript oraz backendem z API GraphQL, DestillationApp zapewnia przejrzyste, uporządkowane i niezawodne narzędzie do obsługi całego cyklu destylacji. \nProjekt i implementacja wykonane w pełni samodzielnie — od koncepcji i architektury, przez projekt API, rozwój interfejsu, dokumentację, aż po przygotowanie do wdrożenia.",
       "work": "solo",
       "year": "2024/2025",
-"features": [
-  {
-    "name": "Autoryzacja i bezpieczeństwo",
-    "icon": "i-lucide-lock-keyhole",
-    "list": [
-      "Bezpieczna autoryzacja z JWT i bcrypt",
-      "Ochrona tras w aplikacji",
-      "Sanityzacja danych przesyłanych do bazy danych",
-      "Możliwość zmiany hasła przez użytkownika"
-    ]
-  },
-  {
-    "name": "Zarządzanie roślinami i destylacjami",
-    "icon": "i-lucide-leaf",
-    "list": [
-      "Zarządzanie magazynem roślin: dodawanie, edycja, usuwanie",
-      "Rejestrowanie, edycja i usuwanie procesów destylacji",
-      "Przypisywanie i zarządzanie wynikami destylacji",
-      "Filtrowanie i sortowanie roślin, destylacji i wyników po nazwie lub dacie"
-    ]
-  },
-    {
-    "name": "Aplikacja frontendowa",
-    "icon": "i-lucide-monitor",
-    "list": [
-      "Vue 3 + TypeScript dla modularnych i typowanych komponentów",
-      "Vuex do centralnego zarządzania stanem aplikacji",
-      "Apollo Client do komunikacji z backendem GraphQL",
-      "Wybrane komponenty Vuetify oraz responsywny design"
-    ]
-  },
-  {
-    "name": "Ekosystem API GraphQL",
-    "icon": "i-lucide-layers",
-    "list": [
-      "Modułowa architektura resolverów i schematów GraphQL",
-      "Elastyczne zarządzanie danymi destylacji, roślin i wyników",
-      "MongoDB i Mongoose dla strukturalnego modelowania danych"
-    ]
-  },
-  {
-    "name": "Dokumentacja i jakość kodu",
-    "icon": "i-lucide-file-text",
-    "list": [
-      "Automatyczna dokumentacja frontendowa VitePress",
-      "TypeDoc generujący dokumentację dla plików TypeScript",
-      "JSDoc dla backendowych modułów i narzędzi",
-      "Środowisko testowe frontendowe z Vitest"
-    ]
-  },
-  {
-    "name": "Monitoring błędów",
-    "icon": "i-lucide-alert-triangle",
-    "list": [
-      "Integracja z Sentry dla raportowania błędów na frontendzie"
-    ]
-  }
-],
+      "features": [
+        {
+          "name": "Autoryzacja i bezpieczeństwo",
+          "icon": "i-lucide-lock-keyhole",
+          "list": [
+            "Bezpieczna autoryzacja z JWT i bcrypt",
+            "Ochrona tras w aplikacji",
+            "Sanityzacja danych przesyłanych do bazy danych",
+            "Możliwość zmiany hasła przez użytkownika"
+          ]
+        },
+        {
+          "name": "Zarządzanie roślinami i destylacjami",
+          "icon": "i-lucide-leaf",
+          "list": [
+            "Zarządzanie magazynem roślin: dodawanie, edycja, usuwanie",
+            "Rejestrowanie, edycja i usuwanie procesów destylacji",
+            "Przypisywanie i zarządzanie wynikami destylacji",
+            "Filtrowanie i sortowanie roślin, destylacji i wyników po nazwie lub dacie"
+          ]
+        },
+        {
+          "name": "Aplikacja frontendowa",
+          "icon": "i-lucide-monitor",
+          "list": [
+            "Vue 3 + TypeScript dla modularnych i typowanych komponentów",
+            "Vuex do centralnego zarządzania stanem aplikacji",
+            "Apollo Client do komunikacji z backendem GraphQL",
+            "Wybrane komponenty Vuetify oraz responsywny design"
+          ]
+        },
+        {
+          "name": "Ekosystem API GraphQL",
+          "icon": "i-lucide-layers",
+          "list": [
+            "Modułowa architektura resolverów i schematów GraphQL",
+            "Elastyczne zarządzanie danymi destylacji, roślin i wyników",
+            "MongoDB i Mongoose dla strukturalnego modelowania danych"
+          ]
+        },
+        {
+          "name": "Dokumentacja i jakość kodu",
+          "icon": "i-lucide-file-text",
+          "list": [
+            "Automatyczna dokumentacja frontendowa VitePress",
+            "TypeDoc generujący dokumentację dla plików TypeScript",
+            "JSDoc dla backendowych modułów i narzędzi",
+            "Środowisko testowe frontendowe z Vitest"
+          ]
+        },
+        {
+          "name": "Monitoring błędów",
+          "icon": "i-lucide-alert-triangle",
+          "list": ["Integracja z Sentry dla raportowania błędów na frontendzie"]
+        }
+      ],
       "responsibilities": {
         "overview": "Ponieważ był to projekt realizowany samodzielnie, odpowiadałam za cały proces tworzenia aplikacji:",
         "list": [
@@ -153,7 +151,10 @@
             "name": "validator",
             "description": "sanityzacja danych"
           },
-          { "name": "JSDoc", "description": "automatyczne generowanie dokumentacji" }
+          {
+            "name": "JSDoc",
+            "description": "automatyczne generowanie dokumentacji"
+          }
         ]
       },
       "img": {
@@ -251,6 +252,10 @@
           {
             "name": "CSS Modules",
             "description": "izolowane style komponentów"
+          },
+          {
+            "name": "Figma",
+            "description": "wykorzystanie przygotowanych grafik i zasobów UI"
           }
         ],
         "backend": [
@@ -295,14 +300,85 @@
     },
     "filmoteka": {
       "title": "Filmoteka",
-      "description": "To jest opis",
+      "demo": "https://jaciubas.github.io/projekt-goit-grupa7/",
+      "github": "https://github.com/jaciubas/projekt-goit-grupa7",
+      "description": "Projekt zespołowy realizowany w ramach kursu GOIT, polegający na stworzeniu dynamicznej aplikacji do wyszukiwania filmów z podglądem zwiastunów, szczegółowymi informacjami o filmach oraz możliwością tworzenia spersonalizowanej listy „obejrzane” lub „do obejrzenia”. \nZbudowany w czystym JavaScript z wykorzystaniem Axios do komunikacji z API, stosuje podejście mobile-first i zapewnia responsywny, interaktywny interfejs. \nUżytkownicy mogą wyszukiwać filmy, oglądać zwiastuny, sprawdzać szczegółowe opisy i zarządzać własnymi listami filmów. \nProjekt pokazuje praktyczne doświadczenie w pracy zespołowej, implementację logiki frontendu oraz integrację zewnętrznych bibliotek dla usprawnienia UI i paginacji.",
       "work": "grupowy",
       "year": "2023",
+      "features": [
+        {
+          "name": "Wyszukiwanie i zapisywanie filmów",
+          "icon": "i-lucide-film",
+          "list": [
+            "Wyszukiwanie i filtrowanie filmów z zewnętrznego API",
+            "Dodawanie filmów do list „obejrzane” lub „do obejrzenia”",
+            "Odtwarzanie zwiastunów wybranych filmów",
+            "Szczegółowe informacje o filmach"
+          ]
+        },
+        {
+          "name": "Responsywny interfejs",
+          "icon": "i-lucide-monitor-smartphone",
+          "list": [
+            "Dynamiczne renderowanie kart wyszukiwanych filmów",
+            "Adaptacyjny układ zoptymalizowany pod urządzenia mobilne i desktopowe",
+            "Płynna interakcja z oknami modalnymi i paginacją"
+          ]
+        },
+        {
+          "name": "Interaktywne komponenty i ulepszenia UI",
+          "icon": "i-lucide-sliders",
+          "list": [
+            "Ładowanie z użyciem spinnerów spin.js",
+            "Powiadomienia i alerty za pomocą Notiflix",
+            "Paginacja obsługiwana przez tui-pagination",
+            "Okna modalne dla zwiastunów i opisów filmów"
+          ]
+        }
+      ],
+      "responsibilities": {
+        "overview": "W tym projekcie:",
+        "list": [
+          "Zaimplementowałam wyświetlanie wyników wyszukiwania w responsywnych kartach",
+          "Dodałam funkcję odtwarzania zwiastunów filmów w oknie modalnym",
+          "Wspierałam prace nad listą „obejrzane / do obejrzenia” oraz działaniem spinnera ładowania",
+          "Współpracowałam z zespołem przy debugowaniu i usprawnianiu komponentów interaktywnych"
+        ]
+      },
       "stack": {
         "frontend": [
-          { "name": "HTML", "description": "markup structure" },
-          { "name": "CSS", "description": "styling and layout" },
-          { "name": "JavaScript", "description": "interactive functionality" }
+          {
+            "name": "Vanilla JavaScript",
+            "description": "dynamiczne renderowanie interfejsu i obsługa stanu"
+          },
+          {
+            "name": "Axios",
+            "description": "pobieranie danych z zewnętrznego API filmowego"
+          },
+          {
+            "name": "Parcel",
+            "description": "bundler projektu i serwer deweloperski"
+          },
+          {
+            "name": "CSS",
+            "description": "style i układ w podejściu mobile-first"
+          },
+          {
+            "name": "Notiflix",
+            "description": "powiadomienia i komunikaty dla użytkownika"
+          },
+          {
+            "name": "Spin.js",
+            "description": "obsługa animacji ładowania"
+          },
+          {
+            "name": "TUI Pagination",
+            "description": "paginacja do nawigacji po dużych zbiorach danych"
+          },
+          {
+            "name": "Figma",
+            "description": "wykorzystanie przygotowanych grafik i zasobów UI"
+          }
         ]
       },
       "img": {
@@ -313,13 +389,67 @@
     },
     "icecream-shop": {
       "title": "Icecream Shop",
-      "description": "To jest opis",
+      "demo": "https://jacek-85.github.io/Ice_Muuu/",
+      "github": "https://github.com/Jacek-85/Ice_Muuu/",
+      "description": "Promocyjna strona typu landing page stworzona dla fikcyjnej marki lodów, zrealizowana jako projekt zespołowy w ramach kursu GoIT. \nAplikacja została wykonana na podstawie szczegółowych makiet z Figmy i zgodnie z określonymi wytycznymi UI oraz identyfikacją wizualną. \nDzięki podejściu mobile-first strona oferuje przejrzysty wygląd, czytelną strukturę sekcji i pełną responsywność na różnych urządzeniach.",
       "work": "grupowy",
       "year": "2022",
+      "features": [
+        {
+          "name": "Responsywny układ",
+          "icon": "i-lucide-smartphone",
+          "list": [
+            "Projekt w podejściu mobile-first",
+            "Płynne dopasowanie do różnych urządzeń",
+            "Czyste i uporządkowane sekcje"
+          ]
+        },
+        {
+          "name": "UI na podstawie Figmy",
+          "icon": "i-lucide-layout",
+          "list": [
+            "Sekcje odwzorowane pixel-perfect względem makiet",
+            "Spójna identyfikacja wizualna i układ strony",
+            "Koordynacja zespołu w oparciu o wspólny projekt"
+          ]
+        },
+        {
+          "name": "Elementy interaktywne",
+          "icon": "i-lucide-mouse-pointer",
+          "list": [
+            "Nawigacja przenosząca do wybranych sekcji strony",
+            "Menu mobilne dostępne na mniejszych urządzeniach",
+            "Animacja startowa wyświetlana przy pierwszym załadowaniu"
+          ]
+        }
+      ],
+      "responsibilities": {
+        "overview": "W tym projekcie:",
+        "list": [
+          "Zaimplementowałam stopkę na podstawie makiet z Figmy",
+          "Dodałam dane kontaktowe oraz linki do social mediów",
+          "Zapewniłam poprawne działanie stopki na urządzeniach mobilnych i desktopowych",
+          "Współpracowałam z resztą zespołu dbając na spójność projektu"
+        ]
+      },
       "stack": {
         "frontend": [
-          { "name": "HTML", "description": "semantic markup" },
-          { "name": "CSS", "description": "responsive design" }
+          {
+            "name": "HTML5",
+            "description": "semantyczna struktura sekcji strony"
+          },
+          {
+            "name": "CSS / SCSS",
+            "description": "responsywne style i układ"
+          },
+          {
+            "name": "Parcel",
+            "description": "bundler projektu i serwer deweloperski"
+          },
+          {
+            "name": "Figma",
+            "description": "pixel-perfect z makiet projektowych"
+          }
         ]
       },
       "img": {
