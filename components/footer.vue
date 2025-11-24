@@ -26,7 +26,8 @@
 </template>
 
 <script setup>
-// No script logic needed for the footer
+import { UIcon } from '#components';
+
 </script>
 
 <style lang="scss" scoped>

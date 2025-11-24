@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import {computed} from "vue";
+import { UCard } from '#components';
 import { useLanguage } from "~/composables/useLanguage";
 import {createCards} from "~/composables/projectsData";
 import ProjectCard from "~/components/project-card.vue";

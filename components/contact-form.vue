@@ -44,7 +44,7 @@
 </template>
 
 <script setup>
-import { reactive, computed, ref } from "vue";
+import { UForm, UFormField, UTextarea, UInput } from '#components';
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "~/composables/useLanguage";
 import {createValidationSchema} from "~/composables/validationSchema";

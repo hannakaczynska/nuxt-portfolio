@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-import { ref, onBeforeUnmount } from "vue";
+import { UCard, UIcon } from '#components';
 import ContactForm from "~/components/contact-form.vue";
 import contact from "~/assets/svg/contact.svg";
 

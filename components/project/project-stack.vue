@@ -25,8 +25,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
+import { UCard } from '#components';
 import { useLanguage } from "~/composables/useLanguage";
 import plDataRaw from "~/i18n/locales/pl.json?raw";
 import enDataRaw from "~/i18n/locales/en.json?raw";

@@ -33,6 +33,7 @@
 </template>
 
 <script setup>
+import { UCard } from '#components';
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useLanguage } from "~/composables/useLanguage";

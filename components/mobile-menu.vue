@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount } from "vue";
 const emit = defineEmits(["closeMenu"]);
 
 const handleWindowClick = (e) => {

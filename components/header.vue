@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { UIcon } from '#components';
 import MobileMenu from "~/components/mobile-menu.vue";
 import { useLanguage } from "~/composables/useLanguage";
 

@@ -21,6 +21,7 @@
 </template>
 
 <script setup>
+import { UCard } from '#components';
 import hero from "~/assets/svg/hero.svg";
 </script>
 

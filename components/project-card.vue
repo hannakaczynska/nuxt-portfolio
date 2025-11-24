@@ -22,6 +22,7 @@
 </template>
 
 <script setup>
+import { UCard, UBadge, UIcon } from '#components';
 const props = defineProps({
   cards: {
     type: Array,
