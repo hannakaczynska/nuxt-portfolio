@@ -16,6 +16,22 @@
   "footer": {
     "madeWith": "Made with ❤️ using Nuxt.js"
   },
+  "about": {
+    "hero": "I’m a system-oriented developer focused on front-end and steadily expanding toward full-stack work. \nI enjoy solving problems, understanding how things fit together, and building clean, user-friendly interfaces.",
+    "stack": [
+      { "name": "Vue 3", "icon": "simple-icons:vuedotjs" },
+      { "name": "Nuxt 4", "icon": "simple-icons:nuxt" },
+      { "name": "React.js", "icon": "simple-icons:react" },
+      { "name": "TypeScript", "icon": "simple-icons:typescript" },
+      { "name": "Node.js", "icon": "simple-icons:nodedotjs" },
+      {"name": "Express", "icon": "simple-icons:express"},
+      { "name": "GraphQL", "icon": "simple-icons:graphql" },
+      { "name": "MongoDB", "icon": "simple-icons:mongodb" },
+      { "name": "Mongoose", "icon": "simple-icons:mongoose" },
+      { "name": "Git", "icon": "simple-icons:git" }
+    ],
+    "story": ""
+  },
   "projects": {
     "destillapp": {
       "title": "DestillApp",
@@ -379,35 +395,35 @@
       "description": "A promotional landing page website created for a fictional ice-cream brand, developed as a team project during the GoIT course. \nThe site was built based on detailed Figma mockups and follows strict UI and branding guidelines. \nDesigned with a mobile-first approach, it features clean visuals, structured content sections, and smooth responsiveness across devices.",
       "work": "team",
       "year": "2022",
-  "features": [
-    {
-      "name": "Responsive Layout",
-      "icon": "i-lucide-smartphone",
-      "list": [
-        "Mobile-first design",
-        "Smooth adaptation across devices",
-        "Clean and structured sections"
-      ]
-    },
-    {
-      "name": "Figma-based UI",
-      "icon": "i-lucide-layout",
-      "list": [
-        "Pixel-perfect sections matching mockups",
-        "Consistent branding and layout",
-        "Team coordination based on shared design"
-      ]
-    },
-    {
-      "name": "Interactive Elements",
-      "icon": "i-lucide-mouse-pointer",
-      "list": [
-        "Navigation linking to specific page sections",
-        "Mobile menu available on smaller devices",
-        "Intro animation displayed on initial page load"
-      ]
-    }
-  ],
+      "features": [
+        {
+          "name": "Responsive Layout",
+          "icon": "i-lucide-smartphone",
+          "list": [
+            "Mobile-first design",
+            "Smooth adaptation across devices",
+            "Clean and structured sections"
+          ]
+        },
+        {
+          "name": "Figma-based UI",
+          "icon": "i-lucide-layout",
+          "list": [
+            "Pixel-perfect sections matching mockups",
+            "Consistent branding and layout",
+            "Team coordination based on shared design"
+          ]
+        },
+        {
+          "name": "Interactive Elements",
+          "icon": "i-lucide-mouse-pointer",
+          "list": [
+            "Navigation linking to specific page sections",
+            "Mobile menu available on smaller devices",
+            "Intro animation displayed on initial page load"
+          ]
+        }
+      ],
       "responsibilities": {
         "overview": "In this project:",
         "list": [
