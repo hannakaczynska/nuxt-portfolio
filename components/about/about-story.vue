@@ -17,21 +17,24 @@
             :href="storyItem.courses[0].pdf"
             target="_blank"
             rel="noopener noreferrer"
-            >{{ storyItem.courses[0].name }}</a
+            class="story_link"
+            >{{ storyItem.courses[0].name }} <UIcon name="i-lucide-external-link" class="inline-icon" /></a
           >
           {{ locale === "en" ? "and" : "i" }}
           <a
             :href="storyItem.courses[1].pdf"
             target="_blank"
             rel="noopener noreferrer"
-            >{{ storyItem.courses[1].name }}</a
-          >
+            class="story_link"
+            >{{ storyItem.courses[1].name }} <UIcon name="i-lucide-external-link" class="inline-icon" /></a
+          >.
           {{ storyItem.texttwo
           }}<a
             :href="storyItem.courses[2].pdf"
             target="_blank"
             rel="noopener noreferrer"
-            >{{ storyItem.courses[2].name }}</a
+            class="story_link"
+            >{{ storyItem.courses[2].name }} <UIcon name="i-lucide-external-link" class="inline-icon" /></a
           >
           {{ storyItem.textthree }}
         </p>
@@ -109,6 +112,19 @@ const myJourney = computed(() => {
   width: 24px;
   height: 24px;
   color: $primary-color;
+}
+
+.story_link {
+    color: $primary-color;
+    font-weight: 500;
+    
+    .inline-icon {
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+        margin-left: 2px;
+        margin-bottom: 2px;
+    }
 }
 
 .story_buttons {
