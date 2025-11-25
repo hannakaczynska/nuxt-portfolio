@@ -11,6 +11,7 @@
           <h4 class="story_title">{{ storyItem.title }}</h4>
           <UIcon :name="storyItem.icon" class="story_icon" />
         </div>
+
         <p v-if="storyItem.textone">
           {{ storyItem.textone }}
           <a
@@ -18,27 +19,35 @@
             target="_blank"
             rel="noopener noreferrer"
             class="story_link"
-            >{{ storyItem.courses[0].name }} <UIcon name="i-lucide-external-link" class="inline-icon" /></a
-          >
+            >{{ storyItem.courses[0].name }}
+            <UIcon name="i-lucide-external-link" class="inline-icon"
+          /></a>
           {{ locale === "en" ? "and" : "i" }}
           <a
             :href="storyItem.courses[1].pdf"
             target="_blank"
             rel="noopener noreferrer"
             class="story_link"
-            >{{ storyItem.courses[1].name }} <UIcon name="i-lucide-external-link" class="inline-icon" /></a
-          >.
-          {{ storyItem.texttwo
+            >{{ storyItem.courses[1].name }}
+            <UIcon name="i-lucide-external-link" class="inline-icon" /></a
+          >. {{ storyItem.texttwo
           }}<a
             :href="storyItem.courses[2].pdf"
             target="_blank"
             rel="noopener noreferrer"
             class="story_link"
-            >{{ storyItem.courses[2].name }} <UIcon name="i-lucide-external-link" class="inline-icon" /></a
-          >
+            >{{ storyItem.courses[2].name }}
+            <UIcon name="i-lucide-external-link" class="inline-icon"
+          /></a>
           {{ storyItem.textthree }}
         </p>
         <p v-else>{{ storyItem.text }}</p>
+        <p v-if="storyItem.li" class="experience-more">
+          {{ storyItem.li }}
+          <a href="https://www.linkedin.com/in/hanna-kaczy%C5%84ska-0b7247224/" target="_blank">
+            LinkedIn <UIcon name="i-lucide-external-link" />
+          </a>
+        </p>
         <div v-if="storyItem.buttons" class="story_buttons">
           <NuxtLink
             v-if="storyItem.buttons.project"
@@ -114,16 +123,37 @@ const myJourney = computed(() => {
   color: $primary-color;
 }
 
+.experience-more {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: $light-grey-color;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      color: $light-grey-color;
+
+      &:hover {
+        color: $third-color;
+      }
+    }
+}
+
 .story_link {
-    color: $primary-color;
-    font-weight: 500;
-    
-    .inline-icon {
-        width: 18px;
-        height: 18px;
-        vertical-align: middle;
-        margin-left: 2px;
-        margin-bottom: 2px;
+  color: $primary-color;
+  font-weight: 500;
+
+  .inline-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-bottom: 2px;
+  }
+
+    &:hover {
+        color: $third-color;
     }
 }
 
@@ -186,6 +216,10 @@ const myJourney = computed(() => {
 @media (min-width: $breakpoint-desktop) {
   .story_cards {
     grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-rows: repeat(4, auto);
+    :last-child {
+      grid-column: 1 / 3;
+    }
   }
 }
 </style>

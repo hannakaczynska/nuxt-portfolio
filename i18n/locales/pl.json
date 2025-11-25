@@ -45,7 +45,8 @@
       "experience": {
         "title": "Doświadczenia, które mnie ukształtowały",
         "icon": "i-lucide-brain-circuit",
-        "text": "Moje wcześniejsze doświadczenia okazały się niezwykle przydatne: praca z systemami jakości nauczyła mnie analitycznego, procesowego podejścia i dokumentowania rozwiązań; prowadzenie mikro firmy — organizacji i łączenia wielu wymagań w jeden spójny system."
+        "text": "Moje wcześniejsze doświadczenia okazały się niezwykle przydatne: praca z systemami jakości nauczyła mnie analitycznego, procesowego podejścia i dokumentowania rozwiązań; prowadzenie mikro firmy — organizacji i łączenia wielu wymagań w jeden spójny system.",
+        "li": "Więcej o moim doświadczeniu:"
       },
       "education": {
         "title": "Budowanie technicznych fundamentów",

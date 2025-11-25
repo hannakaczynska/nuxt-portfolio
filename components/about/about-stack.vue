@@ -53,9 +53,13 @@ const myStack = computed(() => {
   gap: 10px;
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-desktop) {
   .section {
-    margin-bottom: 80px;
+    margin-bottom: 10px;
+  }
+
+  .stack-badges {
+    margin-left: 30px;;
   }
 }
 </style>
