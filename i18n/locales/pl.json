@@ -50,15 +50,32 @@
       "education": {
         "title": "Budowanie technicznych fundamentów",
         "icon": "i-lucide-graduation-cap",
-        "text": "Moje techniczne fundamenty zbudowałam dzięki kursowi Full-stack Developer GoIT i Vue - Complete Guide Udemy. To na tych programach stawiałam pierwsze kroki, poznawałam dobre praktyki i budowałam swoje pierwsze projekty. Szkolenie GitHub Copilot Udemy pomogło usprawnić moją pracę"
+        "textone": "Moje techniczne fundamenty zbudowałam dzięki kursowi",
+        "texttwo": ". To na tych programach stawiałam pierwsze kroki, poznawałam dobre praktyki i budowałam swoje pierwsze projekty. Szkolenie",
+        "textthree": "pomogło usprawnić moją pracę.",
+        "courses": [
+          {
+            "name": "Full-stack Developer GoIT",
+            "pdf": "/certificates/Fullstack-GoIT.pdf"
+          },
+          {
+            "name": "Vue - Complete Guide Udemy",
+            "pdf": "/certificates/Vue-Udemy.pdf"
+          },
+          {
+            "name": "GitHub Copilot Udemy",
+            "pdf": "/certificates/GitHub-Copilot.pdf"
+          }
+        ]
       },
       "project_individual": {
         "title": "Pierwszy indywidualny projekt",
         "icon": "i-lucide-biceps-flexed",
         "text": "Najwięcej nauczyłam się, tworząc mój pierwszy indywidualny projekt full-stack — DestillApp. Sama dobrałam technologie, zaprojektowałam architekturę, tworzyłam funkcjonalności bez gotowych makiet czy wytycznych. Było to wyzwanie, momentami frustrujące, ale też niezwykle rozwijające.",
         "buttons": {
-          "project": "",
-          "projects": ""
+          "project": "/projects/destillapp",
+          "projectName": "DestillApp",
+          "projects": "/projects"
         }
       },
       "project_team": {
@@ -66,8 +83,9 @@
         "icon": "i-lucide-heart-handshake",
         "text": "W projekcie zespołowym Filmoteka po raz pierwszy poczułam, na czym polega prawdziwa praca zespołowa w IT: wspólne cele, dzielenie się zadaniami, wspieranie się i wspólne rozwiązywanie problemów. To doświadczenie utwierdziło mnie, że chcę dalej rozwijać się w tej branży.",
         "buttons": {
-          "project": "",
-          "projects": ""
+          "project": "/projects/filmoteka",
+          "projectName": "Filmoteka",
+          "projects": "/projects"
         }
       },
       "now": {
