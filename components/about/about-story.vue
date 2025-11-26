@@ -182,7 +182,7 @@ const myJourney = computed(() => {
 
 .btn-project {
   background-color: $white;
-  border: 2px solid $primary-color;
+  border: 2px solid $third-color;
   color: $text-color;
 
   &:hover {
@@ -191,11 +191,11 @@ const myJourney = computed(() => {
 }
 
 .btn-projects {
-  background-color: $primary-color;
+  background-color: $third-color;
   color: $white;
 
   &:hover {
-    background-color: $third-color;
+    background-color: $primary-color;
   }
 }
 

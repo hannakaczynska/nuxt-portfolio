@@ -94,6 +94,10 @@
         "icon": "i-lucide-rocket",
         "text": "Dziś kierują mną ciekawość, wytrwałość i chęć budowania rzeczy, które mają sens — ulepszają, porządkują, pomagają. Lubię dobre praktyki, jasną komunikację i projekty, w których całość jest większa niż suma części."
       }
+    },
+    "cta" : {
+      "title": "Masz dla mnie wyzwanie? Porozmawiajmy.",
+      "text": "Z przyjemnością dołączę do zespołu, w którym mogę się rozwijać i wnosić wartość."
     }
   },
   "projects": {

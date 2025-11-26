@@ -24,13 +24,80 @@
       { "name": "React.js", "icon": "simple-icons:react" },
       { "name": "TypeScript", "icon": "simple-icons:typescript" },
       { "name": "Node.js", "icon": "simple-icons:nodedotjs" },
-      {"name": "Express", "icon": "simple-icons:express"},
+      { "name": "Express", "icon": "simple-icons:express" },
       { "name": "GraphQL", "icon": "simple-icons:graphql" },
       { "name": "MongoDB", "icon": "simple-icons:mongodb" },
       { "name": "Mongoose", "icon": "simple-icons:mongoose" },
       { "name": "Git", "icon": "simple-icons:git" }
     ],
-    "story": ""
+    "story": {
+      "intro": {
+        "title": "How It All Started",
+        "icon": "i-lucide-lightbulb",
+        "text": "A few years ago, I felt like I was standing still — I was missing growth, an engaged team, and projects that truly excited me. Then I accidentally stumbled upon a programming webinar. I joined “just out of curiosity,” but quickly realized it was something for me — logical, creative, and full of challenges. Within a few days, I decided to start learning."
+      },
+      "first_steps": {
+        "title": "My First Steps in Programming",
+        "icon": "i-lucide-puzzle",
+        "text": "From the beginning, I was fascinated by how code fits together like a puzzle. Every problem felt like a mini-challenge, every step meant growth, and the first results appeared almost instantly. Over time, I started to understand application architecture more deeply — and it gave me huge satisfaction."
+      },
+      "experience": {
+        "title": "Experiences That Shaped Me",
+        "icon": "i-lucide-brain-circuit",
+        "text": "My previous experience turned out to be extremely valuable: working with quality systems taught me analytical and process-oriented thinking and documenting solutions; running a micro-business taught me organization and combining many requirements into one coherent system.",
+        "li": "More about my experience:"
+      },
+      "education": {
+        "title": "Building My Technical Foundations",
+        "icon": "i-lucide-graduation-cap",
+        "textone": "I built my technical foundations thanks to the",
+        "texttwo": "These programs helped me take my first steps, learn good practices, and build my first projects. The ",
+        "textthree": "training helped me streamline my workflow.",
+        "courses": [
+          {
+            "name": "Full-stack Developer GoIT",
+            "pdf": "/certificates/Fullstack-GoIT.pdf"
+          },
+          {
+            "name": "Vue - Complete Guide Udemy",
+            "pdf": "/certificates/Vue-Udemy.pdf"
+          },
+          {
+            "name": "GitHub Copilot Udemy",
+            "pdf": "/certificates/GitHub-Copilot.pdf"
+          }
+        ]
+      },
+      "project_individual": {
+        "title": "My First Individual Project",
+        "icon": "i-lucide-biceps-flexed",
+        "text": "I learned the most while building my first individual full-stack project — DestillApp. I chose the technologies myself, designed the architecture, and created the features without ready-made mockups or guidelines. It was challenging, sometimes frustrating, but incredibly rewarding.",
+        "buttons": {
+          "project": "/projects/destillapp",
+          "projectName": "DestillApp",
+          "projects": "/projects"
+        }
+      },
+      "project_team": {
+        "title": "Teamwork",
+        "icon": "i-lucide-heart-handshake",
+        "text": "In the team project Filmoteka, I first experienced what real teamwork in IT feels like: shared goals, task distribution, supporting each other, and solving problems together. This experience confirmed that I want to keep growing in this field.",
+        "buttons": {
+          "project": "/projects/filmoteka",
+          "projectName": "Filmoteka",
+          "projects": "/projects"
+        }
+      },
+      "now": {
+        "title": "What Drives Me Today",
+        "icon": "i-lucide-rocket",
+        "text": "Today I’m driven by curiosity, persistence, and the desire to build things that make sense — improve, organize, help. I value good practices, clear communication, and projects where the whole is greater than the sum of its parts."
+      }
+    },
+    "cta": {
+      "title": "Got a challenge for me? Let’s talk.",
+      "text": "I’d be happy to join a team where I can grow and bring real value."
+    }
   },
   "projects": {
     "destillapp": {
