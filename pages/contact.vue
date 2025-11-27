@@ -42,7 +42,7 @@
           </a>
         </nav>
       </section>
-      <img :src="contact" alt="Work Together Image" class="contact_image" />
+      <img src="/svg/contact.svg" alt="Work Together Image" class="contact_image" />
       <ContactForm class="contact_form" />
     </div>
   </UCard>
@@ -51,7 +51,6 @@
 <script setup>
 import { UCard, UIcon } from '#components';
 import ContactForm from "~/components/contact-form.vue";
-import contact from "~/assets/svg/contact.svg";
 
 const isCopied = ref(false);
 
