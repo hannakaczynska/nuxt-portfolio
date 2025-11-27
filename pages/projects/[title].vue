@@ -1,19 +1,7 @@
 <template>
   <UCard>
     <div class="card">
-      <nav class="nav">
-        <NuxtLink :to="localePath('/projects')" class="link">
-          <UIcon name="i-lucide-move-left" class="arrow" />{{
-        lang === "en" ? "Projects" : "Projekty"
-          }}
-        </NuxtLink>
-        <NuxtLink :to="localePath(`/projects/${nextProject}`)" class="link">
-          {{ lang === "en" 
-            ? enData.projects[nextProject]?.title || 'Next Project'
-            : plData.projects[nextProject]?.title || 'Następny Projekt' }}
-          <UIcon name="i-lucide-move-right" class="arrow" />
-        </NuxtLink>
-      </nav>
+      <ProjectNavigation />
       <div class="section_container">
         <div class="grid-container">
           <ProjectIntro class="intro" />
@@ -22,6 +10,7 @@
         <ProjectFeatures />
         <ProjectResponsibility />
         <ProjectStack />
+        <ProjectNavigation />
         <ProjectCarousel
           :images="[
             '/projects/wallet-app/screen1',
@@ -36,69 +25,16 @@
 
 <script setup>
 import { UCard } from '#components';
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import { useLanguage } from "~/composables/useLanguage";
 import ProjectCarousel from "~/components/project/project-carousel.vue";
 import ProjectIntro from "~/components/project/project-intro.vue";
 import ProjectFeatures from "~/components/project/project-features";
 import ProjectStack from "~/components/project/project-stack";
 import ProjectOverview from "~/components/project/project-overview";
 import ProjectResponsibility from "~/components/project/project-responsibilities";
-import plDataRaw from "~/i18n/locales/pl.json?raw";
-import enDataRaw from "~/i18n/locales/en.json?raw";
-
-const enData = JSON.parse(enDataRaw);
-const plData = JSON.parse(plDataRaw);
-
-const { lang } = useLanguage();
-const localePath = useLocalePath();
-
-const route = useRoute();
-const projectTitle = route.params.title;
-
-const ALL_PROJECTS = [
-  "destillapp",
-  "wallet-app",
-  "portfolio",
-  "filmoteka",
-  "icecream-shop",
-];
-
-const currentIndex = computed(() => {
-  return ALL_PROJECTS.findIndex((project) => project === projectTitle);
-});
-
-const nextProject = computed(() => {
-  const nextIndex = (currentIndex.value + 1) % ALL_PROJECTS.length;
-  return ALL_PROJECTS[nextIndex];
-});
+import ProjectNavigation from "~/components/project/project-navigation.vue";
 </script>
 
 <style lang="scss" scoped>
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 10px;
-}
-
-.link {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  align-items: center;
-  color: $light-grey-color;
-  cursor: pointer;
-}
-
-.arrow {
-  width: 18px;
-  height: 18px;
-  color: $light-grey-color;
-  cursor: pointer;
-}
-
 .section_container {
   display: flex;
   flex-direction: column;
@@ -109,29 +45,11 @@ const nextProject = computed(() => {
   .card {
     padding: 1rem;
   }
-
-  .nav {
-    font-size: 14px;
-  }
-
-  .arrow {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 @media (min-width: $breakpoint-desktop) {
   .card {
     padding: 2rem;
-  }
-
-  .nav {
-    font-size: 16px;
-  }
-
-  .arrow {
-    width: 22px;
-    height: 22px;
   }
 
   .section_container {

@@ -1,0 +1,98 @@
+<template>
+  <nav class="nav">
+    <NuxtLink :to="localePath('/projects')" class="link">
+      <UIcon name="i-lucide-move-left" class="arrow" />
+      {{ lang === "en" ? "Projects" : "Projekty" }}
+    </NuxtLink>
+    <NuxtLink :to="localePath(`/projects/${nextProject}`)" class="link">
+      {{ lang === "en" 
+        ? enData.projects[nextProject]?.title || 'Next Project'
+        : plData.projects[nextProject]?.title || 'Następny Projekt' }}
+      <UIcon name="i-lucide-move-right" class="arrow" />
+    </NuxtLink>
+  </nav>
+</template>
+
+<script setup>
+import { UIcon } from '#components';
+import { useLanguage } from "~/composables/useLanguage";
+import plDataRaw from "~/i18n/locales/pl.json?raw";
+import enDataRaw from "~/i18n/locales/en.json?raw";
+
+const enData = JSON.parse(enDataRaw);
+const plData = JSON.parse(plDataRaw);
+
+const { lang } = useLanguage();
+const localePath = useLocalePath();
+
+const route = useRoute();
+const projectTitle = route.params.title;
+
+const ALL_PROJECTS = [
+  "destillapp",
+  "wallet-app",
+  "portfolio",
+  "filmoteka",
+  "icecream-shop",
+];
+
+const currentIndex = computed(() => {
+  return ALL_PROJECTS.findIndex((project) => project === projectTitle);
+});
+
+const nextProject = computed(() => {
+  const nextIndex = (currentIndex.value + 1) % ALL_PROJECTS.length;
+  return ALL_PROJECTS[nextIndex];
+});
+</script>
+
+<style lang="scss" scoped>
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  color: $light-grey-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $third-color;
+  }
+}
+
+.arrow {
+  width: 18px;
+  height: 18px;
+  color: $light-grey-color;
+  cursor: pointer;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .nav {
+    font-size: 14px;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .nav {
+    font-size: 16px;
+  }
+
+  .arrow {
+    width: 22px;
+    height: 22px;
+  }
+}
+</style>
