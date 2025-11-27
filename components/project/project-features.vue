@@ -1,7 +1,7 @@
 <template>
   <section>
     <h3 class="section_title">
-      {{ locale === "en" ? "Key features" : "Kluczowe funkcje" }}
+      {{ lang === "en" ? "Key features" : "Kluczowe funkcje" }}
     </h3>
     <div class="card_container">
       <UCard v-for="(feature, index) in projectFeatures" class="feature_card">
@@ -30,13 +30,13 @@ import enDataRaw from "~/i18n/locales/en.json?raw";
 const enData = JSON.parse(enDataRaw);
 const plData = JSON.parse(plDataRaw);
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
 
 const route = useRoute();
 const projectTitle = route.params.title;
 
 const projectFeatures = computed(() => {
-  const data = locale.value === "en" ? enData : plData;
+  const data = lang.value === "en" ? enData : plData;
   return data.projects[projectTitle].features;
 });
 </script>

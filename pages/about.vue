@@ -1,15 +1,15 @@
 <template>
   <UCard>
     <div class="card">
-      <h2 class="card_title">{{ locale === "en" ? "About" : "O mnie" }}</h2>
+      <h2 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h2>
       <div class="grid-container">
       <AboutHero class="hero" />
       <AboutStack  class="stack"/>    
     </div> 
       <div class="contact_link">
-      <NuxtLink to="/contact">
+      <NuxtLink :to="localePath('/contact')">
         <button type="button" class="btn_contact">
-          {{ locale === "en" ? "Contact" : "Kontakt" }}
+          {{ lang === "en" ? "Contact" : "Kontakt" }}
         </button>
       </NuxtLink>
       </div> 
@@ -27,7 +27,9 @@ import AboutStack from "~/components/about/about-stack.vue";
 import AboutHero from "~/components/about/about-hero.vue";
 import AboutCta from "~/components/about/avout-cta.vue"; 
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
+
+const localePath = useLocalePath();
 </script>
 
 <style lang="scss" scoped>

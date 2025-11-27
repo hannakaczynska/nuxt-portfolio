@@ -1,13 +1,13 @@
 <template>
         <section >
-      <h3 class="section_title">{{ locale === "en" ? "Overview" : "Opis" }}</h3>
+      <h3 class="section_title">{{ lang === "en" ? "Overview" : "Opis" }}</h3>
       <p class="break">{{ $t(`projects.${projectTitle}.description`) }}</p>
     </section>
     </template>
 
     <script setup>
     import { useLanguage } from "~/composables/useLanguage";
-const { locale } = useLanguage();
+const { lang } = useLanguage();
 
 const route = useRoute();
 const projectTitle = route.params.title;

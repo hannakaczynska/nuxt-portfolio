@@ -6,12 +6,12 @@
       <img :src="hero" alt="Hero Image" class="hero_image" />
     </section>
     <nav class="hero-actions">
-      <NuxtLink to="/about">
+      <NuxtLink :to="localePath('/about')">
         <button type="button" class="hero-btn hero-btn-about">
           {{ $t("nav.about") }}
         </button>
       </NuxtLink>
-      <NuxtLink to="/projects">
+      <NuxtLink :to="localePath('/projects')">
         <button type="button" class="hero-btn hero-btn-projects">
           {{ $t("nav.projects") }}
         </button>
@@ -23,6 +23,8 @@
 <script setup>
 import { UCard } from '#components';
 import hero from "~/assets/svg/hero.svg";
+
+const localePath = useLocalePath();
 </script>
 
 <style lang="scss" scoped>

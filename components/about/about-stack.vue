@@ -29,10 +29,10 @@ import enDataRaw from "~/i18n/locales/en.json?raw";
 const enData = JSON.parse(enDataRaw);
 const plData = JSON.parse(plDataRaw);
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
 
 const myStack = computed(() => {
-  const data = locale.value === "en" ? enData : plData;
+  const data = lang.value === "en" ? enData : plData;
   return data.about.stack;
 });
 </script>

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h3>{{ locale === "en" ? "My story" : "Moja historia" }}</h3>
+    <h3>{{ lang === "en" ? "My story" : "Moja historia" }}</h3>
     <div class="story_cards">
       <UCard
         v-for="(storyItem, key) in myJourney"
@@ -22,7 +22,7 @@
             >{{ storyItem.courses[0].name }}
             <UIcon name="i-lucide-external-link" class="inline-icon"
           /></a>
-          {{ locale === "en" ? "and" : "i" }}
+          {{ lang === "en" ? "and" : "i" }}
           <a
             :href="storyItem.courses[1].pdf"
             target="_blank"
@@ -51,7 +51,7 @@
         <div v-if="storyItem.buttons" class="story_buttons">
           <NuxtLink
             v-if="storyItem.buttons.project"
-            :to="storyItem.buttons.project"
+            :to="localePath(storyItem.buttons.project)"
           >
             <button type="button" class="btn btn-project">
               {{ storyItem.buttons.projectName }}
@@ -59,10 +59,10 @@
           </NuxtLink>
           <NuxtLink
             v-if="storyItem.buttons.projects"
-            :to="storyItem.buttons.projects"
+            :to="localePath(storyItem.buttons.projects)"
           >
             <button type="button" class="btn btn-projects">
-              {{ locale === "en" ? "Projects" : "Projekty" }}
+              {{ lang === "en" ? "Projects" : "Projekty" }}
             </button>
           </NuxtLink>
         </div>
@@ -80,11 +80,12 @@ import enDataRaw from "~/i18n/locales/en.json?raw";
 const enData = JSON.parse(enDataRaw);
 const plData = JSON.parse(plDataRaw);
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
+const localePath = useLocalePath();
 
 const myJourney = computed(() => {
-  const data = locale.value === "en" ? enData : plData;
-  return data.about.story;
+  const data = lang.value === "en" ? enData : plData;
+  return data.about?.story || [];
 });
 </script>
 

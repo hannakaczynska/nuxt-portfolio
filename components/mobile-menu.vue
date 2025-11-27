@@ -1,13 +1,13 @@
 <template>
   <nav class="mobile-menu" @click="navigate">
-    <NuxtLink to="/" class="mobile-menu_link">{{ $t("nav.home") }}</NuxtLink>
-    <NuxtLink to="/about" class="mobile-menu_link">{{
+    <NuxtLink :to="localePath('/')" class="mobile-menu_link">{{ $t("nav.home") }}</NuxtLink>
+    <NuxtLink :to="localePath('/about')" class="mobile-menu_link">{{
       $t("nav.about")
     }}</NuxtLink>
-    <NuxtLink to="/projects" class="mobile-menu_link">{{
+    <NuxtLink :to="localePath('/projects')" class="mobile-menu_link">{{
       $t("nav.projects")
     }}</NuxtLink>
-    <NuxtLink to="/contact" class="mobile-menu_link">{{
+    <NuxtLink :to="localePath('/contact')" class="mobile-menu_link">{{
       $t("nav.contact")
     }}</NuxtLink>
   </nav>
@@ -15,6 +15,8 @@
 
 <script setup>
 const emit = defineEmits(["closeMenu"]);
+
+const localePath = useLocalePath();
 
 const handleWindowClick = (e) => {
   if (e.target.closest(".mobile-menu") ||
@@ -52,7 +54,7 @@ const navigate = (e) => {
   border-bottom-right-radius: 20px;
   top: 56px;
   left: 0;
-  width: 100px;
+  width: 200px;
   padding: 1rem 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;

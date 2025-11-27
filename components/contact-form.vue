@@ -8,7 +8,7 @@
     <UFormField name="name" class="form-field">
       <UInput
         v-model="state.name"
-        :placeholder="locale === 'en' ? 'Name' : 'Imię'"
+        :placeholder="lang === 'en' ? 'Name' : 'Imię'"
         color="neutral"
         class="form-input"
       />
@@ -29,7 +29,7 @@
         :rows="12"
         v-model="state.message"
         :placeholder="
-          locale === 'en' ? 'Your message...' : 'Twoja wiadomość...'
+          lang === 'en' ? 'Your message...' : 'Twoja wiadomość...'
         "
         class="form-input"
         color="neutral"
@@ -37,7 +37,7 @@
     </UFormField>
 
     <button type="submit" class="form-btn">
-      {{ locale === "en" ? "Submit" : "Wyślij" }}
+      {{ lang === "en" ? "Submit" : "Wyślij" }}
     </button>
     <p v-if="status" class="form_status small">{{ status }}</p>
   </UForm>
@@ -49,7 +49,7 @@ import emailjs from "@emailjs/browser";
 import { useLanguage } from "~/composables/useLanguage";
 import {createValidationSchema} from "~/composables/validationSchema";
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
 
 const config = useRuntimeConfig()
 
@@ -76,11 +76,11 @@ const onSubmit = async () => {
       config.public.emailjsPublicKey
     );
 
-    status.value = locale === "en" ? "Message sent!" : "Wiadomość wysłana!";
+    status.value = lang === "en" ? "Message sent!" : "Wiadomość wysłana!";
     state.name = state.email = state.message = "";
   } catch (err) {
     console.error(err);
-    status.value = locale === "en" ? "❌ Something went wrong. Please try again." : "❌ Coś poszło nie tak. Spróbuj ponownie.";
+    status.value = lang === "en" ? "❌ Something went wrong. Please try again." : "❌ Coś poszło nie tak. Spróbuj ponownie.";
   }
 };
 </script>

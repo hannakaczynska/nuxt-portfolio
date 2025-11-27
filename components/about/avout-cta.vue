@@ -3,15 +3,18 @@
     <h3>{{ $t("about.cta.title") }}</h3>
     <p>{{ $t("about.cta.text") }}</p>
     <nav class="about_cta_nav">
-      <NuxtLink to="/contact"
+      <NuxtLink :to="localePath('/contact')"
         ><button class="btn btn-contact">
-          {{ locale === "en" ? "Contact" : "Kontakt" }}
+          {{ lang === "en" ? "Contact" : "Kontakt" }}
         </button></NuxtLink
       >
-      <NuxtLink to="/projects"
-        ><button class="btn btn-projects">
-          {{ locale === "en" ? "Projects" : "Projekty" }}
-        </button></NuxtLink
+      <a
+        href="https://example.com/my-cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="story_link"
+      >
+        <button class="btn btn-cv">CV</button></a
       >
     </nav>
     <img :src="cat" alt="Cat Image" class="cat_image" />
@@ -22,7 +25,8 @@
 import { useLanguage } from "~/composables/useLanguage";
 import cat from "~/assets/svg/cat.svg";
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
+const localePath = useLocalePath();
 </script>
 
 <style lang="scss" scoped>
@@ -57,10 +61,11 @@ const { locale } = useLanguage();
   }
 }
 
-.btn-projects {
+.btn-cv {
   background-color: $white;
   border: 2px solid $primary-color;
   color: $text-color;
+  padding-inline: 25px;
 
   &:hover {
     background-color: $secondary-color;

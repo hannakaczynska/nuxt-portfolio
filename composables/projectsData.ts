@@ -2,13 +2,13 @@ import { useLanguage } from "~/composables/useLanguage";
 import { ref } from "vue";
 
 export const createCards = () => {
-  const { locale } = useLanguage();
+  const { lang } = useLanguage();
 
   const soloCards = ref([
     {
       title: "DestillApp (Full Stack Web App)",
       description:
-        locale.value === "en"
+        lang.value === "en"
           ? "Web app for managing and documenting craft-scale essential oil distillation. Built with full-stack Vue & Node.js architecture."
           : "Aplikacja webowa do zarządzania i dokumentowania destylacji olejków eterycznych w małej skali, zbudowana w pełnym stacku Vue i Node.js.",
       stack: [
@@ -22,7 +22,7 @@ export const createCards = () => {
     },
     {
       title: "Wallet App (Full Stack Web App)",
-      description: locale.value === "en" ?
+      description: lang.value === "en" ?
         "Personal finance manager with transaction tracking, interactive charts, and secure authentication. Built with React.js and Node.js."
         : "Menedżer finansów osobistych z śledzeniem transakcji, interaktywnymi wykresami i bezpiecznym logowaniem, zbudowany w React.js i Node.js.",
       stack: [
@@ -37,7 +37,7 @@ export const createCards = () => {
     {
       title: "Developer Portfolio (Nuxt 3, SSR)",
       description:
-        locale.value === "en"
+        lang.value === "en"
           ? "Responsive portfolio built with Nuxt.js and server-side rendering. Includes bilingual (PL/EN) support and a contact form powered by EmailJS."
           : "Responsywne portfolio zbudowane w Nuxt.js z renderowaniem po stronie serwera. Obsługuje dwa języki (PL/EN) oraz formularz kontaktowy z EmailJS.",
       stack: [
@@ -55,7 +55,7 @@ export const createCards = () => {
     {
       title: "Filmoteka",
       description:
-        locale.value === "en"
+        lang.value === "en"
           ? "Movie search app with trailers, detailed info and a personalized watchlist. Built with JavaScript and REST API."
           : "Aplikacja do wyszukiwania filmów z trailerami, szczegółowymi informacjami i spersonalizowaną listą do obejrzenia. Zbudowana w JavaScript i REST API.",
       stack: [
@@ -68,7 +68,7 @@ export const createCards = () => {
     },
     {
       title: "IceCream Shop",
-      description: locale.value === "en" ?
+      description: lang.value === "en" ?
         "Responsive landing page for a fictional ice-cream brand, built from Figma designs."
         : "Responsywny landing page dla fikcyjnej marki lodowej, wykonany na podstawie projektu w Figma.",
       stack: [

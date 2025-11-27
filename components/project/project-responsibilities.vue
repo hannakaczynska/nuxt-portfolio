@@ -1,7 +1,7 @@
 <template>
   <section>
     <h3 class="section_title">
-      {{ locale === "en" ? "My responsibilities" : "Moje zadania" }}
+      {{ lang === "en" ? "My responsibilities" : "Moje zadania" }}
     </h3>
     <ul class="responsibilities_list">
       <h4 class="list_title">{{ projectResp.overview }}</h4>
@@ -25,12 +25,12 @@ import enDataRaw from "~/i18n/locales/en.json?raw";
 const enData = JSON.parse(enDataRaw);
 const plData = JSON.parse(plDataRaw);
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
 const route = useRoute();
 const projectTitle = route.params.title;
 
 const projectResp = computed(() => {
-  const data = locale.value === "en" ? enData : plData;
+  const data = lang.value === "en" ? enData : plData;
   return data.projects[projectTitle].responsibilities;
 });
 </script>

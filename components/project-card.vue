@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink v-for="(card, index) in cards" :key="index" :to="card.to">
+    <NuxtLink v-for="(card, index) in cards" :key="index" :to="localePath(card.to)">
       <UCard>
         <section>
         <h3>{{ card.title }}</h3>
@@ -23,6 +23,9 @@
 
 <script setup>
 import { UCard, UBadge, UIcon } from '#components';
+
+const localePath = useLocalePath();
+
 const props = defineProps({
   cards: {
     type: Array,

@@ -8,14 +8,14 @@
     />
     <MobileMenu v-if="isMenuOpen" @closeMenu="closeMenu" />
     <nav class="header_nav">
-      <NuxtLink to="/">{{$t("nav.home") }}</NuxtLink>
-      <NuxtLink to="/about">{{$t("nav.about") }}</NuxtLink>
-      <NuxtLink to="/projects">{{$t("nav.projects") }}</NuxtLink>
-      <NuxtLink to="/contact">{{$t("nav.contact") }}</NuxtLink>
+      <NuxtLink :to="localePath('/')">{{$t("nav.home") }}</NuxtLink>
+      <NuxtLink :to="localePath('/about')">{{$t("nav.about") }}</NuxtLink>
+      <NuxtLink :to="localePath('/projects')">{{$t("nav.projects") }}</NuxtLink>
+      <NuxtLink :to="localePath('/contact')">{{$t("nav.contact") }}</NuxtLink>
     </nav>
-    <button class="header_button" @click="switchLanguage(locale === 'en' ? 'pl' : 'en')">
+    <button class="header_button" @click="switchLanguage(lang === 'en' ? 'pl' : 'en')">
       <UIcon name="i-lucide-globe" size="20" />
-  <span class="header_button-text">{{ locale === "en" ? "EN" : "PL" }}</span>
+  <span class="header_button-text">{{ lang === "en" ? "EN" : "PL" }}</span>
     </button>
   </header>
 </template>
@@ -27,7 +27,8 @@ import { useLanguage } from "~/composables/useLanguage";
 
 const isMenuOpen = ref(false);
 
-const { locale, switchLanguage } = useLanguage();
+const {lang, switchLanguage } = useLanguage();
+const localePath = useLocalePath();
 
 const closeMenu = () => {
   isMenuOpen.value = false;

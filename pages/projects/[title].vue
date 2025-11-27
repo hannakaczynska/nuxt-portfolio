@@ -2,13 +2,15 @@
   <UCard>
     <div class="card">
       <nav class="nav">
-        <NuxtLink to="/projects" class="link">
+        <NuxtLink :to="localePath('/projects')" class="link">
           <UIcon name="i-lucide-move-left" class="arrow" />{{
-            locale === "en" ? "Projects" : "Projekty"
+        lang === "en" ? "Projects" : "Projekty"
           }}
         </NuxtLink>
-        <NuxtLink :to="`/projects/${nextProject}`" class="link">
-          {{ $t(`projects.${nextProject}.title`) }}
+        <NuxtLink :to="localePath(`/projects/${nextProject}`)" class="link">
+          {{ lang === "en" 
+            ? enData.projects[nextProject]?.title || 'Next Project'
+            : plData.projects[nextProject]?.title || 'Następny Projekt' }}
           <UIcon name="i-lucide-move-right" class="arrow" />
         </NuxtLink>
       </nav>
@@ -49,7 +51,8 @@ import enDataRaw from "~/i18n/locales/en.json?raw";
 const enData = JSON.parse(enDataRaw);
 const plData = JSON.parse(plDataRaw);
 
-const { locale } = useLanguage();
+const { lang } = useLanguage();
+const localePath = useLocalePath();
 
 const route = useRoute();
 const projectTitle = route.params.title;

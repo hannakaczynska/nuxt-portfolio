@@ -2,13 +2,19 @@
   <section class="section_intro">
     <h2 class="project_title">{{ $t(`projects.${projectTitle}.title`) }}</h2>
     <nav class="project_nav">
-      <NuxtLink :to="$t(`projects.${projectTitle}.demo`)" class="project_link"
-        >[Live Demo]</NuxtLink
-      >
+      <a
+        :href="$t(`projects.${projectTitle}.demo`)"
+        class="project_link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >[Live Demo]</a>
       <span>•</span>
-      <NuxtLink :to="$t(`projects.${projectTitle}.github`)" class="project_link"
-        >[GitHub]</NuxtLink
-      >
+      <a
+        :href="$t(`projects.${projectTitle}.github`)"
+        class="project_link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >[GitHub]</a>
     </nav>
     <span class="project_info small"
       >{{ $t(`projects.${projectTitle}.work`) }} |
