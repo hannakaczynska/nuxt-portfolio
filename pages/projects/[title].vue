@@ -11,13 +11,13 @@
         <ProjectResponsibility />
         <ProjectStack />
         <ProjectNavigation />
-        <ProjectCarousel
+        <ProjectCarousel v-if="projectTitle !== 'portfolio'"
           :images="[
-            '/projects/wallet-app/screen1',
-            '/projects/wallet-app/screen2',
-            '/projects/wallet-app/screen3',
-            '/projects/wallet-app/screen4',
-            '/projects/wallet-app/screen5',
+            `/projects/${projectTitle}/screen1`,
+            `/projects/${projectTitle}/screen2`,
+            `/projects/${projectTitle}/screen3`,
+            `/projects/${projectTitle}/screen4`,
+            `/projects/${projectTitle}/screen5`,
           ]"
         />
       </div>
@@ -34,6 +34,9 @@ import ProjectStack from "~/components/project/project-stack";
 import ProjectOverview from "~/components/project/project-overview";
 import ProjectResponsibility from "~/components/project/project-responsibilities";
 import ProjectNavigation from "~/components/project/project-navigation.vue";
+
+const route = useRoute();
+const projectTitle = route.params.title;
 </script>
 
 <style lang="scss" scoped>

@@ -242,9 +242,9 @@
         ]
       },
       "img": {
-        "avif": "/images/wallet-app.avif",
-        "webp": "/images/wallet-app.webp",
-        "png": "/images/wallet-app.png"
+        "avif": "/images/destillapp.avif",
+        "webp": "/images/destillapp.webp",
+        "png": "/images/destillapp.png"
       }
     },
     "wallet-app": {
