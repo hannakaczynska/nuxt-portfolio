@@ -16,6 +16,8 @@
             '/projects/wallet-app/screen1',
             '/projects/wallet-app/screen2',
             '/projects/wallet-app/screen3',
+            '/projects/wallet-app/screen4',
+            '/projects/wallet-app/screen5',
           ]"
         />
       </div>
@@ -24,7 +26,7 @@
 </template>
 
 <script setup>
-import { UCard } from '#components';
+import { UCard } from "#components";
 import ProjectCarousel from "~/components/project/project-carousel.vue";
 import ProjectIntro from "~/components/project/project-intro.vue";
 import ProjectFeatures from "~/components/project/project-features";
