@@ -83,6 +83,7 @@ const projectTitle = route.params.title;
 .project_link,
 .project_nav span {
   color: $primary-color;
+  transition: color .25s ease-out;
 }
 
 .project_link {

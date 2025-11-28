@@ -97,6 +97,7 @@ onBeforeUnmount(() => {
 
 .contact_email {
   font-size: 11px;
+  transition: color .25s ease-out;
   &:hover {
     font-weight: 400;
     color: $third-color;
@@ -116,7 +117,7 @@ onBeforeUnmount(() => {
 
   a {
     color: $text-color;
-    transition: color 0.3s ease;
+    transition: color .25s ease-out;
 
     &:hover {
       color: $third-color;

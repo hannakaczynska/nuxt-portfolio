@@ -5,16 +5,18 @@
       {{ lang === "en" ? "Projects" : "Projekty" }}
     </NuxtLink>
     <NuxtLink :to="localePath(`/projects/${nextProject}`)" class="link">
-      {{ lang === "en" 
-        ? enData.projects[nextProject]?.title || 'Next Project'
-        : plData.projects[nextProject]?.title || 'Następny Projekt' }}
+      {{
+        lang === "en"
+          ? enData.projects[nextProject]?.title || "Next Project"
+          : plData.projects[nextProject]?.title || "Następny Projekt"
+      }}
       <UIcon name="i-lucide-move-right" class="arrow" />
     </NuxtLink>
   </nav>
 </template>
 
 <script setup>
-import { UIcon } from '#components';
+import { UIcon } from "#components";
 import { useLanguage } from "~/composables/useLanguage";
 import plDataRaw from "~/i18n/locales/pl.json?raw";
 import enDataRaw from "~/i18n/locales/en.json?raw";
@@ -61,17 +63,25 @@ const nextProject = computed(() => {
   align-items: center;
   color: $light-grey-color;
   cursor: pointer;
+  transition: color 0.25s ease-out;
 
   &:hover {
     color: $third-color;
   }
 }
 
+/* Move .arrow outside of .link for proper specificity */
 .arrow {
   width: 18px;
   height: 18px;
   color: $light-grey-color;
   cursor: pointer;
+  transition: color 0.25s ease-out;
+}
+
+/* Hover effect for arrow when link is hovered */
+.link:hover .arrow {
+  color: $third-color;
 }
 
 @media (min-width: $breakpoint-tablet) {

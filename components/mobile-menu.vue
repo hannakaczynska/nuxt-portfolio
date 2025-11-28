@@ -30,10 +30,20 @@ const handleWindowClick = (e) => {
 
 onMounted(() => {
   window.addEventListener("click", handleWindowClick);
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 767) {
+      emit("closeMenu");
+    }
+  });
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("click", handleWindowClick);
+  window.removeEventListener("resize", () => {
+    if (window.innerWidth > 767) {
+      emit("closeMenu");
+    }
+  });
 });
 
 const navigate = (e) => {

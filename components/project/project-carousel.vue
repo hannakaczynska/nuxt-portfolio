@@ -76,6 +76,8 @@ const props = defineProps({
   opacity: 1;
   transform: scale(1);
   z-index: 1;
+  border: 1px solid $light-grey-color;
+  border-radius: 12px;
 }
 
 img {

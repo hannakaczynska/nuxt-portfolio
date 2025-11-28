@@ -134,6 +134,7 @@ const myJourney = computed(() => {
         align-items: center;
         gap: 4px;
       color: $light-grey-color;
+      transition: color .25s ease-out;
 
       &:hover {
         color: $third-color;
@@ -144,6 +145,7 @@ const myJourney = computed(() => {
 .story_link {
   color: $primary-color;
   font-weight: 500;
+  transition: color .25s ease-out;
 
   .inline-icon {
     width: 18px;
@@ -151,6 +153,7 @@ const myJourney = computed(() => {
     vertical-align: middle;
     margin-left: 2px;
     margin-bottom: 2px;
+    transition: color .25s ease-out;
   }
 
     &:hover {
@@ -175,6 +178,7 @@ const myJourney = computed(() => {
   padding-block: 5px;
   box-sizing: border-box;
   font-weight: 400;
+  transition: background-color .25s ease-out;
 
   &:hover {
     font-weight: 400;

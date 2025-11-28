@@ -59,9 +59,11 @@ display: none;
   padding-block: 5px;
   box-sizing: border-box;
   font-weight: 400;
+  transition: background-color .25s ease-out, box-shadow .25s ease-out;
 
   &:hover {
     font-weight: 400;
+    box-shadow: $shadow;
   }
 }
 

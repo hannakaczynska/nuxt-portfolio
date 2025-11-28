@@ -1,6 +1,6 @@
 <template>
     <NuxtLink v-for="(card, index) in cards" :key="index" :to="localePath(card.to)">
-      <UCard>
+      <UCard class="card">
         <section>
         <h3>{{ card.title }}</h3>
         <p class="project_description">{{ card.description }}</p>
@@ -36,6 +36,14 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
+.card {
+    transition: transform .25s ease-out, box-shadow .25s ease-out;
+    &:hover {
+        box-shadow: $shadow;
+        transform: scale(1.01);        
+    }
+}
+
 .project_description {
     margin-block: 20px;
 }

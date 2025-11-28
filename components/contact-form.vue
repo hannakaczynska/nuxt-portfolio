@@ -114,9 +114,11 @@ const onSubmit = async () => {
   font-weight: 400;
   background-color: $primary-color;
   color: $white;
+  transition: background-color .25s ease-out, box-shadow .25s ease-out;
 
   &:hover {
     font-weight: 400;
+    box-shadow: $shadow;
     background-color: $third-color;
   }
 }

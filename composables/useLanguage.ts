@@ -1,10 +1,9 @@
 import { useI18n } from 'vue-i18n'
 
 export const useLanguage = () => {
-  // GLOBAL STATE
-  const lang = useState('lang', () => 'en')
+  const { locale, setLocale } = useI18n();
 
-  const { setLocale } = useI18n()
+  const lang = useState('lang', () => locale.value as 'en' | 'pl');
 
   const switchLanguage = (value: 'en' | 'pl') => {
     lang.value = value
