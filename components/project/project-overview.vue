@@ -13,7 +13,7 @@ const route = useRoute();
 const projectTitle = route.params.title;
     </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .break {
   white-space: pre-line;
 }

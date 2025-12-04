@@ -1,4 +1,43 @@
 {
+  "home": {
+    "metaTitle": "Hanna Kaczyńska - Frontend Developer Portfolio",
+    "metaDescription": "Portfolio Frontend Developerki specjalizującej się w Vue.js i React. Poznaj moje projekty i umiejętności."
+  },
+  "projectsMeta": {
+    "metaTitle": "Hanna Kaczyńska - Projekty",
+    "metaDescription": "Poznaj projekty, które stworzyłam jako Frontend Developerka, używając Vue.js, React.js i TypeScript."
+  },
+    "projectMeta": {
+    "destillapp": {
+      "metaTitle": "Hanna Kaczyńska - DestillApp Projekt",
+      "metaDescription": "Odkryj DestillApp, aplikację full-stack do zarządzania procesami destylacji, stworzoną przy użyciu Vue 3, TypeScript i GraphQL."
+    },
+    "wallet-app": {
+      "metaTitle": "Hanna Kaczyńska - Wallet App Projekt",
+      "metaDescription": "Poznaj Wallet App, menedżera finansów osobistych zbudowanego przy użyciu React.js i Node.js, z bezpiecznym uwierzytelnianiem i interaktywnymi wykresami."
+    },
+    "filmoteka": {
+      "metaTitle": "Hanna Kaczyńska - Filmoteka Projekt",
+      "metaDescription": "Poznaj Filmotekę, dynamiczną aplikację do wyszukiwania filmów zbudowaną w vanilla JavaScript, z podglądem trailerów i funkcją listy do obejrzenia."
+    },
+    "portfolio": {
+      "metaTitle": "Hanna Kaczyńska - Developer Portfolio Projekt",
+      "metaDescription": "Poznaj moje Developer Portfolio, zbudowane z Nuxt.js, prezentujące moje umiejętności i projekty jako Frontend Developerka."
+    },
+    "icecream-shop": {
+      "metaTitle": "Hanna Kaczyńska - Icecream Shop Projekt",
+      "metaDescription": "Zobacz landing page Icecream Shop, promocyjną witrynę stworzoną za pomocą HTML i CSS na podstawie projektów z Figma."
+    }
+  },
+  "aboutMeta": {
+    "metaTitle": "Hanna Kaczyńska - O mnie",
+    "metaDescription": "Dowiedz się więcej o mnie, moim doświadczeniu i umiejętnościach jako Frontend Developerka specjalizująca się w Vue.js, React.js i TypeScript."
+  },
+  "contactMeta": {
+    "metaTitle": "Hanna Kaczyńska - Kontakt",
+    "metaDescription": "Skontaktuj się ze mną za pomocą formularza kontaktowego, e-maila lub linków społecznościowych, aby omówić projekty, współpracę lub po prostu powiedzieć cześć."
+  },
+
   "nav": {
     "home": "Strona główna",
     "about": "O mnie",
@@ -95,7 +134,7 @@
         "text": "Dziś kierują mną ciekawość, wytrwałość i chęć budowania rzeczy, które mają sens — ulepszają, porządkują, pomagają. Lubię dobre praktyki, jasną komunikację i projekty, w których całość jest większa niż suma części."
       }
     },
-    "cta" : {
+    "cta": {
       "title": "Masz dla mnie wyzwanie? Porozmawiajmy.",
       "text": "Z przyjemnością dołączę do zespołu, w którym mogę się rozwijać i wnosić wartość."
     }
@@ -103,7 +142,7 @@
   "projects": {
     "destillapp": {
       "title": "DestillApp",
-      "demo": "",
+      "demo": "https://destillapp.netlify.app/",
       "github": "https://github.com/DestillApp/main",
       "description": "Aplikacja full-stack zaprojektowana do zarządzania i dokumentowania destylacji roślin aromatycznych. \nSystem centralizuje dane o roślinach, partie destylacji, wyniki oraz ustawienia użytkowników — oferując efektywny workflow dla małoskalowych pracowni destylacyjnych lub środowisk badawczych. \nZbudowana z nowoczesnym frontendem w Vue 3 z TypeScript oraz backendem z API GraphQL, DestillationApp zapewnia przejrzyste, uporządkowane i niezawodne narzędzie do obsługi całego cyklu destylacji. \nProjekt i implementacja wykonane w pełni samodzielnie — od koncepcji i architektury, przez projekt API, rozwój interfejsu, dokumentację, aż po przygotowanie do wdrożenia.",
       "work": "solo",
@@ -367,9 +406,15 @@
     },
     "portfolio": {
       "title": "Developer Portfolio",
+      "demo": "",
+      "github": "",
       "description": "To jest opis",
       "work": "solo",
       "year": "2025",
+      "responsibilities": {
+        "overview": "",
+        "list": []
+      },
       "stack": {
         "frontend": [
           { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },

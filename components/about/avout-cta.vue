@@ -54,7 +54,7 @@ const localePath = useLocalePath();
   padding-block: 5px;
   box-sizing: border-box;
   font-weight: 400;
-  transition: background-color .25s ease-out, box-shadow .25s ease-out;
+  transition: background-color 0.25s ease-out, box-shadow 0.25s ease-out;
 
   &:hover {
     box-shadow: $shadow;

@@ -1,7 +1,7 @@
 <template>
   <footer>
     <p class="footer_withLove small">{{ $t("footer.madeWith") }}</p>
-    <div class="footer_content">    
+    <div class="footer_content">
       <p class="footer_copy small">© 2025 Hanna Kaczyńska</p>
       <nav class="social-icons" aria-label="Social media links">
         <a
@@ -26,8 +26,7 @@
 </template>
 
 <script setup>
-import { UIcon } from '#components';
-
+// No script logic needed for this footer component
 </script>
 
 <style lang="scss" scoped>
@@ -60,11 +59,11 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
-  
+
   a {
     color: $light-grey-color;
-    transition: color .25s ease-out;
-    
+    transition: color 0.25s ease-out;
+
     &:hover {
       color: $third-color;
     }

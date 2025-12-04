@@ -3,16 +3,16 @@
     <div class="card">
       <h2 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h2>
       <div class="grid-container">
-      <AboutHero class="hero" />
-      <AboutStack  class="stack"/>    
-    </div> 
+        <AboutHero class="hero" />
+        <AboutStack class="stack" />
+      </div>
       <div class="contact_link">
-      <NuxtLink :to="localePath('/contact')">
-        <button type="button" class="btn_contact">
-          {{ lang === "en" ? "Contact" : "Kontakt" }}
-        </button>
-      </NuxtLink>
-      </div> 
+        <NuxtLink :to="localePath('/contact')">
+          <button type="button" class="btn_contact">
+            {{ lang === "en" ? "Contact" : "Kontakt" }}
+          </button>
+        </NuxtLink>
+      </div>
       <AboutStory />
       <AboutCta />
     </div>
@@ -20,16 +20,34 @@
 </template>
 
 <script setup>
-import { UCard } from "#components";
 import { useLanguage } from "~/composables/useLanguage";
 import AboutStory from "~/components/about/about-story.vue";
 import AboutStack from "~/components/about/about-stack.vue";
 import AboutHero from "~/components/about/about-hero.vue";
-import AboutCta from "~/components/about/avout-cta.vue"; 
+import AboutCta from "~/components/about/avout-cta.vue";
+import { useRuntimeConfig } from "#app";
+
+const route = useRoute();
+const config = useRuntimeConfig();
+
+const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
 
 const { lang } = useLanguage();
+const { t } = useI18n();
 
 const localePath = useLocalePath();
+
+useHead({
+  title: t("aboutMeta.metaTitle"),
+  meta: [
+    { name: "description", content: t("aboutMeta.metaDescription") },
+    { property: "og:title", content: t("aboutMeta.metaTitle") },
+    { property: "og:description", content: t("aboutMeta.metaDescription") },
+    { property: "og:url", content: currentUrl.value },
+    { property: "og:locale", content: lang.value === "pl" ? "pl_PL" : "en_US" },
+  ],
+  link: [{ rel: "canonical", href: currentUrl.value }],
+});
 </script>
 
 <style lang="scss" scoped>
@@ -44,9 +62,9 @@ const localePath = useLocalePath();
 
 .contact_link {
   margin-bottom: 50px;
-display: flex;
-justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .btn_contact {
@@ -60,7 +78,7 @@ justify-content: center;
   font-weight: 400;
   background-color: $primary-color;
   color: $white;
-  transition: background-color .25s ease-out, box-shadow .25s ease-out;
+  transition: background-color 0.25s ease-out, box-shadow 0.25s ease-out;
 
   &:hover {
     font-weight: 400;
@@ -81,8 +99,8 @@ justify-content: center;
   }
 
   .card_title {
-  margin-bottom: 0;
-}
+    margin-bottom: 0;
+  }
 
   .grid-container {
     display: grid;
@@ -104,10 +122,9 @@ justify-content: center;
   }
 
   .contact_link {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
 }
-
 </style>

@@ -8,32 +8,35 @@
     />
     <MobileMenu v-if="isMenuOpen" @closeMenu="closeMenu" />
     <nav class="header_nav">
-      <NuxtLink :to="localePath('/')">{{$t("nav.home") }}</NuxtLink>
-      <NuxtLink :to="localePath('/about')">{{$t("nav.about") }}</NuxtLink>
-      <NuxtLink :to="localePath('/projects')">{{$t("nav.projects") }}</NuxtLink>
-      <NuxtLink :to="localePath('/contact')">{{$t("nav.contact") }}</NuxtLink>
+      <NuxtLink :to="localePath('/')">{{ $t("nav.home") }}</NuxtLink>
+      <NuxtLink :to="localePath('/about')">{{ $t("nav.about") }}</NuxtLink>
+      <NuxtLink :to="localePath('/projects')">{{
+        $t("nav.projects")
+      }}</NuxtLink>
+      <NuxtLink :to="localePath('/contact')">{{ $t("nav.contact") }}</NuxtLink>
     </nav>
-    <button class="header_button" @click="switchLanguage(lang === 'en' ? 'pl' : 'en')">
+    <button
+      class="header_button"
+      @click="switchLanguage(lang === 'en' ? 'pl' : 'en')"
+    >
       <UIcon name="i-lucide-globe" size="20" />
-  <span class="header_button-text">{{ lang === "en" ? "EN" : "PL" }}</span>
+      <span class="header_button-text">{{ lang === "en" ? "EN" : "PL" }}</span>
     </button>
   </header>
 </template>
 
 <script setup>
-import { UIcon } from '#components';
 import MobileMenu from "~/components/mobile-menu.vue";
 import { useLanguage } from "~/composables/useLanguage";
 
 const isMenuOpen = ref(false);
 
-const {lang, switchLanguage } = useLanguage();
+const { lang, switchLanguage } = useLanguage();
 const localePath = useLocalePath();
 
 const closeMenu = () => {
   isMenuOpen.value = false;
 };
-
 </script>
 
 <style lang="scss" scoped>
@@ -80,10 +83,10 @@ nav a {
   font-size: 18px;
   cursor: pointer;
   padding-inline: 0;
-&-text {
-  line-height: 1.3;
-  box-sizing: border-box;
-  padding-top: 1px;
-}
+  &-text {
+    line-height: 1.3;
+    box-sizing: border-box;
+    padding-top: 1px;
+  }
 }
 </style>

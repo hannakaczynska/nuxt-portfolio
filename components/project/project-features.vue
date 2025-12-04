@@ -22,7 +22,6 @@
 </template>
 
 <script setup>
-import { UCard, UIcon } from '#components';
 import { useLanguage } from "~/composables/useLanguage";
 import plDataRaw from "~/i18n/locales/pl.json?raw";
 import enDataRaw from "~/i18n/locales/en.json?raw";

@@ -25,7 +25,6 @@
 </template>
 
 <script setup>
-import { UCard } from '#components';
 import { useLanguage } from "~/composables/useLanguage";
 import plDataRaw from "~/i18n/locales/pl.json?raw";
 import enDataRaw from "~/i18n/locales/en.json?raw";
@@ -108,7 +107,7 @@ const backendStack = computed(() => {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
-  
+
   .stack_list--backend {
     grid-column: 2 / 3;
     grid-row: 1 / 2;

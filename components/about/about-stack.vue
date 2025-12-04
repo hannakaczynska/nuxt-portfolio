@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-import { UBadge, UIcon } from "#components";
 import { useLanguage } from "~/composables/useLanguage";
 import plDataRaw from "~/i18n/locales/pl.json?raw";
 import enDataRaw from "~/i18n/locales/en.json?raw";
@@ -59,7 +58,7 @@ const myStack = computed(() => {
   }
 
   .stack-badges {
-    margin-left: 30px;;
+    margin-left: 30px;
   }
 }
 </style>

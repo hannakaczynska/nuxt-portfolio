@@ -44,7 +44,10 @@
         <p v-else>{{ storyItem.text }}</p>
         <p v-if="storyItem.li" class="experience-more">
           {{ storyItem.li }}
-          <a href="https://www.linkedin.com/in/hanna-kaczy%C5%84ska-0b7247224/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/hanna-kaczy%C5%84ska-0b7247224/"
+            target="_blank"
+          >
             LinkedIn <UIcon name="i-lucide-external-link" />
           </a>
         </p>
@@ -72,7 +75,6 @@
 </template>
 
 <script setup>
-import { UCard, UIcon } from "#components";
 import { useLanguage } from "~/composables/useLanguage";
 import plDataRaw from "~/i18n/locales/pl.json?raw";
 import enDataRaw from "~/i18n/locales/en.json?raw";
@@ -125,27 +127,27 @@ const myJourney = computed(() => {
 }
 
 .experience-more {
-    margin-top: 30px;
-    font-size: 0.9rem;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: $light-grey-color;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     color: $light-grey-color;
+    transition: color 0.25s ease-out;
 
-    a {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-      color: $light-grey-color;
-      transition: color .25s ease-out;
-
-      &:hover {
-        color: $third-color;
-      }
+    &:hover {
+      color: $third-color;
     }
+  }
 }
 
 .story_link {
   color: $primary-color;
   font-weight: 500;
-  transition: color .25s ease-out;
+  transition: color 0.25s ease-out;
 
   .inline-icon {
     width: 18px;
@@ -153,12 +155,12 @@ const myJourney = computed(() => {
     vertical-align: middle;
     margin-left: 2px;
     margin-bottom: 2px;
-    transition: color .25s ease-out;
+    transition: color 0.25s ease-out;
   }
 
-    &:hover {
-        color: $third-color;
-    }
+  &:hover {
+    color: $third-color;
+  }
 }
 
 .story_buttons {
@@ -178,7 +180,7 @@ const myJourney = computed(() => {
   padding-block: 5px;
   box-sizing: border-box;
   font-weight: 400;
-  transition: background-color .25s ease-out;
+  transition: background-color 0.25s ease-out;
 
   &:hover {
     font-weight: 400;

@@ -28,9 +28,7 @@
       <UTextarea
         :rows="12"
         v-model="state.message"
-        :placeholder="
-          lang === 'en' ? 'Your message...' : 'Twoja wiadomość...'
-        "
+        :placeholder="lang === 'en' ? 'Your message...' : 'Twoja wiadomość...'"
         class="form-input"
         color="neutral"
       />
@@ -44,14 +42,13 @@
 </template>
 
 <script setup>
-import { UForm, UFormField, UTextarea, UInput } from '#components';
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "~/composables/useLanguage";
-import {createValidationSchema} from "~/composables/validationSchema";
+import { createValidationSchema } from "~/composables/validationSchema";
 
 const { lang } = useLanguage();
 
-const config = useRuntimeConfig()
+const config = useRuntimeConfig();
 
 const schema = computed(() => createValidationSchema());
 
@@ -76,11 +73,14 @@ const onSubmit = async () => {
       config.public.emailjsPublicKey
     );
 
-    status.value = lang === "en" ? "Message sent!" : "Wiadomość wysłana!";
+    status.value = lang.value === "en" ? "Message sent!" : "Wiadomość wysłana!";
     state.name = state.email = state.message = "";
   } catch (err) {
     console.error(err);
-    status.value = lang === "en" ? "❌ Something went wrong. Please try again." : "❌ Coś poszło nie tak. Spróbuj ponownie.";
+    status.value =
+      lang.value === "en"
+        ? "❌ Something went wrong. Please try again."
+        : "❌ Coś poszło nie tak. Spróbuj ponownie.";
   }
 };
 </script>
@@ -114,7 +114,7 @@ const onSubmit = async () => {
   font-weight: 400;
   background-color: $primary-color;
   color: $white;
-  transition: background-color .25s ease-out, box-shadow .25s ease-out;
+  transition: background-color 0.25s ease-out, box-shadow 0.25s ease-out;
 
   &:hover {
     font-weight: 400;
@@ -124,7 +124,7 @@ const onSubmit = async () => {
 }
 
 .form_status {
-    color: $light-grey-color;
+  color: $light-grey-color;
 }
 
 @media (min-width: 500px) {

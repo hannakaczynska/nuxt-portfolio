@@ -11,7 +11,8 @@
         <ProjectResponsibility />
         <ProjectStack />
         <ProjectNavigation />
-        <ProjectCarousel v-if="projectTitle !== 'portfolio'"
+        <ProjectCarousel
+          v-if="projectTitle !== 'portfolio'"
           :images="[
             `/projects/${projectTitle}/screen1`,
             `/projects/${projectTitle}/screen2`,
@@ -26,7 +27,6 @@
 </template>
 
 <script setup>
-import { UCard } from "#components";
 import ProjectCarousel from "~/components/project/project-carousel.vue";
 import ProjectIntro from "~/components/project/project-intro.vue";
 import ProjectFeatures from "~/components/project/project-features";
@@ -34,9 +34,38 @@ import ProjectStack from "~/components/project/project-stack";
 import ProjectOverview from "~/components/project/project-overview";
 import ProjectResponsibility from "~/components/project/project-responsibilities";
 import ProjectNavigation from "~/components/project/project-navigation.vue";
+import ProjectCard from "~/components/project-card.vue";
+import { useRuntimeConfig } from "#app";
 
 const route = useRoute();
 const projectTitle = route.params.title;
+
+const config = useRuntimeConfig();
+const { lang } = useLanguage();
+const { t } = useI18n();
+
+const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
+
+useHead({
+  title: t(`projectMeta.${projectTitle}.metaTitle`),
+  meta: [
+    {
+      name: "description",
+      content: t(`projectMeta.${projectTitle}.metaDescription`),
+    },
+    {
+      property: "og:title",
+      content: t(`projectMeta.${projectTitle}.metaTitle`),
+    },
+    {
+      property: "og:description",
+      content: t(`projectMeta.${projectTitle}.metaDescription`),
+    },
+    { property: "og:url", content: currentUrl.value },
+    { property: "og:locale", content: lang.value === "pl" ? "pl_PL" : "en_US" },
+  ],
+  link: [{ rel: "canonical", href: currentUrl.value }],
+});
 </script>
 
 <style lang="scss" scoped>

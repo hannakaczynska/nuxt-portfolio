@@ -1,8 +1,8 @@
 <template>
   <UCard class="hero">
     <section class="hero_content">
-        <h1 class="hero_title">{{ $t("hero.title") }}</h1>
-        <p class="hero_subtitle">{{ $t("hero.subtitle") }}</p>
+      <h1 class="hero_title">{{ $t("hero.title") }}</h1>
+      <p class="hero_subtitle">{{ $t("hero.subtitle") }}</p>
       <img src="/svg/hero.svg" alt="Hero Image" class="hero_image" />
     </section>
     <nav class="hero-actions">
@@ -21,9 +21,28 @@
 </template>
 
 <script setup>
-import { UCard } from '#components';
+import { useRuntimeConfig } from "#app";
 
+const route = useRoute();
+const config = useRuntimeConfig();
 const localePath = useLocalePath();
+
+const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
+
+const { lang } = useLanguage();
+const { t } = useI18n();
+
+useHead({
+  title: t("home.metaTitle"),
+  meta: [
+    { name: "description", content: t("home.metaDescription") },
+    { property: "og:title", content: t("home.metaTitle") },
+    { property: "og:description", content: t("home.metaDescription") },
+    { property: "og:url", content: currentUrl.value },
+    { property: "og:locale", content: lang.value === "pl" ? "pl_PL" : "en_US" },
+  ],
+  link: [{ rel: "canonical", href: currentUrl.value }],
+});
 </script>
 
 <style lang="scss" scoped>
@@ -40,7 +59,7 @@ const localePath = useLocalePath();
 }
 
 .hero_image {
-display: none;
+  display: none;
 }
 
 .hero-actions {
@@ -59,7 +78,7 @@ display: none;
   padding-block: 5px;
   box-sizing: border-box;
   font-weight: 400;
-  transition: background-color .25s ease-out, box-shadow .25s ease-out;
+  transition: background-color 0.25s ease-out, box-shadow 0.25s ease-out;
 
   &:hover {
     font-weight: 400;
@@ -95,35 +114,35 @@ display: none;
 
 @media (min-width: $breakpoint-tablet) {
   .hero_content {
-display: grid;
-grid-template-columns: 2fr 1fr;
-grid-template-rows: 1fr 1fr;
-grid-column-gap: 30px;
-grid-row-gap: 20px;
-align-items: start;
-}
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    align-items: start;
+  }
 
-.hero_title {
-grid-column: 1 / 2;
-grid-row: 1 / 2;
-}
+  .hero_title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 
-.hero_subtitle {
-grid-column: 1 / 2;
-grid-row: 2 / 3;
-}
+  .hero_subtitle {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 
-.hero_image {
-  display: block;
-   align-self: center;
- grid-column: 2 / 3;
- grid-row: 1 / 3;
-}
+  .hero_image {
+    display: block;
+    align-self: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
 
-.hero-btn {
-  height: 50px;
+  .hero-btn {
+    height: 50px;
     padding-inline: 20px;
-}
+  }
 }
 
 @media (min-width: $breakpoint-desktop) {

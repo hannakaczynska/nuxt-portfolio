@@ -45,7 +45,7 @@
     align-items: center;
   }
 
-    .section_text {
+  .section_text {
     flex: 2;
   }
   .picture_container {
@@ -92,6 +92,5 @@
     min-width: 175px;
     min-height: 175px;
   }
-
 }
 </style>

@@ -7,14 +7,16 @@
         class="project_link"
         target="_blank"
         rel="noopener noreferrer"
-      >[Live Demo]</a>
+        >[Live Demo]</a
+      >
       <span>•</span>
       <a
         :href="$t(`projects.${projectTitle}.github`)"
         class="project_link"
         target="_blank"
         rel="noopener noreferrer"
-      >[GitHub]</a>
+        >[GitHub]</a
+      >
     </nav>
     <span class="project_info small"
       >{{ $t(`projects.${projectTitle}.work`) }} |
@@ -40,8 +42,6 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
-
 const route = useRoute();
 const projectTitle = route.params.title;
 </script>
@@ -83,7 +83,7 @@ const projectTitle = route.params.title;
 .project_link,
 .project_nav span {
   color: $primary-color;
-  transition: color .25s ease-out;
+  transition: color 0.25s ease-out;
 }
 
 .project_link {

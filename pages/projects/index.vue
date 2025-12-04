@@ -15,12 +15,29 @@
 </template>
 
 <script setup>
-import { UCard } from "#components";
 import { useLanguage } from "~/composables/useLanguage";
 import { createCards } from "~/composables/projectsData";
 import ProjectCard from "~/components/project-card.vue";
+import { useRuntimeConfig } from "#app";
 
+const route = useRoute();
+const config = useRuntimeConfig();
 const { lang } = useLanguage();
+const { t } = useI18n();
+
+const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
+
+useHead({
+  title: t("projectsMeta.metaTitle"),
+  meta: [
+    { name: "description", content: t("projectsMeta.metaDescription") },
+    { property: "og:title", content: t("projectsMeta.metaTitle") },
+    { property: "og:description", content: t("projectsMeta.metaDescription") },
+    { property: "og:url", content: currentUrl.value },
+    { property: "og:locale", content: lang.value === "pl" ? "pl_PL" : "en_US" },
+  ],
+  link: [{ rel: "canonical", href: currentUrl.value }],
+});
 
 const projectData = computed(() => createCards());
 const soloCards = computed(() => projectData.value.soloCards.value);

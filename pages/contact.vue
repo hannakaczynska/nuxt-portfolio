@@ -42,15 +42,40 @@
           </a>
         </nav>
       </section>
-      <img src="/svg/contact.svg" alt="Work Together Image" class="contact_image" />
+      <img
+        src="/svg/contact.svg"
+        alt="Work Together Image"
+        class="contact_image"
+      />
       <ContactForm class="contact_form" />
     </div>
   </UCard>
 </template>
 
 <script setup>
-import { UCard, UIcon } from '#components';
 import ContactForm from "~/components/contact-form.vue";
+import { useLanguage } from "~/composables/useLanguage";
+import { useRuntimeConfig } from "#app";
+
+const route = useRoute();
+const config = useRuntimeConfig();
+
+const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
+
+const { lang } = useLanguage();
+const { t } = useI18n();
+
+useHead({
+  title: t("contactMeta.metaTitle"),
+  meta: [
+    { name: "description", content: t("contactMeta.metaDescription") },
+    { property: "og:title", content: t("contactMeta.metaTitle") },
+    { property: "og:description", content: t("contactMeta.metaDescription") },
+    { property: "og:url", content: currentUrl.value },
+    { property: "og:locale", content: lang.value === "pl" ? "pl_PL" : "en_US" },
+  ],
+  link: [{ rel: "canonical", href: currentUrl.value }],
+});
 
 const isCopied = ref(false);
 
@@ -97,7 +122,7 @@ onBeforeUnmount(() => {
 
 .contact_email {
   font-size: 11px;
-  transition: color .25s ease-out;
+  transition: color 0.25s ease-out;
   &:hover {
     font-weight: 400;
     color: $third-color;
@@ -117,7 +142,7 @@ onBeforeUnmount(() => {
 
   a {
     color: $text-color;
-    transition: color .25s ease-out;
+    transition: color 0.25s ease-out;
 
     &:hover {
       color: $third-color;

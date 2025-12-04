@@ -1,50 +1,45 @@
 <template>
   <div class="embla" ref="emblaRef">
     <div class="embla__container">
-      <div
-        class="embla__slide"
-        v-for="(img, index) in images"
-        :key="index"
-      >
-       <div class="slide-inner">
-        <picture class="slide__picture">
-          <source :srcset="`${img}.avif`" type="image/avif" />
-          <source :srcset="`${img}.webp`" type="image/webp" />
-          <img :src="`${img}.png`" alt="Project screenshot" />
-        </picture>
-      </div>
+      <div class="embla__slide" v-for="(img, index) in images" :key="index">
+        <div class="slide-inner">
+          <picture class="slide__picture">
+            <source :srcset="`${img}.avif`" type="image/avif" />
+            <source :srcset="`${img}.webp`" type="image/webp" />
+            <img :src="`${img}.png`" alt="Project screenshot" />
+          </picture>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import emblaCarouselVue from 'embla-carousel-vue';
-import Autoplay from 'embla-carousel-autoplay';
-import ClassNames from 'embla-carousel-class-names';
+import emblaCarouselVue from "embla-carousel-vue";
+import Autoplay from "embla-carousel-autoplay";
+import ClassNames from "embla-carousel-class-names";
 
 const [emblaRef] = emblaCarouselVue(
-  { 
+  {
     loop: true,
-    align: 'center'
-  }, 
+    align: "center",
+  },
   [
     Autoplay({ delay: 3000 }),
     ClassNames({
-      snapped: 'embla__slide--snapped',
-      inView: 'embla__slide--in-view'
-    })
+      snapped: "embla__slide--snapped",
+      inView: "embla__slide--in-view",
+    }),
   ]
 );
 
 const props = defineProps({
   images: {
     type: Array,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
-
 
 <style lang="scss" scoped>
 .embla {
