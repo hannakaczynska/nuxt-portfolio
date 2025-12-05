@@ -2,10 +2,8 @@
   <UCard>
     <div class="card">
       <h2 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h2>
-      <div class="grid-container">
-        <AboutHero class="hero" />
-        <AboutStack class="stack" />
-      </div>
+      <AboutHero />
+      <AboutStack />
       <div class="contact_link">
         <NuxtLink :to="localePath('/contact')">
           <button type="button" class="btn_contact">
@@ -102,29 +100,11 @@ useHead({
     margin-bottom: 0;
   }
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 30px;
-    margin-bottom: 50px;
-  }
-
-  .hero {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-  }
-
-  .stack {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    align-self: start;
-  }
-
   .contact_link {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 50px;
   }
 }
 </style>

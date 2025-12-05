@@ -22,7 +22,6 @@
       >{{ $t(`projects.${projectTitle}.work`) }} |
       {{ $t(`projects.${projectTitle}.year`) }}</span
     >
-    <!-- deal differently with src and alt (svg)!!!!!!!!!!-->
     <picture class="project_picture">
       <source
         :srcset="$t(`projects.${projectTitle}.img.avif`)"
