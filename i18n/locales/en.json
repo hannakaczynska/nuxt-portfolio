@@ -33,7 +33,7 @@
     "metaTitle": "Hanna Kaczyńska - About",
     "metaDescription": "Learn more about me, my background, and my skills as a Frontend Developer specializing in Vue.js, React.js, and TypeScript."
   },
-    "contactMeta": {
+  "contactMeta": {
     "metaTitle": "Hanna Kaczyńska - Contact",
     "metaDescription": "Get in touch with me via the contact form, email, or social links to discuss projects, collaborations, or just to say hello."
   },
@@ -143,6 +143,7 @@
       "demo": "https://destillapp.netlify.app/",
       "github": "https://github.com/DestillApp/main",
       "description": "A full-stack application designed to manage and document the distillation of aromatic plants. \nThe system centralizes plant data, distillation batches, results, and user settings — offering an efficient workflow for small-scale distillation studios or botanical research environments. \nBuilt with a modern TypeScript–powered Vue 3 frontend and a GraphQL API backend, DestillationApp delivers a clean, structured, and reliable tool for handling the entire distillation lifecycle. \nDesigned and implemented end-to-end as a solo project — from concept and architecture to API design, UI development, documentation, and deployment preparation.",
+      "alt": "View of the login page of the DestillApp application",
       "work": "solo",
       "year": "2024/2025",
       "features": [
@@ -267,13 +268,21 @@
         "avif": "/images/destillapp.avif",
         "webp": "/images/destillapp.webp",
         "png": "/images/destillapp.png"
-      }
+      },
+  "imgalt": {
+    "screen1": "View of the raw materials warehouse with a list of plants and management options",
+    "screen2": "Fragment of the form for editing a plant in the raw materials warehouse",
+    "screen3": "View of saved distillations with the ability to see details and assign results",
+    "screen4": "View of the distillation card with a summary of parameters, results, and raw material information",
+    "screen5": "View of the user account in dark mode with profile management options"
+  }
     },
     "wallet-app": {
       "title": "Wallet App",
       "demo": "https://wallet-app-project.netlify.app/login",
       "github": "https://github.com/hannakaczynska/WalletApp-react-node",
       "description": "A full-stack personal finance manager designed to help users track income, expenses, and spending habits in a clear, intuitive interface. \nThe application offers secure authentication, interactive charts, real-time currency conversion, and a clean UX optimized for quick daily use. \nDeveloped as part of the GoIT course, based on a provided Figma design, and built independently as a complete end-to-end product — from architecture to deployment.",
+      "alt": "View of the login page of the Wallet App application",
       "work": "solo",
       "year": "2025",
       "features": [
@@ -382,6 +391,13 @@
         "avif": "/images/wallet-app.avif",
         "webp": "/images/wallet-app.webp",
         "png": "/images/wallet-app.png"
+      },
+      "imgalt": {
+        "screen1": "Expense and income statistics panel with a pie chart",
+        "screen2": "Form for adding a new transaction in the income category",
+        "screen3": "Mobile view with account balance and a list of recent transactions",
+        "screen4": "Main dashboard with account balance, recent transactions list, and currency exchange rates",
+        "screen5": "Mobile view of the Wallet App registration page"
       }
     },
     "portfolio": {
@@ -389,6 +405,7 @@
       "demo": "",
       "github": "",
       "description": "This is description",
+      "alt": "View of the hero page of the Developer Portfolio application",
       "work": "solo",
       "year": "2025",
       "features": [],
@@ -416,6 +433,7 @@
       "demo": "https://wallet-app-project.netlify.app/login",
       "github": "https://github.com/hannakaczynska/WalletApp-react-node",
       "description": "A team project as part of the GOIT course, creating a dynamic movie search application with trailer previews, detailed film information, and a personalized watchlist feature. \nBuilt using vanilla JavaScript with Axios for API communication, it follows a mobile-first approach and provides a responsive, interactive interface. \nUsers can search for films, watch trailers, explore detailed descriptions, and manage their personal “watched” or “to-watch” lists. \nThis project demonstrates practical teamwork, frontend logic implementation, and integration of third-party libraries for UI and pagination enhancements.",
+      "alt": "View of the top part of the Filmoteka movie search application",
       "work": "team",
       "year": "2023",
       "features": [
@@ -498,6 +516,13 @@
         "avif": "/images/filmoteka.avif",
         "webp": "/images/filmoteka.webp",
         "png": "/images/filmoteka.png"
+      },
+      "imgalt": {
+        "screen1": "View of the main page of the Filmoteka app with a movie search",
+        "screen2": "Modal window with detailed movie information",
+        "screen3": "Modal window with movie trailer",
+        "screen4": "Library section with watched and to-watch movies",
+        "screen5": "View of padding and movie card in search results"
       }
     },
     "icecream-shop": {
@@ -505,6 +530,7 @@
       "demo": "https://jacek-85.github.io/Ice_Muuu/",
       "github": "https://github.com/Jacek-85/Ice_Muuu/",
       "description": "A promotional landing page website created for a fictional ice-cream brand, developed as a team project during the GoIT course. \nThe site was built based on detailed Figma mockups and follows strict UI and branding guidelines. \nDesigned with a mobile-first approach, it features clean visuals, structured content sections, and smooth responsiveness across devices.",
+      "alt": "View of the top part of the Icecream Shop landing page",
       "work": "team",
       "year": "2022",
       "features": [
@@ -569,6 +595,13 @@
         "avif": "/images/icecream-shop.avif",
         "webp": "/images/icecream-shop.webp",
         "png": "/images/icecream-shop.png"
+      },
+      "imgalt": {
+        "screen4": "Mobile view of the top section of the icecream shop page with logo and navigation",
+        "screen1": "Product section of the icecream shop page with various ice cream flavors",
+        "screen5": "Section about ingredients and production process of the icecream shop page",
+        "screen3": "Location and opening hours section of the icecream shop page",
+        "screen2": "Mobile view of the footer of the icecream shop page with contact information"
       }
     }
   }

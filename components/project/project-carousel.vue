@@ -6,7 +6,7 @@
           <picture class="slide__picture">
             <source :srcset="`${img}.avif`" type="image/avif" />
             <source :srcset="`${img}.webp`" type="image/webp" />
-            <img :src="`${img}.png`" alt="Project screenshot" />
+            <img :src="`${img}.png`" :alt="$t(`projects.${projectTitle}.imgalt.screen${index + 1}`)" />
           </picture>
         </div>
       </div>
@@ -18,6 +18,12 @@
 import emblaCarouselVue from "embla-carousel-vue";
 import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
+import { useLanguage } from "~/composables/useLanguage";
+
+const route = useRoute();
+const projectTitle = route.params.title;
+
+const { lang } = useLanguage();
 
 const [emblaRef] = emblaCarouselVue(
   {

@@ -3,7 +3,7 @@
     <section class="hero_content">
       <h1 class="hero_title">{{ $t("hero.title") }}</h1>
       <p class="hero_subtitle">{{ $t("hero.subtitle") }}</p>
-      <img src="/svg/hero.svg" alt="Hero Image" class="hero_image" />
+      <img src="/svg/hero.svg" alt="" class="hero_image" />
     </section>
     <nav class="hero-actions">
       <NuxtLink :to="localePath('/about')">

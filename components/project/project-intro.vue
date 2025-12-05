@@ -33,7 +33,7 @@
       />
       <img
         :src="$t(`projects.${projectTitle}.img.png`)"
-        :alt="`${projectTitle} screenshot`"
+        :alt="$t(`projects.${projectTitle}.alt`)"
         class="project_img"
       />
     </picture>
@@ -41,6 +41,9 @@
 </template>
 
 <script setup>
+import { useLanguage } from "~/composables/useLanguage";
+
+const { lang } = useLanguage();
 const route = useRoute();
 const projectTitle = route.params.title;
 </script>

@@ -12,7 +12,7 @@
       />
       <img
         src="/images/myPhoto-800.png"
-        alt="My photo"
+        :alt="lang === 'en' ? 'Photo of the portfolio author' : 'Zdjęcie autorki portfolio'"
         loading="lazy"
         class="img"
       />
@@ -21,7 +21,9 @@
 </template>
 
 <script setup>
-// No additional imports needed since we're using $t from the parent
+import { useLanguage } from "~/composables/useLanguage";
+
+const { lang } = useLanguage();
 </script>
 
 <style lang="scss" scoped>

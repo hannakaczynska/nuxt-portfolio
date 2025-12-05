@@ -17,14 +17,15 @@
         <button class="btn btn-cv">CV</button></a
       >
     </nav>
-    <img src="/svg/cat.svg" alt="Cat Image" class="cat_image" />
+    <img
+      src="/svg/cat.svg"
+      alt=""
+      class="cat_image"
+    />
   </section>
 </template>
 
 <script setup>
-import { useLanguage } from "~/composables/useLanguage";
-
-const { lang } = useLanguage();
 const localePath = useLocalePath();
 </script>
 

@@ -44,7 +44,7 @@
       </section>
       <img
         src="/svg/contact.svg"
-        alt="Work Together Image"
+        alt=""
         class="contact_image"
       />
       <ContactForm class="contact_form" />
