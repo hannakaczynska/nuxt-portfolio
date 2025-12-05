@@ -13,6 +13,7 @@
             <img
               :src="`${img}.png`"
               :alt="$t(`projects.${projectTitle}.imgalt.screen${index + 1}`)"
+              :loading="index === 0 ? 'eager' : 'lazy'"
             />
           </picture>
         </div>

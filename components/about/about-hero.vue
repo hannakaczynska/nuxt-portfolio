@@ -13,7 +13,6 @@
       <img
         src="/images/myPhoto-800.png"
         :alt="lang === 'en' ? 'Photo of the portfolio author' : 'Zdjęcie autorki portfolio'"
-        loading="lazy"
         class="img"
       />
     </picture>
