@@ -29,7 +29,8 @@ export default defineNuxtConfig({
     meta: [
       { name: "author", content: "Hanna Kaczyńska" },
       { property: "og:type", content: "website" },
-      { property: 'og:site_name', content: 'Hanna Kaczyńska Portfolio' },
+      { property: "og:site_name", content: "Hanna Kaczyńska Portfolio" },
+      { property: "og:image", content: `${process.env.NUXT_PUBLIC_SITE_URL}/images/og-image.png` },    
     ],
     link: [
       { rel: "canonical", href: process.env.NUXT_PUBLIC_SITE_URL },
@@ -80,8 +81,6 @@ export default defineNuxtConfig({
       emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID,
       emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
-      ogImageEn: process.env.NUXT_PUBLIC_OG_IMAGE_EN,
-      ogImagePl: process.env.NUXT_PUBLIC_OG_IMAGE_PL,
     },
   },
 
