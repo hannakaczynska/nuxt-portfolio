@@ -1,16 +1,32 @@
 <template>
-  <nav class="nav">
-    <NuxtLink :to="localePath('/projects')" class="link">
-      <UIcon name="i-lucide-move-left" class="arrow" />
+  <nav class="nav" :aria-label="lang === 'en' ? 'Projects navigation' : 'Nawigacja projektów'">
+    <NuxtLink
+      :to="localePath('/projects')"
+      class="link"
+      :aria-label="lang === 'en' ? 'Back to projects' : 'Wróć do projektów'"
+    >
+      <UIcon name="i-lucide-move-left" class="arrow" aria-hidden="true" />
       {{ lang === "en" ? "Projects" : "Projekty" }}
     </NuxtLink>
-    <NuxtLink :to="localePath(`/projects/${nextProject}`)" class="link">
+    <NuxtLink
+      :to="localePath(`/projects/${nextProject}`)"
+      class="link"
+      :aria-label="
+        lang === 'en'
+          ? `Next project: ${
+              enData.projects[nextProject]?.title || 'Next Project'
+            }`
+          : `Następny projekt: ${
+              plData.projects[nextProject]?.title || 'Następny projekt'
+            }`
+      "
+    >
       {{
         lang === "en"
           ? enData.projects[nextProject]?.title || "Next Project"
           : plData.projects[nextProject]?.title || "Następny Projekt"
       }}
-      <UIcon name="i-lucide-move-right" class="arrow" />
+      <UIcon name="i-lucide-move-right" class="arrow" aria-hidden="true" />
     </NuxtLink>
   </nav>
 </template>

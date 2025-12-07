@@ -6,15 +6,11 @@
       <img src="/svg/hero.svg" alt="" class="hero_image" />
     </section>
     <nav class="hero-actions">
-      <NuxtLink :to="localePath('/about')">
-        <button type="button" class="hero-btn hero-btn-about">
+      <NuxtLink :to="localePath('/about')" class="hero-link hero-link-about">
           {{ $t("nav.about") }}
-        </button>
       </NuxtLink>
-      <NuxtLink :to="localePath('/projects')">
-        <button type="button" class="hero-btn hero-btn-projects">
+      <NuxtLink :to="localePath('/projects')" class="hero-link hero-link-projects">
           {{ $t("nav.projects") }}
-        </button>
       </NuxtLink>
     </nav>
   </UCard>
@@ -69,7 +65,7 @@ useHead({
   margin-top: 2rem;
 }
 
-.hero-btn {
+.hero-link {
   height: 40px;
   font-family: inherit;
   cursor: pointer;
@@ -79,14 +75,17 @@ useHead({
   box-sizing: border-box;
   font-weight: 400;
   transition: background-color 0.25s ease-out, box-shadow 0.25s ease-out;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   &:hover {
     font-weight: 400;
     box-shadow: $shadow;
   }
 }
 
-.hero-btn-about {
+.hero-link-about {
   background-color: $white;
   border: 2px solid $primary-color;
   color: $text-color;
@@ -96,7 +95,7 @@ useHead({
   }
 }
 
-.hero-btn-projects {
+.hero-link-projects {
   background-color: $primary-color;
   color: $white;
 
@@ -139,7 +138,7 @@ useHead({
     grid-row: 1 / 3;
   }
 
-  .hero-btn {
+  .hero-link {
     height: 50px;
     padding-inline: 20px;
   }

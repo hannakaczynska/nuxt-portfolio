@@ -1,5 +1,10 @@
 <template>
-  <nav class="mobile-menu" @click="navigate">
+  <nav
+    id="mobile-menu"
+    class="mobile-menu"
+    :aria-label="lang === 'en' ? 'Mobile navigation' : 'Nawigacja mobilna'"
+    @click="navigate"
+  >
     <NuxtLink :to="localePath('/')" class="mobile-menu_link">{{
       $t("nav.home")
     }}</NuxtLink>
@@ -16,6 +21,8 @@
 </template>
 
 <script setup>
+import { useLanguage } from "~/composables/useLanguage";
+const { lang } = useLanguage();
 const emit = defineEmits(["closeMenu"]);
 
 const localePath = useLocalePath();
@@ -24,6 +31,8 @@ const handleWindowClick = (e) => {
   if (
     e.target.closest(".mobile-menu") ||
     e.target.closest(".header_button") ||
+    e.target.closest(".header_menu-button") ||
+    e.target.className.includes("header_menu-button") ||
     e.target.className.includes("header_menu-icon")
   ) {
     return;
@@ -31,22 +40,28 @@ const handleWindowClick = (e) => {
   emit("closeMenu");
 };
 
+const handleEscape = (e) => {
+  if (e.key === "Escape") {
+    emit("closeMenu");
+  }
+};
+
+const handleResize = () => {
+  if (window.innerWidth > 767) {
+    emit("closeMenu");
+  }
+};
+
 onMounted(() => {
+  document.addEventListener("keydown", handleEscape);
   window.addEventListener("click", handleWindowClick);
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 767) {
-      emit("closeMenu");
-    }
-  });
+  window.addEventListener("resize", handleResize);
 });
 
 onBeforeUnmount(() => {
+  document.removeEventListener("keydown", handleEscape);
   window.removeEventListener("click", handleWindowClick);
-  window.removeEventListener("resize", () => {
-    if (window.innerWidth > 767) {
-      emit("closeMenu");
-    }
-  });
+  window.removeEventListener("resize", handleResize);
 });
 
 const navigate = (e) => {

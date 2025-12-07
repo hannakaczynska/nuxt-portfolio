@@ -5,10 +5,8 @@
       <AboutHero />
       <AboutStack />
       <div class="contact_link">
-        <NuxtLink :to="localePath('/contact')">
-          <button type="button" class="btn_contact">
-            {{ lang === "en" ? "Contact" : "Kontakt" }}
-          </button>
+        <NuxtLink :to="localePath('/contact')" class="link">
+          {{ lang === "en" ? "Contact" : "Kontakt" }}
         </NuxtLink>
       </div>
       <AboutStory />
@@ -65,7 +63,7 @@ useHead({
   width: 100%;
 }
 
-.btn_contact {
+.link {
   height: 40px;
   font-family: inherit;
   cursor: pointer;
@@ -77,6 +75,10 @@ useHead({
   background-color: $primary-color;
   color: $white;
   transition: background-color 0.25s ease-out, box-shadow 0.25s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   &:hover {
     font-weight: 400;

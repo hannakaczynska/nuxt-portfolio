@@ -10,7 +10,7 @@
         :key="index"
         class="responsibility_item"
       >
-        <UIcon name="i-lucide-check" class="iteam_icon" />{{ resp }}
+        <UIcon name="i-lucide-check" class="iteam_icon" aria-hidden="true"  />{{ resp }}
       </li>
     </ul>
   </section>

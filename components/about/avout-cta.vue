@@ -3,29 +3,27 @@
     <h3>{{ $t("about.cta.title") }}</h3>
     <p>{{ $t("about.cta.text") }}</p>
     <nav class="about_cta_nav">
-      <NuxtLink :to="localePath('/contact')"
-        ><button class="btn btn-contact">
-          {{ lang === "en" ? "Contact" : "Kontakt" }}
-        </button></NuxtLink
-      >
+      <NuxtLink :to="localePath('/contact')" class="link link-contact">
+        {{ lang === "en" ? "Contact" : "Kontakt" }}
+      </NuxtLink>
       <a
         href="https://example.com/my-cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        class="story_link"
+        :title="lang === 'en' ? 'Open CV in a new tab' : 'Otwórz CV w nowej karcie'"
+        class="link link-cv"
       >
-        <button class="btn btn-cv">CV</button></a
-      >
+        CV
+      </a>
     </nav>
-    <img
-      src="/svg/cat.svg"
-      alt=""
-      class="cat_image"
-    />
+    <img src="/svg/cat.svg" alt="" class="cat_image" />
   </section>
 </template>
 
 <script setup>
+import { useLanguage } from "~/composables/useLanguage";
+
+const { lang } = useLanguage();
 const localePath = useLocalePath();
 </script>
 
@@ -46,7 +44,7 @@ const localePath = useLocalePath();
   margin-top: 10px;
 }
 
-.btn {
+.link {
   height: 40px;
   font-family: inherit;
   cursor: pointer;
@@ -56,6 +54,10 @@ const localePath = useLocalePath();
   box-sizing: border-box;
   font-weight: 400;
   transition: background-color 0.25s ease-out, box-shadow 0.25s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   &:hover {
     box-shadow: $shadow;
@@ -63,7 +65,7 @@ const localePath = useLocalePath();
   }
 }
 
-.btn-cv {
+.link-cv {
   background-color: $white;
   border: 2px solid $primary-color;
   color: $text-color;
@@ -74,7 +76,7 @@ const localePath = useLocalePath();
   }
 }
 
-.btn-contact {
+.link-contact {
   background-color: $primary-color;
   color: $white;
 

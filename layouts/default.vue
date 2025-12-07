@@ -11,6 +11,14 @@
 <script setup>
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
+import { useLanguage } from '~/composables/useLanguage';
+const { lang } = useLanguage();
+
+useHead({
+  htmlAttrs: {
+    lang: lang.value
+  }
+})
 </script>
 
 <style>

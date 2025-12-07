@@ -7,6 +7,7 @@
         class="project_link"
         target="_blank"
         rel="noopener noreferrer"
+        :title="lang === 'en' ? 'Open live demo in a new tab' : 'Otwórz demo w nowej karcie'"
         >[Live Demo]</a
       >
       <span>•</span>
@@ -15,6 +16,7 @@
         class="project_link"
         target="_blank"
         rel="noopener noreferrer"
+        :title="lang === 'en' ? 'Open GitHub repository in a new tab' : 'Otwórz repozytorium GitHub w nowej karcie'"
         >[GitHub]</a
       >
     </nav>
@@ -43,7 +45,6 @@
 
 <script setup>
 import { useLanguage } from "~/composables/useLanguage";
-
 const { lang } = useLanguage();
 const route = useRoute();
 const projectTitle = route.params.title;

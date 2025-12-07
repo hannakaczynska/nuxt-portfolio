@@ -8,27 +8,47 @@
           <a href="mailto:hanna.kaczynska.dev@gmail.com" class="contact_email"
             >hanna.kaczynska.dev@gmail.com</a
           >
-          <UIcon
-            name="i-lucide-copy"
-            size="16"
-            v-if="!isCopied"
+          <button
+            type="button"
+            class="copy-button"
             @click="copyIcon"
-            class="copy-icon"
-          />
-          <UIcon
-            name="i-lucide-copy-check"
-            size="16"
-            v-if="isCopied"
-            @click="copyIcon"
-            class="copy-icon"
-          />
+            :aria-label="
+              isCopied
+                ? lang === 'en'
+                  ? 'Email address copied'
+                  : 'Adres e-mail skopiowany'
+                : lang === 'en'
+                ? 'Copy email address'
+                : 'Skopiuj adres e-mail'
+            "
+          >
+            <UIcon
+              name="i-lucide-copy"
+              size="16"
+              v-if="!isCopied"
+              class="copy-icon"
+              aria-hidden="true"
+            />
+            <UIcon
+              name="i-lucide-copy-check"
+              size="16"
+              v-if="isCopied"
+              class="copy-icon"
+              aria-hidden="true"
+            />
+          </button>
         </div>
-        <nav class="social-icons" aria-label="Social media links">
+        <nav class="social-icons" :aria-label="lang === 'en' ? 'Social media links' : 'Linki do mediów społecznościowych'">
           <a
             href="https://github.com/hannakaczynska"
+            title="GitHub"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
+            :aria-label="
+              lang === 'en'
+                ? 'Open my GitHub profile'
+                : 'Otwórz mój profil GitHub'
+            "
           >
             <UIcon name="simple-icons:github" class="social-icon" />
           </a>
@@ -36,17 +56,18 @@
             href="https://www.linkedin.com/in/hanna-kaczy%C5%84ska-0b7247224/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
+            :aria-label="
+              lang === 'en'
+                ? 'Open my LinkedIn profile'
+                : 'Otwórz mój profil LinkedIn'
+            "
+            title="LinkedIn"
           >
             <UIcon name="simple-icons:linkedin" class="social-icon" />
           </a>
         </nav>
       </section>
-      <img
-        src="/svg/contact.svg"
-        alt=""
-        class="contact_image"
-      />
+      <img src="/svg/contact.svg" alt="" class="contact_image" />
       <ContactForm class="contact_form" />
     </div>
   </UCard>
@@ -127,6 +148,10 @@ onBeforeUnmount(() => {
     font-weight: 400;
     color: $third-color;
   }
+}
+.copy-button {
+  display: inline-flex;
+  align-items: center;
 }
 
 .copy-icon {

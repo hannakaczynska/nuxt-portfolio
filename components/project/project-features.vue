@@ -5,7 +5,7 @@
     </h3>
     <div class="card_container">
       <UCard v-for="(feature, index) in projectFeatures" class="feature_card">
-        <UIcon :name="feature.icon" class="feature_icon" />
+        <UIcon :name="feature.icon" class="feature_icon" aria-hidden="true" />
         <h4 class="feature_title" :key="index">{{ feature.name }}</h4>
         <ul class="feature_list">
           <li

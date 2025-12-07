@@ -9,7 +9,7 @@
       >
         <div class="story_into">
           <h4 class="story_title">{{ storyItem.title }}</h4>
-          <UIcon :name="storyItem.icon" class="story_icon" />
+          <UIcon :name="storyItem.icon" class="story_icon" aria-hidden="true" />
         </div>
 
         <p v-if="storyItem.textone">
@@ -18,26 +18,50 @@
             :href="storyItem.courses[0].pdf"
             target="_blank"
             rel="noopener noreferrer"
+            :title="
+              lang === 'en'
+                ? 'Open certificate in a new tab'
+                : 'Otwórz certyfikat w nowej karcie'
+            "
             class="story_link"
             >{{ storyItem.courses[0].name }}
-            <UIcon name="i-lucide-external-link" class="inline-icon"
+            <UIcon
+              name="i-lucide-external-link"
+              class="inline-icon"
+              aria-hidden="true"
           /></a>
           {{ lang === "en" ? "and" : "i" }}
           <a
             :href="storyItem.courses[1].pdf"
             target="_blank"
             rel="noopener noreferrer"
+            :title="
+              lang === 'en'
+                ? 'Open certificate in a new tab'
+                : 'Otwórz certyfikat w nowej karcie'
+            "
             class="story_link"
             >{{ storyItem.courses[1].name }}
-            <UIcon name="i-lucide-external-link" class="inline-icon" /></a
+            <UIcon
+              name="i-lucide-external-link"
+              class="inline-icon"
+              aria-hidden="true" /></a
           >. {{ storyItem.texttwo
           }}<a
             :href="storyItem.courses[2].pdf"
             target="_blank"
             rel="noopener noreferrer"
+            :title="
+              lang === 'en'
+                ? 'Open certificate in a new tab'
+                : 'Otwórz certyfikat w nowej karcie'
+            "
             class="story_link"
             >{{ storyItem.courses[2].name }}
-            <UIcon name="i-lucide-external-link" class="inline-icon"
+            <UIcon
+              name="i-lucide-external-link"
+              class="inline-icon"
+              aria-hidden="true"
           /></a>
           {{ storyItem.textthree }}
         </p>
@@ -47,26 +71,26 @@
           <a
             href="https://www.linkedin.com/in/hanna-kaczy%C5%84ska-0b7247224/"
             target="_blank"
+            rel="noopener noreferrer"
+            :title="lang === 'en' ? 'Open my LinkedIn profile' : 'Otwórz mój profil LinkedIn'"
           >
-            LinkedIn <UIcon name="i-lucide-external-link" />
+            LinkedIn <UIcon name="i-lucide-external-link" aria-hidden="true" />
           </a>
         </p>
-        <div v-if="storyItem.buttons" class="story_buttons">
+        <div v-if="storyItem.buttons" class="project_links">
           <NuxtLink
             v-if="storyItem.buttons.project"
             :to="localePath(storyItem.buttons.project)"
+            class="link link_project"
           >
-            <button type="button" class="btn btn-project">
-              {{ storyItem.buttons.projectName }}
-            </button>
+            {{ storyItem.buttons.projectName }}
           </NuxtLink>
           <NuxtLink
             v-if="storyItem.buttons.projects"
             :to="localePath(storyItem.buttons.projects)"
+            class="link link_projects"
           >
-            <button type="button" class="btn btn-projects">
-              {{ lang === "en" ? "Projects" : "Projekty" }}
-            </button>
+            {{ lang === "en" ? "Projects" : "Projekty" }}
           </NuxtLink>
         </div>
       </UCard>
@@ -163,7 +187,7 @@ const myJourney = computed(() => {
   }
 }
 
-.story_buttons {
+.project_links {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -171,7 +195,7 @@ const myJourney = computed(() => {
   margin-top: 20px;
 }
 
-.btn {
+.link {
   height: 40px;
   font-family: inherit;
   cursor: pointer;
@@ -181,13 +205,16 @@ const myJourney = computed(() => {
   box-sizing: border-box;
   font-weight: 400;
   transition: background-color 0.25s ease-out;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   &:hover {
     font-weight: 400;
   }
 }
 
-.btn-project {
+.link_project {
   background-color: $white;
   border: 2px solid $third-color;
   color: $text-color;
@@ -197,7 +224,7 @@ const myJourney = computed(() => {
   }
 }
 
-.btn-projects {
+.link_projects {
   background-color: $third-color;
   color: $white;
 
@@ -207,7 +234,7 @@ const myJourney = computed(() => {
 }
 
 @media (min-width: 500px) {
-  .story_buttons {
+  .project_links {
     flex-direction: row;
     justify-content: center;
     margin-top: 30px;

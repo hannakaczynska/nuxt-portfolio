@@ -3,20 +3,22 @@
     <p class="footer_withLove small">{{ $t("footer.madeWith") }}</p>
     <div class="footer_content">
       <p class="footer_copy small">© 2025 Hanna Kaczyńska</p>
-      <nav class="social-icons" aria-label="Social media links">
+      <nav class="social-icons" :aria-label="lang === 'en' ? 'Social media links' : 'Linki do mediów społecznościowych'">
         <a
           href="https://github.com/hannakaczynska"
+          title="GitHub"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub"
+          :aria-label="lang === 'en' ? 'Open my GitHub profile' : 'Otwórz mój profil GitHub'"
         >
           <UIcon name="simple-icons:github" />
         </a>
         <a
           href="https://www.linkedin.com/in/hanna-kaczy%C5%84ska-0b7247224/"
+          title="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
+          :aria-label="lang === 'en' ? 'Open my LinkedIn profile' : 'Otwórz mój profil LinkedIn'"
         >
           <UIcon name="simple-icons:linkedin" />
         </a>
@@ -26,7 +28,8 @@
 </template>
 
 <script setup>
-// No script logic needed for this footer component
+import { useLanguage } from "~/composables/useLanguage";
+const { lang } = useLanguage();
 </script>
 
 <style lang="scss" scoped>

@@ -24,6 +24,7 @@
     </p>
     <div class="autoplay-controls">
       <button
+        type="button"
         @click="isPlaying ? pauseAutoplay() : playAutoplay()"
         :aria-pressed="isPlaying.toString()"
         :aria-label="isPlaying ? 'Pauza karuzeli' : 'Odtwórz karuzelę'"

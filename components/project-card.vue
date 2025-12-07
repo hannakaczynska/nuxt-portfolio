@@ -3,10 +3,11 @@
     v-for="(card, index) in cards"
     :key="index"
     :to="localePath(card.to)"
+    :aria-labelledby="`card-title-${index}`"
   >
     <UCard class="card">
       <section>
-        <h3>{{ card.title }}</h3>
+        <h3 :id="`card-title-${index}`">{{ card.title }}</h3>
         <p class="project_description">{{ card.description }}</p>
       </section>
       <section class="stack-badges">
@@ -22,6 +23,7 @@
             :name="stack.icon || 'i-lucide-rocket'"
             class="stack_icon"
             :style="{ color: '#70af7a' }"
+            aria-hidden="true" 
           />
         </UBadge>
       </section>

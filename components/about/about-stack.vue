@@ -14,6 +14,7 @@
           :name="stack.icon"
           class="stack_icon"
           :style="{ color: '#70af7a' }"
+          aria-hidden="true" 
         />
       </UBadge>
     </div>
