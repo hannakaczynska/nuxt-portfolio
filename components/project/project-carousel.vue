@@ -27,7 +27,7 @@
         type="button"
         @click="isPlaying ? pauseAutoplay() : playAutoplay()"
         :aria-pressed="isPlaying.toString()"
-        :aria-label="isPlaying ? 'Pauza karuzeli' : 'Odtwórz karuzelę'"
+        :aria-label="isPlaying ? lang === 'en' ? 'Pause carousel' : 'Pauza karuzeli' : lang === 'en' ? 'Play carousel' : 'Odtwórz karuzelę'"
         class="autoplay-button"
       >
         <UIcon v-if="!isPlaying" name="i-lucide-square-play" class="icon" />
