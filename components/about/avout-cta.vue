@@ -11,9 +11,10 @@
         target="_blank"
         rel="noopener noreferrer"
         :title="lang === 'en' ? 'Open CV in a new tab' : 'Otwórz CV w nowej karcie'"
+        aria-label="Open my CV in PDF format"
         class="link link-cv"
       >
-        CV
+        CV (PDF)
       </a>
     </nav>
     <img src="/svg/cat.svg" alt="" class="cat_image" />

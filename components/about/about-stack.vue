@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h3 class="stack_title">Stack</h3>
+    <h2 class="stack_title">Stack</h2>
     <div class="stack-badges">
       <UBadge
         v-for="(stack, stackIndex) in myStack"

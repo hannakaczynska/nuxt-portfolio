@@ -1,5 +1,6 @@
 <template>
   <section class="section_intro">
+    <h1 class="sr-only">{{ lang === 'en' ? 'Project Page' : 'Strona Projektu' }}</h1>
     <h2 class="project_title">{{ $t(`projects.${projectTitle}.title`) }}</h2>
     <nav class="project_nav">
       <a

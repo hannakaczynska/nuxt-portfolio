@@ -1,7 +1,7 @@
 <template>
   <UCard>
     <div class="card">
-      <h2 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h2>
+      <h1 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h1>
       <AboutHero />
       <AboutStack />
       <div class="contact_link">

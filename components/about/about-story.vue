@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h3>{{ lang === "en" ? "My story" : "Moja historia" }}</h3>
+    <h2>{{ lang === "en" ? "My story" : "Moja historia" }}</h2>
     <div class="story_cards">
       <UCard
         v-for="(storyItem, key) in myJourney"
@@ -8,7 +8,7 @@
         class="story_card"
       >
         <div class="story_into">
-          <h4 class="story_title">{{ storyItem.title }}</h4>
+          <h3 class="story_title">{{ storyItem.title }}</h3>
           <UIcon :name="storyItem.icon" class="story_icon" aria-hidden="true" />
         </div>
 
@@ -216,7 +216,7 @@ const myJourney = computed(() => {
 
 .link_project {
   background-color: $white;
-  border: 2px solid $primary-color-light;
+  border: 2px solid $primary-color;
   color: $text-color;
 
   &:hover {
@@ -225,11 +225,11 @@ const myJourney = computed(() => {
 }
 
 .link_projects {
-  background-color: $primary-color-light;
+  background-color: $primary-color;
   color: $white;
 
   &:hover {
-    background-color: $primary-color;
+    background-color: $primary-color-light;
   }
 }
 
