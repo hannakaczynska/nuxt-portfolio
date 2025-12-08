@@ -286,13 +286,13 @@
         "webp": "/images/destillapp.webp",
         "png": "/images/destillapp.png"
       },
-  "imgalt": {
-    "screen1": "Widok magazynu surowców z listą roślin i opcjami zarządzania",
-    "screen2": "Fragment formularza do edycji rośliny w magazynie surowców",
-    "screen3": "Widok zapisanych destylacji z możliwością zobaczenia szczegółów i przypisywania wyników",
-    "screen4": "Widok karty destylacji z podsumowaniem parametrów, wyników i informacji o surowcu",
-    "screen5": "Widok konta użytkownika w trybie ciemnym z opcjami zarządzania profilem"
-  }
+      "imgalt": {
+        "screen1": "Widok magazynu surowców z listą roślin i opcjami zarządzania",
+        "screen2": "Fragment formularza do edycji rośliny w magazynie surowców",
+        "screen3": "Widok zapisanych destylacji z możliwością zobaczenia szczegółów i przypisywania wyników",
+        "screen4": "Widok karty destylacji z podsumowaniem parametrów, wyników i informacji o surowcu",
+        "screen5": "Widok konta użytkownika w trybie ciemnym z opcjami zarządzania profilem"
+      }
     },
     "wallet-app": {
       "title": "Wallet App",
@@ -412,30 +412,108 @@
         "webp": "/images/wallet-app.webp",
         "png": "/images/wallet-app.png"
       },
-  "imgalt": {
-    "screen1": "Panel statystyk wydatków i przychodów z wykresem kołowym",
-    "screen2": "Formularz dodawania nowej transakcji z kategorii przychodów",
-    "screen3": "Widok mobilny z saldem konta i listą ostatnich transakcji",
-    "screen4": "Pulpit główny z saldem konta, listą ostatnich transakcji i kursami walut",
-    "screen5": "Widok mobilny strony rejestracji do aplikacji Wallet App"
-  }
+      "imgalt": {
+        "screen1": "Panel statystyk wydatków i przychodów z wykresem kołowym",
+        "screen2": "Formularz dodawania nowej transakcji z kategorii przychodów",
+        "screen3": "Widok mobilny z saldem konta i listą ostatnich transakcji",
+        "screen4": "Pulpit główny z saldem konta, listą ostatnich transakcji i kursami walut",
+        "screen5": "Widok mobilny strony rejestracji do aplikacji Wallet App"
+      }
     },
     "portfolio": {
       "title": "Developer Portfolio",
       "demo": "",
-      "github": "",
-      "description": "To jest opis",
+      "github": "https://github.com/hannakaczynska/nuxt-portfolio",
+      "description": "Osobiste portfolio deweloperskie zbudowane w Nuxt 3, prezentujące moje projekty, umiejętności oraz umożliwiające łatwy kontakt. \nProjekt został stworzony w pełni samodzielnie, z myślą o nowoczesnym, responsywnym i przyjaznym dla użytkownika designie. \nStrona jest w pełni dostępna i zoptymalizowana pod kątem SEO, a także wspiera dwa języki (EN/PL) z możliwością szybkiej zmiany wybranego języka. \nPortfolio zawiera interaktywne karuzele projektów, zoptymalizowane obrazy oraz wygodny formularz kontaktowy, a także linki do zasobów i mediów społecznościowych.",
       "alt": "Widok strony głównej aplikacji Developer Portfolio",
       "work": "solo",
       "year": "2025",
+      "features": [
+        {
+          "name": "Prezentacja Projektów",
+          "icon": "i-lucide-monitor",
+          "list": [
+            "Interaktywne karuzele projektów",
+            "Optymalizacja obrazów WebP/AVIF z fallbackami",
+            "Ładowanie danych o projektach z lokalnych plików"
+          ]
+        },
+        {
+          "name": "Informacje i Kontakt",
+          "icon": "i-lucide-user",
+          "list": [
+            "Formularz kontaktowy do wysłania wiadomości",
+            "Dostęp do CV i certyfikatów w formacie PDF",
+            "Linki do mediów społecznościowych oraz email"
+          ]
+        },
+        {
+          "name": "Międzynarodowość",
+          "icon": "i-lucide-globe",
+          "list": [
+            "Obsługa dwóch języków (EN/PL) z i18n",
+            "Przełączanie języka za pomocą przycisku",
+            "Dynamiczna zmiana treści i ścieżek URL"
+          ]
+        },
+        {
+          "name": "Responsywny Design i UX",
+          "icon": "i-lucide-smartphone",
+          "list": [
+            "Projekt mobile-first z SCSS",
+            "Komponenty Nuxt UI dla spójnego wyglądu",
+            "Dbałość o dostępność i przyjazny UX"
+          ]
+        },
+        {
+          "name": "SEO i Wydajność",
+          "icon": "i-lucide-rocket",
+          "list": [
+            "Statyczna generacja stron",
+            "Automatyczne meta tagi, sitemap.xml i robots.txt",
+            "Lazy loading"
+          ]
+        }
+      ],
       "responsibilities": {
-        "overview": "",
-        "list": []
+        "overview": "Jako projekt solo odpowiadałam za cały proces tworzenia portfolio:",
+        "list": [
+          "Zaprojektowałam strukturę i architekturę Nuxt 3",
+          "Stworzyłam responsywny UI z Nuxt UI i SCSS",
+          "Zaimplementowałam interaktywne karuzele projektów z Embla Carousel",
+          "Skonfigurowałam dwujęzyczność za pomocą i18n",
+          "Zaimplementowałam formularz kontaktowy z walidacją i integracją EmailJS",
+          "Zoptymalizowałam SEO (meta tagi, sitemap, robots.txt) oraz wydajność",
+          "Zadbałam o pełną dostępność: ARIA, semantyka, keyboard navigation, focus management, kontrast",
+          "Wdrożyłam portfolio na Vercel, z automatycznym buildem i statyczną dystrybucją stron"
+        ]
       },
       "stack": {
         "frontend": [
-          { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
-          { "name": "Nuxt UI", "icon": "simple-icons:nuxt" }
+          {
+            "name": "Nuxt 3",
+            "description": "Framework Vue do SSG i pełnego frontendu"
+          },
+          {
+            "name": "Nuxt UI",
+            "description": "Biblioteka komponentów do szybkiego budowania UI"
+          },
+          {
+            "name": "SCSS",
+            "description": "Stylowanie komponentów i layoutów"
+          },
+          {
+            "name": "i18n",
+            "description": "Obsługa dwóch języków (EN/PL)"
+          },
+          {
+            "name": "Embla Carousel",
+            "description": "Interaktywne karuzele projektów"
+          },
+          {
+            "name": "EmailJS + Joi",
+            "description": "Formularz kontaktowy z walidacją i wysyłką maili"
+          }
         ]
       },
       "img": {
@@ -533,13 +611,13 @@
         "webp": "/images/filmoteka.webp",
         "png": "/images/filmoteka.png"
       },
-  "imgalt": {
-    "screen1": "Widok głównej strony aplikacji Filmoteka z wyszukiwarką filmów",
-    "screen2": "Okno modalne z szczegółowymi informacjami o filmie",
-    "screen3": "Okno modalne z trailerem filmu",
-    "screen4": "Sekcja biblioteki z filmami obejrzanymi i do obejrzenia",
-    "screen5": "Widok paddingu i karty filmu w wynikach wyszukiwania"
-  }
+      "imgalt": {
+        "screen1": "Widok głównej strony aplikacji Filmoteka z wyszukiwarką filmów",
+        "screen2": "Okno modalne z szczegółowymi informacjami o filmie",
+        "screen3": "Okno modalne z trailerem filmu",
+        "screen4": "Sekcja biblioteki z filmami obejrzanymi i do obejrzenia",
+        "screen5": "Widok paddingu i karty filmu w wynikach wyszukiwania"
+      }
     },
     "icecream-shop": {
       "title": "Icecream Shop",

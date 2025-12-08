@@ -269,13 +269,13 @@
         "webp": "/images/destillapp.webp",
         "png": "/images/destillapp.png"
       },
-  "imgalt": {
-    "screen1": "View of the raw materials warehouse with a list of plants and management options",
-    "screen2": "Fragment of the form for editing a plant in the raw materials warehouse",
-    "screen3": "View of saved distillations with the ability to see details and assign results",
-    "screen4": "View of the distillation card with a summary of parameters, results, and raw material information",
-    "screen5": "View of the user account in dark mode with profile management options"
-  }
+      "imgalt": {
+        "screen1": "View of the raw materials warehouse with a list of plants and management options",
+        "screen2": "Fragment of the form for editing a plant in the raw materials warehouse",
+        "screen3": "View of saved distillations with the ability to see details and assign results",
+        "screen4": "View of the distillation card with a summary of parameters, results, and raw material information",
+        "screen5": "View of the user account in dark mode with profile management options"
+      }
     },
     "wallet-app": {
       "title": "Wallet App",
@@ -400,34 +400,108 @@
         "screen5": "Mobile view of the Wallet App registration page"
       }
     },
-    "portfolio": {
-      "title": "Developer Portfolio",
-      "demo": "",
-      "github": "",
-      "description": "This is description",
-      "alt": "View of the hero page of the Developer Portfolio application",
-      "work": "solo",
-      "year": "2025",
-      "features": [],
-      "responsibilities": {
-        "overview": "",
-        "list": []
-      },
-      "stack": {
-        "frontend": [
-          { "name": "Nuxt 3", "icon": "simple-icons:nuxt" },
-          { "name": "Nuxt UI", "icon": "simple-icons:nuxt" },
-          { "name": "SCSS", "icon": "simple-icons:sass" },
-          { "name": "i18n", "icon": "simple-icons:i18next" },
-          { "name": "EmailJS", "icon": "i-lucide-send" }
-        ]
-      },
-      "img": {
-        "avif": "/images/wallet-app.avif",
-        "webp": "/images/wallet-app.webp",
-        "png": "/images/wallet-app.png"
-      }
+"portfolio": {
+  "title": "Developer Portfolio",
+  "demo": "",
+  "github": "https://github.com/hannakaczynska/nuxt-portfolio",
+  "description": "A personal developer portfolio built with Nuxt 3, showcasing my projects, skills, and providing easy ways to get in touch. \nThe project was fully developed solo, focusing on a modern, responsive, and user-friendly design. \nThe site is fully accessible and SEO-optimized, supporting two languages (EN/PL) with quick language switching. \nThe portfolio includes interactive project carousels, optimized images, as well as a convenient contact form and links to resources and social media.",
+  "alt": "View of the main page of the Developer Portfolio application",
+  "work": "solo",
+  "year": "2025",
+  "features": [
+    {
+      "name": "Project Showcase",
+      "icon": "i-lucide-monitor",
+      "list": [
+        "Interactive project carousels",
+        "Image optimization in WebP/AVIF with fallbacks",
+        "Project data loaded from local files"
+      ]
     },
+    {
+      "name": "Information & Contact",
+      "icon": "i-lucide-user",
+      "list": [
+        "Contact form for sending messages",
+        "Access to CV and certificates in PDF format",
+        "Links to social media and email"
+      ]
+    },
+    {
+      "name": "Internationalization",
+      "icon": "i-lucide-globe",
+      "list": [
+        "Support for two languages (EN/PL) with i18n",
+        "Language switching via button",
+        "Content and URL paths change according to the selected language"
+      ]
+    },
+    {
+      "name": "Responsive Design & UX",
+      "icon": "i-lucide-smartphone",
+      "list": [
+        "Mobile-first design with SCSS",
+        "Nuxt UI components for consistent appearance",
+        "Focus on accessibility and user-friendly UX"
+      ]
+    },
+    {
+      "name": "SEO & Performance",
+      "icon": "i-lucide-rocket",
+      "list": [
+        "Static site generation",
+        "Automatic meta tags, sitemap.xml, and robots.txt",
+        "Lazy loading of resources"
+      ]
+    }
+  ],
+  "responsibilities": {
+    "overview": "As a solo project, I was responsible for the entire portfolio creation process:",
+    "list": [
+      "Designed the structure and architecture with Nuxt 3",
+      "Created a responsive UI using Nuxt UI and SCSS",
+      "Implemented interactive project carousels with Embla Carousel",
+      "Configured bilingual support using i18n",
+      "Implemented a contact form with validation and EmailJS integration",
+      "Optimized SEO (meta tags, sitemap, robots.txt) and performance",
+      "Ensured full accessibility: ARIA, semantic HTML, keyboard navigation, focus management, color contrast",
+      "Deployed the portfolio on Vercel, with static site distribution and HTTPS/CDN support"
+    ]
+  },
+  "stack": {
+    "frontend": [
+      {
+        "name": "Nuxt 3",
+        "description": "Vue framework for SSG and full frontend development"
+      },
+      {
+        "name": "Nuxt UI",
+        "description": "Component library for building UI quickly"
+      },
+      {
+        "name": "SCSS",
+        "description": "Styling components and layouts"
+      },
+      {
+        "name": "i18n",
+        "description": "Support for two languages (EN/PL)"
+      },
+      {
+        "name": "Embla Carousel",
+        "description": "Interactive project carousels"
+      },
+      {
+        "name": "EmailJS + Joi",
+        "description": "Contact form with validation and email sending"
+      }
+    ]
+  },
+  "img": {
+    "avif": "/images/wallet-app.avif",
+    "webp": "/images/wallet-app.webp",
+    "png": "/images/wallet-app.png"
+  }
+},
     "filmoteka": {
       "title": "Filmoteka",
       "demo": "https://wallet-app-project.netlify.app/login",
