@@ -107,7 +107,7 @@ nav a {
   align-items: center;
   gap: 0.25rem;
   border: none;
-  color: $light-grey-color;
+  color: $dark-grey-color;
   background: none;
   font-size: 18px;
   cursor: pointer;

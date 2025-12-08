@@ -76,7 +76,7 @@ const nextProject = computed(() => {
   flex-direction: row;
   gap: 5px;
   align-items: center;
-  color: $light-grey-color;
+  color: $dark-grey-color;
   cursor: pointer;
   transition: color 0.25s ease-out;
 
@@ -89,7 +89,7 @@ const nextProject = computed(() => {
 .arrow {
   width: 18px;
   height: 18px;
-  color: $light-grey-color;
+  color: $dark-grey-color;
   cursor: pointer;
   transition: color 0.25s ease-out;
 }

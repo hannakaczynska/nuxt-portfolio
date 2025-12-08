@@ -147,19 +147,19 @@ const myJourney = computed(() => {
 .story_icon {
   width: 24px;
   height: 24px;
-  color: $primary-color;
+  color: $primary-color-light;
 }
 
 .experience-more {
   margin-top: 30px;
   font-size: 0.9rem;
-  color: $light-grey-color;
+  color: $dark-grey-color;
 
   a {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    color: $light-grey-color;
+    color: $dark-grey-color;
     transition: color 0.25s ease-out;
 
     &:hover {
@@ -216,7 +216,7 @@ const myJourney = computed(() => {
 
 .link_project {
   background-color: $white;
-  border: 2px solid $third-color;
+  border: 2px solid $primary-color-light;
   color: $text-color;
 
   &:hover {
@@ -225,7 +225,7 @@ const myJourney = computed(() => {
 }
 
 .link_projects {
-  background-color: $third-color;
+  background-color: $primary-color-light;
   color: $white;
 
   &:hover {

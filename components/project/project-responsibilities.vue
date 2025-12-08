@@ -3,8 +3,8 @@
     <h3 class="section_title">
       {{ lang === "en" ? "My responsibilities" : "Moje zadania" }}
     </h3>
+    <h4 class="list_title">{{ projectResp.overview }}</h4>
     <ul class="responsibilities_list">
-      <h4 class="list_title">{{ projectResp.overview }}</h4>
       <li
         v-for="(resp, index) in projectResp.list"
         :key="index"
@@ -38,6 +38,11 @@ const projectResp = computed(() => {
 .section_title {
   margin-bottom: 15px;
 }
+
+.list_title {
+  margin-bottom: 10px;
+}
+
 .responsibilities_list {
   display: flex;
   flex-direction: column;
@@ -54,7 +59,7 @@ const projectResp = computed(() => {
 .iteam_icon {
   width: 16px;
   height: 16px;
-  color: $primary-color;
+  color: $primary-color-light;
   flex-shrink: 0;
 }
 

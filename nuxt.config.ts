@@ -6,9 +6,13 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxtjs/sitemap", "@nuxtjs/robots"],
 
-  ui: {
-    global: true,
+  compilerOptions: {
+    types: ["node"],
   },
+
+  // ui: {
+  //   global: true,
+  // },
 
   css: ["~/assets/styles/main.css", "~/assets/styles/global.scss"],
 
@@ -25,18 +29,22 @@ export default defineNuxtConfig({
 
   // SEO Configuration
   app: {
-  head: {
-    meta: [
-      { name: "author", content: "Hanna Kaczyńska" },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Hanna Kaczyńska Portfolio" },
-      { property: "og:image", content: `${process.env.NUXT_PUBLIC_SITE_URL}/images/og-image.png` },    
-    ],
-    link: [
-      { rel: "canonical", href: process.env.NUXT_PUBLIC_SITE_URL },
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
-    ]
-  }
+    head: {
+      meta: [
+        { name: "author", content: "Hanna Kaczyńska" },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Hanna Kaczyńska Portfolio" },
+        { name: "robots", content: "index, follow" },
+        {
+          property: "og:image",
+          content: `${process.env.NUXT_PUBLIC_SITE_URL}/images/og-image.png`,
+        },
+      ],
+      link: [
+        { rel: "canonical", href: process.env.NUXT_PUBLIC_SITE_URL },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      ],
+    },
   },
 
   // Sitemap Configuration
@@ -72,7 +80,7 @@ export default defineNuxtConfig({
     langDir: "locales/",
     strategy: "prefix_except_default",
     detectBrowserLanguage: false,
-    seo: true, // Enable SEO for i18n
+    seo: true,
   },
 
   runtimeConfig: {

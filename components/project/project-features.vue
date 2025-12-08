@@ -60,7 +60,7 @@ const projectFeatures = computed(() => {
   display: block;
   width: 24px;
   height: 24px;
-  color: $primary-color;
+  color: $primary-color-light;
   margin-inline: auto;
   margin-bottom: 15px;
 }

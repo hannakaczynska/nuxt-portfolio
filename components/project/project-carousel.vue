@@ -151,7 +151,7 @@ img {
 }
 
 .icon {
-  color: $primary-color;
+  color: $primary-color-light;
   width: 30px;
   height: 30px;
 }

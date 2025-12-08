@@ -167,6 +167,11 @@ const onSubmit = async () => {
   width: 100%;
 }
 
+.form-input ::v-deep(input)::placeholder,
+.form-field ::v-deep(textarea)::placeholder {
+  color: $dark-grey-color;
+}
+
 .form-btn {
   height: 40px;
   font-family: inherit;

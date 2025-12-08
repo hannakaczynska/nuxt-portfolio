@@ -3,8 +3,8 @@
     <h3 class="section_title">Stack</h3>
     <div class="stack_container">
       <UCard v-if="frontendStack.length" class="stack_card">
+        <h3 v-if="backendStack.length" class="list_title">Frontend</h3>
         <ul class="stack_list stack_list--frontend">
-          <h3 v-if="backendStack.length" class="list_title">Frontend</h3>
           <li v-for="(stack, index) in frontendStack" :key="index">
             <span class="stack_name">{{ stack.name }}</span
             >: <span>{{ stack.description }}</span>
@@ -12,8 +12,8 @@
         </ul>
       </UCard>
       <UCard v-if="backendStack.length" class="stack_card">
+        <h3 class="list_title">Backend</h3>
         <ul class="stack_list stack_list--backend">
-          <h3 class="list_title">Backend</h3>
           <li v-for="(stack, index) in backendStack" :key="index">
             <span class="stack_name">{{ stack.name }}</span
             >: <span>{{ stack.description }}</span>
