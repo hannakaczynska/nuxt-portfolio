@@ -517,9 +517,9 @@
         ]
       },
       "img": {
-        "avif": "/images/wallet-app.avif",
-        "webp": "/images/wallet-app.webp",
-        "png": "/images/wallet-app.png"
+        "avif": "/images/portfolio.avif",
+        "webp": "/images/portfolio.webp",
+        "png": "/images/portfolio.png"
       }
     },
     "filmoteka": {
