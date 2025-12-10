@@ -94,15 +94,15 @@
         "courses": [
           {
             "name": "Full-stack Developer GoIT",
-            "pdf": "/certificates/Fullstack-GoIT.pdf"
+            "pdf": "/pdfs/Fullstack-GoIT.pdf"
           },
           {
             "name": "Vue - Complete Guide Udemy",
-            "pdf": "/certificates/Vue-Udemy.pdf"
+            "pdf": "/pdfs/Vue-Udemy.pdf"
           },
           {
             "name": "GitHub Copilot Udemy",
-            "pdf": "/certificates/GitHub-Copilot.pdf"
+            "pdf": "/pdfs/GitHub-Copilot.pdf"
           }
         ]
       },
@@ -134,7 +134,8 @@
     },
     "cta": {
       "title": "Got a challenge for me? Let’s talk.",
-      "text": "I’d be happy to join a team where I can grow and bring real value."
+      "text": "I’d be happy to join a team where I can grow and bring real value.",
+      "pdf": "/pdfs/H_Kaczyńska_CV_en.pdf"
     }
   },
   "projects": {

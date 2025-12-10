@@ -7,7 +7,7 @@
         {{ lang === "en" ? "Contact" : "Kontakt" }}
       </NuxtLink>
       <a
-        href="https://example.com/my-cv.pdf"
+        :href="$t('about.cta.pdf')"
         target="_blank"
         rel="noopener noreferrer"
         :title="lang === 'en' ? 'Open CV in a new tab' : 'Otwórz CV w nowej karcie'"

@@ -96,15 +96,15 @@
         "courses": [
           {
             "name": "Full-stack Developer GoIT",
-            "pdf": "/certificates/Fullstack-GoIT.pdf"
+            "pdf": "/pdfs/Fullstack-GoIT.pdf"
           },
           {
             "name": "Vue - Complete Guide Udemy",
-            "pdf": "/certificates/Vue-Udemy.pdf"
+            "pdf": "/pdfs/Vue-Udemy.pdf"
           },
           {
             "name": "GitHub Copilot Udemy",
-            "pdf": "/certificates/GitHub-Copilot.pdf"
+            "pdf": "/pdfs/GitHub-Copilot.pdf"
           }
         ]
       },
@@ -136,7 +136,8 @@
     },
     "cta": {
       "title": "Masz dla mnie wyzwanie? Porozmawiajmy.",
-      "text": "Z przyjemnością dołączę do zespołu, w którym mogę się rozwijać i wnosić wartość."
+      "text": "Z przyjemnością dołączę do zespołu, w którym mogę się rozwijać i wnosić wartość.",
+      "pdf": "/pdfs/H_Kaczyńska_CV_pl.pdf"
     }
   },
   "projects": {
