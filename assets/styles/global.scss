@@ -1,6 +1,13 @@
 @use '@/assets/styles/fonts.scss';
 @use "@/assets/styles/variables.scss" as *;
 
+:root {
+  --ui-bg: #ffffff;
+  --ui-text: $text-color; 
+  --ui-border: #e5e5e5;
+  --ui-border-accented: #e5e5e5;
+}
+
 body {
   margin: 0;
   font-family: $main-font;
