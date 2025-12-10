@@ -112,7 +112,6 @@ npm run preview
 The application is optimized for Vercel deployment with:
 - Automatic builds on git push
 - Server-side rendering (SSR) support
-- Static site generation for better performance
 - Automatic HTTPS and CDN distribution
 
 #### Build Settings for Vercel

@@ -10,10 +10,6 @@ export default defineNuxtConfig({
     types: ["node"],
   },
 
-  // ui: {
-  //   global: true,
-  // },
-
   css: ["~/assets/styles/main.css", "~/assets/styles/global.scss"],
 
   vite: {
@@ -89,23 +85,6 @@ export default defineNuxtConfig({
       emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID,
       emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
-    },
-  },
-
-  // Enable SSG for better SEO
-  nitro: {
-    prerender: {
-      routes: [
-        "/",
-        "/about",
-        "/projects",
-        "/contact",
-        "/projects/destillapp",
-        "/projects/wallet-app",
-        "/projects/portfolio",
-        "/projects/filmoteka",
-        "/projects/icecream-shop",
-      ],
     },
   },
 });

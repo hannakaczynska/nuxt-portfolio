@@ -473,7 +473,7 @@
     "frontend": [
       {
         "name": "Nuxt 3",
-        "description": "Vue framework for SSG and full frontend development"
+        "description": "Vue framework for SSR and full frontend development"
       },
       {
         "name": "Nuxt UI",
