@@ -5,13 +5,14 @@
     <nav class="project_nav">
       <a
         :href="$t(`projects.${projectTitle}.demo`)"
+        v-if="$t(`projects.${projectTitle}.demo`)"
         class="project_link"
         target="_blank"
         rel="noopener noreferrer"
         :title="lang === 'en' ? 'Open live demo in a new tab' : 'Otwórz demo w nowej karcie'"
         >[Live Demo]</a
       >
-      <span>•</span>
+      <span v-if="$t(`projects.${projectTitle}.demo`)">•</span>
       <a
         :href="$t(`projects.${projectTitle}.github`)"
         class="project_link"

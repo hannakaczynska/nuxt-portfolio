@@ -214,7 +214,7 @@
           "Implemented secure JWT-based authentication with permission checks and data sanitization",
           "Prepared technical documentation (VitePress, TypeDoc, JSDoc) and foundational unit testing setup (Vitest)",
           "Integrated Sentry for error and performance monitoring",
-          "Collaborated with a DevOps engineer on deployment planning and workflow design"
+          "Deployed frontend (Netlify) and backend (Render)"
         ]
       },
       "stack": {
@@ -466,7 +466,7 @@
       "Implemented a contact form with validation and EmailJS integration",
       "Optimized SEO (meta tags, sitemap, robots.txt) and performance",
       "Ensured full accessibility: ARIA, semantic HTML, keyboard navigation, focus management, color contrast",
-      "Deployed the portfolio on Vercel, with static site distribution and HTTPS/CDN support"
+      "Deployed portfolio on Vercel with automatic builds and server-side rendering"
     ]
   },
   "stack": {

@@ -122,17 +122,6 @@ Output Directory: .output
 Install Command: npm install
 ```
 
-### Manual Deployment
-
-For other hosting providers:
-
-```bash
-# Generate static files
-npm run generate
-
-# Deploy the .output/public directory
-```
-
 ## Features Overview
 
 ### Internationalization
@@ -171,7 +160,7 @@ npm run generate
 
 ## License
 
-This project is private and proprietary.
+Public repository, proprietary code.
 
 ## Author
 

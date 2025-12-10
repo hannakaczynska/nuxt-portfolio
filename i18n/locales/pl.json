@@ -216,7 +216,7 @@
           "Wdrożyłam bezpieczne logowanie oparte na JWT, wraz z kontrolą uprawnień i sanityzacją danych",
           "Przygotowałam dokumentację techniczną (VitePress, TypeDoc, JSDoc) oraz strukturę pod dalsze testy (Vitest)",
           "Zintegrowałam narzędzia monitorujące błędy (Sentry)",
-          "Współpracowałam z inżynierem DevOps w zakresie planowania procesu wdrożenia"
+          "Wdrożyłam frontend (Netlify) i backend (Render)"
         ]
       },
       "stack": {
@@ -486,7 +486,7 @@
           "Zaimplementowałam formularz kontaktowy z walidacją i integracją EmailJS",
           "Zoptymalizowałam SEO (meta tagi, sitemap, robots.txt) oraz wydajność",
           "Zadbałam o pełną dostępność: ARIA, semantyka, keyboard navigation, focus management, kontrast",
-          "Wdrożyłam portfolio na Vercel, z automatycznym buildem i statyczną dystrybucją stron"
+          "Wdrożyłam portfolio na Vercel, z automatycznym buildem i obsługą SSR"
         ]
       },
       "stack": {
