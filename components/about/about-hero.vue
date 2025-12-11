@@ -12,7 +12,13 @@
       />
       <img
         src="/images/myPhoto-800.png"
-        :alt="lang === 'en' ? 'Photo of the portfolio author' : 'Zdjęcie autorki portfolio'"
+        width="300"
+        height="400"
+        :alt="
+          lang === 'en'
+            ? 'Photo of the portfolio author'
+            : 'Zdjęcie autorki portfolio'
+        "
         class="img"
       />
     </picture>
