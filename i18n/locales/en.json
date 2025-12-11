@@ -56,6 +56,7 @@
   },
   "about": {
     "hero": "I’m a system-oriented developer focused on front-end and steadily expanding toward full-stack work. \nI enjoy solving problems, understanding how things fit together, and building clean, user-friendly interfaces.",
+    "photoAlt": "Photo of the portfolio author",
     "stack": [
       { "name": "Vue 3", "icon": "simple-icons:vuedotjs" },
       { "name": "Nuxt 4", "icon": "simple-icons:nuxt" },

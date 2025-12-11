@@ -14,11 +14,7 @@
         src="/images/myPhoto-800.png"
         width="300"
         height="400"
-        :alt="
-          lang === 'en'
-            ? 'Photo of the portfolio author'
-            : 'Zdjęcie autorki portfolio'
-        "
+        :alt="$t('about.photoAlt')"
         class="img"
       />
     </picture>
