@@ -1,28 +1,31 @@
 <template>
   <UCard>
-    <div class="card">
-      <ProjectNavigation />
-      <div class="section_container">
-        <div class="grid-container">
-          <ProjectIntro class="intro" />
-          <ProjectOverview class="overview" />
-        </div>
-        <ProjectFeatures />
-        <ProjectResponsibility />
-        <ProjectStack />
+    <LoadingSpinner v-if="!pageReady" />
+    <transition name="fade" mode="out-in">
+      <div v-if="pageReady" class="card">
         <ProjectNavigation />
-        <ProjectCarousel
-          v-if="projectTitle !== 'portfolio'"
-          :images="[
-            `/projects/${projectTitle}/screen1`,
-            `/projects/${projectTitle}/screen2`,
-            `/projects/${projectTitle}/screen3`,
-            `/projects/${projectTitle}/screen4`,
-            `/projects/${projectTitle}/screen5`,
-          ]"
-        />
+        <div class="section_container">
+          <div class="grid-container">
+            <ProjectIntro class="intro" />
+            <ProjectOverview class="overview" />
+          </div>
+          <ProjectFeatures />
+          <ProjectResponsibility />
+          <ProjectStack />
+          <ProjectNavigation />
+          <ProjectCarousel
+            v-if="projectTitle !== 'portfolio'"
+            :images="[
+              `/projects/${projectTitle}/screen1`,
+              `/projects/${projectTitle}/screen2`,
+              `/projects/${projectTitle}/screen3`,
+              `/projects/${projectTitle}/screen4`,
+              `/projects/${projectTitle}/screen5`,
+            ]"
+          />
+        </div>
       </div>
-    </div>
+    </transition>
   </UCard>
 </template>
 
@@ -35,7 +38,10 @@ import ProjectOverview from "~/components/project/project-overview";
 import ProjectResponsibility from "~/components/project/project-responsibilities";
 import ProjectNavigation from "~/components/project/project-navigation.vue";
 import ProjectCard from "~/components/project-card.vue";
+import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
+
+const pageReady = ref(false);
 
 const route = useRoute();
 const projectTitle = route.params.title;
@@ -66,9 +72,22 @@ useHead({
   ],
   link: [{ rel: "canonical", href: currentUrl.value }],
 });
+
+onMounted(() => {
+  pageReady.value = true;
+});
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .section_container {
   display: flex;
   flex-direction: column;

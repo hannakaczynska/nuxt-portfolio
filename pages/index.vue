@@ -1,23 +1,31 @@
 <template>
   <UCard class="hero">
-    <section class="hero_content">
-      <h1 class="hero_title">{{ $t("hero.title") }}</h1>
-      <p class="hero_subtitle">{{ $t("hero.subtitle") }}</p>
-      <img src="/svg/hero.svg" alt="" class="hero_image" />
-    </section>
-    <nav class="hero-actions">
-      <NuxtLink :to="localePath('/about')" class="hero-link hero-link-about">
-          {{ $t("nav.about") }}
-      </NuxtLink>
-      <NuxtLink :to="localePath('/projects')" class="hero-link hero-link-projects">
-          {{ $t("nav.projects") }}
-      </NuxtLink>
-    </nav>
+    <LoadingSpinner v-if="!pageReady" />
+    <transition name="fade" mode="out-in">
+      <div v-if="pageReady">
+        <section class="hero_content">
+          <h1 class="hero_title">{{ $t("hero.title") }}</h1>
+          <p class="hero_subtitle">{{ $t("hero.subtitle") }}</p>
+          <img src="/svg/hero.svg" alt="" class="hero_image" />
+        </section>
+        <nav class="hero-actions">
+          <NuxtLink :to="localePath('/about')" class="hero-link hero-link-about">
+              {{ $t("nav.about") }}
+          </NuxtLink>
+          <NuxtLink :to="localePath('/projects')" class="hero-link hero-link-projects">
+              {{ $t("nav.projects") }}
+          </NuxtLink>
+        </nav>
+      </div>
+    </transition>
   </UCard>
 </template>
 
 <script setup>
+import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
+
+const pageReady = ref(false);
 
 const route = useRoute();
 const config = useRuntimeConfig();
@@ -39,9 +47,22 @@ useHead({
   ],
   link: [{ rel: "canonical", href: currentUrl.value }],
 });
+
+onMounted(() => {
+  pageReady.value = true;
+});
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .hero {
   text-align: center;
   margin: 20px auto;

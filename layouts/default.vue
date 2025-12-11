@@ -2,7 +2,7 @@
   <div class="layout">
     <Header />
     <main :key="$route.fullPath">
-      <slot />
+        <NuxtPage />
     </main>
     <Footer />
   </div>
@@ -12,6 +12,7 @@
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
 import { useLanguage } from '~/composables/useLanguage';
+
 const { lang } = useLanguage();
 
 useHead({
@@ -19,6 +20,7 @@ useHead({
     lang: lang.value
   }
 })
+
 </script>
 
 <style>

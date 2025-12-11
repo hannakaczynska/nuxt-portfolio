@@ -1,16 +1,19 @@
 <template>
   <UCard class="card">
-    <div class="content">
-      <h1>{{ lang === "en" ? "Projects" : "Projekty" }}</h1>
-      <section class="section">
-        <h2>{{ lang === "en" ? "Solo projects" : "Projekty indywidualne" }}</h2>
-        <ProjectCard :cards="soloCards" />
-      </section>
-      <section class="section">
-        <h2>{{ lang === "en" ? "Team projects" : "Projekty grupowe" }}</h2>
-        <ProjectCard :cards="teamCards" />
-      </section>
-    </div>
+    <LoadingSpinner v-if="!pageReady" />
+    <transition name="fade" mode="out-in">
+      <div v-if="pageReady" class="content">
+        <h1>{{ lang === "en" ? "Projects" : "Projekty" }}</h1>
+        <section class="section">
+          <h2>{{ lang === "en" ? "Solo projects" : "Projekty indywidualne" }}</h2>
+          <ProjectCard :cards="soloCards" />
+        </section>
+        <section class="section">
+          <h2>{{ lang === "en" ? "Team projects" : "Projekty grupowe" }}</h2>
+          <ProjectCard :cards="teamCards" />
+        </section>
+      </div>
+    </transition>
   </UCard>
 </template>
 
@@ -18,7 +21,10 @@
 import { useLanguage } from "~/composables/useLanguage";
 import { createCards } from "~/composables/projectsData";
 import ProjectCard from "~/components/project-card.vue";
+import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
+
+const pageReady = ref(false);
 
 const route = useRoute();
 const config = useRuntimeConfig();
@@ -42,9 +48,22 @@ useHead({
 const projectData = computed(() => createCards());
 const soloCards = computed(() => projectData.value.soloCards.value);
 const teamCards = computed(() => projectData.value.teamCards.value);
+
+onMounted(() => {
+  pageReady.value = true;
+});
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .card {
   padding: 1rem 0;
 }

@@ -1,16 +1,21 @@
 <template>
   <UCard>
     <div class="card">
-      <h1 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h1>
-      <AboutHero />
-      <AboutStack />
-      <div class="contact_link">
-        <NuxtLink :to="localePath('/contact')" class="link">
-          {{ lang === "en" ? "Contact" : "Kontakt" }}
-        </NuxtLink>
-      </div>
-      <AboutStory />
-      <AboutCta />
+      <LoadingSpinner v-if="!pageReady" />
+      <transition name="fade" mode="out-in">
+        <div v-if="pageReady">
+          <h1 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h1>
+          <AboutHero />
+          <AboutStack />
+          <div class="contact_link">
+            <NuxtLink :to="localePath('/contact')" class="link">
+              {{ lang === "en" ? "Contact" : "Kontakt" }}
+            </NuxtLink>
+          </div>
+          <AboutStory />
+          <AboutCta />
+        </div>
+      </transition>
     </div>
   </UCard>
 </template>
@@ -21,6 +26,7 @@ import AboutStory from "~/components/about/about-story.vue";
 import AboutStack from "~/components/about/about-stack.vue";
 import AboutHero from "~/components/about/about-hero.vue";
 import AboutCta from "~/components/about/avout-cta.vue";
+import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
 
 const route = useRoute();
@@ -32,6 +38,7 @@ const { lang } = useLanguage();
 const { t } = useI18n();
 
 const localePath = useLocalePath();
+const pageReady = ref(false);
 
 useHead({
   title: t("aboutMeta.metaTitle"),
@@ -44,12 +51,26 @@ useHead({
   ],
   link: [{ rel: "canonical", href: currentUrl.value }],
 });
+
+onMounted(() => {
+  pageReady.value = true;
+});
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .card {
   display: flex;
   flex-direction: column;
+  min-height: 50vh;
 }
 
 .card_title {
