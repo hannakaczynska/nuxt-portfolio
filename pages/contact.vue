@@ -76,7 +76,7 @@
             </a>
           </nav>
         </section>
-        <img src="/svg/contact.svg" alt="" class="contact_image" />
+        <img src="/svg/contact.svg" alt="" class="contact_image" width="213" height="69" />
         <ContactForm class="contact_form" />
       </div>
     </transition>

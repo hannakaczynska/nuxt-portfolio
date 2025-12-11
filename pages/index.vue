@@ -6,14 +6,26 @@
         <section class="hero_content">
           <h1 class="hero_title">{{ $t("hero.title") }}</h1>
           <p class="hero_subtitle">{{ $t("hero.subtitle") }}</p>
-          <img src="/svg/hero.svg" alt="" class="hero_image" />
+          <img
+            src="/svg/hero.svg"
+            alt=""
+            class="hero_image"
+            width="246"
+            height="157"
+          />
         </section>
         <nav class="hero-actions">
-          <NuxtLink :to="localePath('/about')" class="hero-link hero-link-about">
-              {{ $t("nav.about") }}
+          <NuxtLink
+            :to="localePath('/about')"
+            class="hero-link hero-link-about"
+          >
+            {{ $t("nav.about") }}
           </NuxtLink>
-          <NuxtLink :to="localePath('/projects')" class="hero-link hero-link-projects">
-              {{ $t("nav.projects") }}
+          <NuxtLink
+            :to="localePath('/projects')"
+            class="hero-link hero-link-projects"
+          >
+            {{ $t("nav.projects") }}
           </NuxtLink>
         </nav>
       </div>

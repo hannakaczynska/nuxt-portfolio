@@ -38,7 +38,6 @@
       <img
         :src="$t(`projects.${projectTitle}.img.png`)"
         :alt="$t(`projects.${projectTitle}.alt`)"
-        loading="lazy"
         class="project_img"
       />
     </picture>
