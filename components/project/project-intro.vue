@@ -1,6 +1,8 @@
 <template>
   <section class="section_intro">
-    <h1 class="sr-only">{{ lang === 'en' ? 'Project Page' : 'Strona Projektu' }}</h1>
+    <h1 class="sr-only">
+      {{ lang === "en" ? "Project Page" : "Strona Projektu" }}
+    </h1>
     <h2 class="project_title">{{ $t(`projects.${projectTitle}.title`) }}</h2>
     <nav class="project_nav">
       <a
@@ -9,7 +11,11 @@
         class="project_link"
         target="_blank"
         rel="noopener noreferrer"
-        :title="lang === 'en' ? 'Open live demo in a new tab' : 'Otwórz demo w nowej karcie'"
+        :title="
+          lang === 'en'
+            ? 'Open live demo in a new tab'
+            : 'Otwórz demo w nowej karcie'
+        "
         >[Live Demo]</a
       >
       <span v-if="$t(`projects.${projectTitle}.demo`)">•</span>
@@ -18,7 +24,11 @@
         class="project_link"
         target="_blank"
         rel="noopener noreferrer"
-        :title="lang === 'en' ? 'Open GitHub repository in a new tab' : 'Otwórz repozytorium GitHub w nowej karcie'"
+        :title="
+          lang === 'en'
+            ? 'Open GitHub repository in a new tab'
+            : 'Otwórz repozytorium GitHub w nowej karcie'
+        "
         >[GitHub]</a
       >
     </nav>
@@ -26,29 +36,48 @@
       >{{ $t(`projects.${projectTitle}.work`) }} |
       {{ $t(`projects.${projectTitle}.year`) }}</span
     >
-    <picture class="project_picture">
-      <source
-        :srcset="$t(`projects.${projectTitle}.img.avif`)"
-        type="image/avif"
+    <div class="project_picture-wrapper">
+
+      <USkeleton
+        v-if="!imageLoaded"
+        class="image-skeleton project_picture"
+        width="600"
+        height="400"
+        rounded="lg"
       />
-      <source
-        :srcset="$t(`projects.${projectTitle}.img.webp`)"
-        type="image/webp"
-      />
-      <img
-        :src="$t(`projects.${projectTitle}.img.png`)"
-        :alt="$t(`projects.${projectTitle}.alt`)"
-        class="project_img"
-      />
-    </picture>
+      <transition name="fade">
+      <picture v-show="imageLoaded" class="project_picture">
+        <source
+          :srcset="$t(`projects.${projectTitle}.img.avif`)"
+          type="image/avif"
+        />
+        <source
+          :srcset="$t(`projects.${projectTitle}.img.webp`)"
+          type="image/webp"
+        />
+        <img
+          :src="$t(`projects.${projectTitle}.img.png`)"
+          :alt="$t(`projects.${projectTitle}.alt`)"
+          width="600"
+          height="400"
+          class="project_img"
+          @load="imageLoaded = true;"
+        />
+      </picture>
+      </transition>
+    </div>
   </section>
 </template>
 
 <script setup>
 import { useLanguage } from "~/composables/useLanguage";
 const { lang } = useLanguage();
+
 const route = useRoute();
 const projectTitle = route.params.title;
+
+const imageLoaded = ref(false);
+
 </script>
 
 <style lang="scss" scoped>
@@ -63,20 +92,33 @@ const projectTitle = route.params.title;
   margin-block: 10px;
 }
 
+.project_picture-wrapper {
+  position: relative;
+   margin-inline: auto;
+  width: 90%;
+}
+
 .project_picture {
   display: flex;
-  margin-inline: auto;
   margin-bottom: 2rem;
-  width: 90%;
+  width: 100%;
+  aspect-ratio: 3 / 2;
   justify-content: center;
-}
+  }
 
 .project_img {
   display: block;
   width: 100%;
-  height: auto;
+  object-fit: contain;
   border: 1px solid $light-grey-color;
   border-radius: 12px;
+}
+
+.image-skeleton {
+  position: absolute;
+  top: 0;
+  margin-inline: auto;
+  background: $light-grey-color;
 }
 
 .project_nav {
@@ -119,10 +161,14 @@ const projectTitle = route.params.title;
     grid-row: 2 / 3;
     align-self: end;
   }
-  .project_picture {
+
+  .project_picture-wrapper {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     width: 100%;
+  }
+
+  .project_picture {
     height: auto;
     margin-bottom: 0;
     justify-self: center;
@@ -135,5 +181,15 @@ const projectTitle = route.params.title;
     object-fit: contain;
     max-width: 100%;
   }
+}
+
+.fade-enter-active {
+  transition: opacity 1s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
 }
 </style>
