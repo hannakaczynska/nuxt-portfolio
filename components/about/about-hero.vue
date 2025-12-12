@@ -34,7 +34,6 @@
 const imageLoaded = ref(false);
 
 onMounted(() => {
-    console.log("HI");
   const img = new Image();
   img.src = "/images/myPhoto-800.png";
   img.onload = () => {

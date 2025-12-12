@@ -57,7 +57,7 @@
   },
   "about": {
     "hero": "Jestem deweloperką o systemowym podejściu do tworzenia — skupiam się na front-endzie i stopniowo rozwijam się w kierunku full-stacku. \nLubię rozwiązywać problemy, rozumieć, jak różne elementy łączą się w całość, oraz tworzyć czyste i przyjazne dla użytkownika interfejsy.",
-     "photoAlt": "Zdjęcie autorki portfolio",
+    "photoAlt": "Zdjęcie autorki portfolio",
     "stack": [
       { "name": "Vue 3", "icon": "simple-icons:vuedotjs" },
       { "name": "Nuxt 4", "icon": "simple-icons:nuxt" },
@@ -471,9 +471,9 @@
           "name": "SEO i Wydajność",
           "icon": "i-lucide-rocket",
           "list": [
-            "Statyczna generacja stron",
-            "Automatyczne meta tagi, sitemap.xml i robots.txt",
-            "Lazy loading"
+            "Server-side rendering (SSR)",
+            "Automatyczne meta tagi dla SEO",
+            "Wygenerowany sitemap.xml i robots.txt"
           ]
         }
       ],

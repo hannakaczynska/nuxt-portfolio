@@ -36,27 +36,25 @@
       >{{ $t(`projects.${projectTitle}.work`) }} |
       {{ $t(`projects.${projectTitle}.year`) }}</span
     >
-    <div class="project_picture-wrapper">
-      <transition name="fade">
-        <picture v-show="imageLoaded" class="project_picture">
-          <source
-            :srcset="$t(`projects.${projectTitle}.img.avif`)"
-            type="image/avif"
-          />
-          <source
-            :srcset="$t(`projects.${projectTitle}.img.webp`)"
-            type="image/webp"
-          />
-          <img
-            :src="$t(`projects.${projectTitle}.img.png`)"
-            :alt="$t(`projects.${projectTitle}.alt`)"
-            width="600"
-            height="400"
-            class="project_img"
-          />
-        </picture>
-      </transition>
-    </div>
+    <transition name="fade">
+      <picture v-show="imageLoaded" class="project_picture">
+        <source
+          :srcset="$t(`projects.${projectTitle}.img.avif`)"
+          type="image/avif"
+        />
+        <source
+          :srcset="$t(`projects.${projectTitle}.img.webp`)"
+          type="image/webp"
+        />
+        <img
+          :src="$t(`projects.${projectTitle}.img.png`)"
+          :alt="$t(`projects.${projectTitle}.alt`)"
+          width="600"
+          height="400"
+          class="project_img"
+        />
+      </picture>
+    </transition>
   </section>
 </template>
 
@@ -90,19 +88,14 @@ onMounted(() => {
   margin-block: 10px;
 }
 
-.project_picture-wrapper {
-  position: relative;
-   margin-inline: auto;
-  width: 90%;
-}
-
 .project_picture {
   display: flex;
   margin-bottom: 2rem;
-  width: 100%;
+  margin-inline: auto;
+  width: 90%;
   aspect-ratio: 3 / 2;
   justify-content: center;
-  }
+}
 
 .project_img {
   display: block;
@@ -153,13 +146,10 @@ onMounted(() => {
     align-self: end;
   }
 
-  .project_picture-wrapper {
+  .project_picture {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     width: 100%;
-  }
-
-  .project_picture {
     height: auto;
     margin-bottom: 0;
     justify-self: center;
