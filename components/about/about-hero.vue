@@ -1,6 +1,7 @@
 <template>
   <section class="section_hero">
     <p class="section_text">{{ $t(`about.hero`) }}</p>
+    <transition name="fade">
     <picture class="picture">
       <source
         srcset="/images/myPhoto-1200.avif 1200w, /images/myPhoto-800.avif 800w"
@@ -14,10 +15,12 @@
         src="/images/myPhoto-800.png"
         width="300"
         height="400"
+        loading="eager"
         :alt="$t('about.photoAlt')"
         class="img"
       />
     </picture>
+  </transition>
   </section>
 </template>
 
@@ -77,5 +80,15 @@ const { lang } = useLanguage();
     width: 240px;
     height: 320px;
   }
+}
+
+.fade-enter-active {
+  transition: opacity 1s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
 }
 </style>

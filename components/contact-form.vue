@@ -111,10 +111,9 @@ import { useLanguage } from "~/composables/useLanguage";
 import { createValidationSchema } from "~/composables/validationSchema";
 
 const { lang } = useLanguage();
-
 const config = useRuntimeConfig();
 
-const schema = computed(() => createValidationSchema());
+const schema = computed(() => createValidationSchema(lang.value));
 
 const status = ref("");
 

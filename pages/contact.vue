@@ -76,7 +76,9 @@
             </a>
           </nav>
         </section>
+        <transition name="slowfade">
         <img src="/svg/contact.svg" alt="" class="contact_image" width="213" height="69" />
+        </transition>
         <ContactForm class="contact_form" />
       </div>
     </transition>
@@ -87,9 +89,9 @@
 import ContactForm from "~/components/contact-form.vue";
 import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useLanguage } from "~/composables/useLanguage";
-
 import { useRuntimeConfig } from "#app";
 
+const { lang } = useLanguage();
 const pageReady = ref(false);
 
 const route = useRoute();
@@ -97,7 +99,6 @@ const config = useRuntimeConfig();
 
 const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
 
-const { lang } = useLanguage();
 const { t } = useI18n();
 
 useHead({
@@ -138,6 +139,17 @@ onBeforeUnmount(() => {
 .fade-leave-to {
   opacity: 0;
 }
+
+.slowfade-enter-active {
+  transition: opacity 1s ease;
+}
+.slowfade-enter-from {
+  opacity: 0;
+}
+.slowfade-enter-to {
+  opacity: 1;
+}
+
 .card {
   padding: 2rem 0;
 }

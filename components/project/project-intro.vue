@@ -37,33 +37,25 @@
       {{ $t(`projects.${projectTitle}.year`) }}</span
     >
     <div class="project_picture-wrapper">
-
-      <USkeleton
-        v-if="!imageLoaded"
-        class="image-skeleton project_picture"
-        width="600"
-        height="400"
-        rounded="lg"
-      />
       <transition name="fade">
-      <picture v-show="imageLoaded" class="project_picture">
-        <source
-          :srcset="$t(`projects.${projectTitle}.img.avif`)"
-          type="image/avif"
-        />
-        <source
-          :srcset="$t(`projects.${projectTitle}.img.webp`)"
-          type="image/webp"
-        />
-        <img
-          :src="$t(`projects.${projectTitle}.img.png`)"
-          :alt="$t(`projects.${projectTitle}.alt`)"
-          width="600"
-          height="400"
-          class="project_img"
-          @load="imageLoaded = true;"
-        />
-      </picture>
+        <picture class="project_picture">
+          <source
+            :srcset="$t(`projects.${projectTitle}.img.avif`)"
+            type="image/avif"
+          />
+          <source
+            :srcset="$t(`projects.${projectTitle}.img.webp`)"
+            type="image/webp"
+          />
+          <img
+            :src="$t(`projects.${projectTitle}.img.png`)"
+            :alt="$t(`projects.${projectTitle}.alt`)"
+            width="600"
+            height="400"
+            loading="eager"
+            class="project_img"
+          />
+        </picture>
       </transition>
     </div>
   </section>
@@ -75,9 +67,6 @@ const { lang } = useLanguage();
 
 const route = useRoute();
 const projectTitle = route.params.title;
-
-const imageLoaded = ref(false);
-
 </script>
 
 <style lang="scss" scoped>
@@ -112,13 +101,6 @@ const imageLoaded = ref(false);
   object-fit: contain;
   border: 1px solid $light-grey-color;
   border-radius: 12px;
-}
-
-.image-skeleton {
-  position: absolute;
-  top: 0;
-  margin-inline: auto;
-  background: $light-grey-color;
 }
 
 .project_nav {

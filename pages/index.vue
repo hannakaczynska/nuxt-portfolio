@@ -6,6 +6,7 @@
         <section class="hero_content">
           <h1 class="hero_title">{{ $t("hero.title") }}</h1>
           <p class="hero_subtitle">{{ $t("hero.subtitle") }}</p>
+          <transition name="slowfade">
           <img
             src="/svg/hero.svg"
             alt=""
@@ -13,6 +14,7 @@
             width="246"
             height="157"
           />
+          </transition>
         </section>
         <nav class="hero-actions">
           <NuxtLink
@@ -73,6 +75,16 @@ onMounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.slowfade-enter-active {
+  transition: opacity 1s ease;
+}
+.slowfade-enter-from {
+  opacity: 0;
+}
+.slowfade-enter-to {
+  opacity: 1;
 }
 
 .hero {
