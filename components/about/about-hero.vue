@@ -2,7 +2,7 @@
   <section class="section_hero">
     <p class="section_text">{{ $t(`about.hero`) }}</p>
     <transition name="fade">
-      <picture v-if="imageLoaded" class="picture">
+      <picture v-show="imageLoaded" class="picture">
         <source
           srcset="
             /images/myPhoto-1200.avif 1200w,
