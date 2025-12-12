@@ -1,7 +1,7 @@
 <template>
   <UCard>
     <LoadingSpinner v-if="!pageReady" />
-    <transition v-if="transitionEnabled" name="fade" mode="out-in">
+    <transition name="fade" mode="out-in">
       <div v-if="pageReady" class="card">
         <ProjectNavigation />
         <div class="section_container">
@@ -37,7 +37,6 @@ import ProjectStack from "~/components/project/project-stack";
 import ProjectOverview from "~/components/project/project-overview";
 import ProjectResponsibility from "~/components/project/project-responsibilities";
 import ProjectNavigation from "~/components/project/project-navigation.vue";
-import ProjectCard from "~/components/project-card.vue";
 import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
 
@@ -47,7 +46,6 @@ const route = useRoute();
 const projectTitle = route.params.title;
 
 const config = useRuntimeConfig();
-const transitionEnabled = usePageTransition();
 const { lang } = useLanguage();
 const { t } = useI18n();
 

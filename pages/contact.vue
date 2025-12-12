@@ -1,7 +1,7 @@
 <template>
   <UCard class="card">
     <LoadingSpinner v-if="!pageReady" />
-    <transition v-if="transitionEnabled" name="fade" mode="out-in">
+    <transition name="fade" mode="out-in">
       <div v-if="pageReady" class="contact">
         <section class="contact_section">
           <h1>{{ $t("contact.title") }}</h1>
@@ -92,11 +92,11 @@ import { useLanguage } from "~/composables/useLanguage";
 import { useRuntimeConfig } from "#app";
 
 const { lang } = useLanguage();
-const pageReady = ref(false);
 
 const route = useRoute();
 const config = useRuntimeConfig();
-const transitionEnabled = usePageTransition();
+
+const pageReady = ref(false);
 
 const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
 

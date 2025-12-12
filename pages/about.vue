@@ -2,7 +2,7 @@
   <UCard>
     <div class="card">
       <LoadingSpinner v-if="!pageReady" />
-      <transition v-if="transitionEnabled" name="fade" mode="out-in">
+      <transition name="fade" mode="out-in">
         <div v-if="pageReady">
           <h1 class="card_title">{{ lang === "en" ? "About" : "O mnie" }}</h1>
           <AboutHero />
@@ -31,7 +31,6 @@ import { useRuntimeConfig } from "#app";
 
 const route = useRoute();
 const config = useRuntimeConfig();
-const transitionEnabled = usePageTransition();
 
 const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
 
