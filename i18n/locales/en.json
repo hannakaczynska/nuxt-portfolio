@@ -506,8 +506,8 @@
     },
     "filmoteka": {
       "title": "Filmoteka",
-      "demo": "https://wallet-app-project.netlify.app/login",
-      "github": "https://github.com/hannakaczynska/WalletApp-react-node",
+      "demo": "https://jaciubas.github.io/projekt-goit-grupa7/",
+      "github": "https://github.com/jaciubas/projekt-goit-grupa7",
       "description": "A team project as part of the GOIT course, creating a dynamic movie search application with trailer previews, detailed film information, and a personalized watchlist feature. \nBuilt using vanilla JavaScript with Axios for API communication, it follows a mobile-first approach and provides a responsive, interactive interface. \nUsers can search for films, watch trailers, explore detailed descriptions, and manage their personal “watched” or “to-watch” lists. \nThis project demonstrates practical teamwork, frontend logic implementation, and integration of third-party libraries for UI and pagination enhancements.",
       "alt": "View of the top part of the Filmoteka movie search application",
       "work": "team",
