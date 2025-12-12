@@ -38,7 +38,7 @@
     >
     <div class="project_picture-wrapper">
       <transition name="fade">
-        <picture class="project_picture">
+        <picture v-show="imageLoaded" class="project_picture">
           <source
             :srcset="$t(`projects.${projectTitle}.img.avif`)"
             type="image/avif"
@@ -52,7 +52,6 @@
             :alt="$t(`projects.${projectTitle}.alt`)"
             width="600"
             height="400"
-            loading="eager"
             class="project_img"
           />
         </picture>
@@ -67,6 +66,16 @@ const { lang } = useLanguage();
 
 const route = useRoute();
 const projectTitle = route.params.title;
+
+const imageLoaded = ref(false);
+
+onMounted(() => {
+  const img = new Image();
+  img.src = $t(`projects.${projectTitle}.img.png`);
+  img.onload = () => {
+    imageLoaded.value = true;
+  };
+});
 </script>
 
 <style lang="scss" scoped>
@@ -166,7 +175,7 @@ const projectTitle = route.params.title;
 }
 
 .fade-enter-active {
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
 .fade-enter-from {
   opacity: 0;

@@ -1,7 +1,7 @@
 <template>
   <UCard class="card">
     <LoadingSpinner v-if="!pageReady" />
-    <transition name="fade" mode="out-in">
+    <transition v-if="transitionEnabled" name="fade" mode="out-in">
       <div v-if="pageReady" class="content">
         <h1>{{ lang === "en" ? "Projects" : "Projekty" }}</h1>
         <section class="section">
@@ -28,6 +28,7 @@ const pageReady = ref(false);
 
 const route = useRoute();
 const config = useRuntimeConfig();
+const transitionEnabled = usePageTransition();
 const { lang } = useLanguage();
 const { t } = useI18n();
 

@@ -1,7 +1,7 @@
 <template>
   <UCard class="hero">
     <LoadingSpinner v-if="!pageReady" />
-    <transition name="fade" mode="out-in">
+    <transition v-if="transitionEnabled" name="fade" mode="out-in">
       <div v-if="pageReady">
         <section class="hero_content">
           <h1 class="hero_title">{{ $t("hero.title") }}</h1>
@@ -44,6 +44,7 @@ const pageReady = ref(false);
 const route = useRoute();
 const config = useRuntimeConfig();
 const localePath = useLocalePath();
+const transitionEnabled = usePageTransition();
 
 const currentUrl = computed(() => `${config.public.siteUrl}${route.fullPath}`);
 
@@ -63,6 +64,8 @@ useHead({
 });
 
 onMounted(() => {
+  console.log(transitionEnabled.value)
+  console.log("HI");
   pageReady.value = true;
 });
 </script>

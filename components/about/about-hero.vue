@@ -2,32 +2,45 @@
   <section class="section_hero">
     <p class="section_text">{{ $t(`about.hero`) }}</p>
     <transition name="fade">
-    <picture class="picture">
-      <source
-        srcset="/images/myPhoto-1200.avif 1200w, /images/myPhoto-800.avif 800w"
-        type="image/avif"
-      />
-      <source
-        srcset="/images/myPhoto-1200.webp 1200w, /images/myPhoto-800.webp 800w"
-        type="image/webp"
-      />
-      <img
-        src="/images/myPhoto-800.png"
-        width="300"
-        height="400"
-        loading="eager"
-        :alt="$t('about.photoAlt')"
-        class="img"
-      />
-    </picture>
-  </transition>
+      <picture v-if="imageLoaded" class="picture">
+        <source
+          srcset="
+            /images/myPhoto-1200.avif 1200w,
+            /images/myPhoto-800.avif   800w
+          "
+          type="image/avif"
+        />
+        <source
+          srcset="
+            /images/myPhoto-1200.webp 1200w,
+            /images/myPhoto-800.webp   800w
+          "
+          type="image/webp"
+        />
+        <img
+          src="/images/myPhoto-800.png"
+          width="300"
+          height="400"
+          loading="eager"
+          :alt="$t('about.photoAlt')"
+          class="img"
+        />
+      </picture>
+    </transition>
   </section>
 </template>
 
 <script setup>
-import { useLanguage } from "~/composables/useLanguage";
+const imageLoaded = ref(false);
 
-const { lang } = useLanguage();
+onMounted(() => {
+    console.log("HI");
+  const img = new Image();
+  img.src = "/images/myPhoto-800.png";
+  img.onload = () => {
+    imageLoaded.value = true;
+  };
+});
 </script>
 
 <style lang="scss" scoped>
@@ -83,7 +96,7 @@ const { lang } = useLanguage();
 }
 
 .fade-enter-active {
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
 .fade-enter-from {
   opacity: 0;
