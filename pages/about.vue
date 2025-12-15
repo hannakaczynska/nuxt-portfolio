@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { useLanguage } from "~/composables/useLanguage";
+
 import AboutStory from "~/components/about/about-story.vue";
 import AboutStack from "~/components/about/about-stack.vue";
 import AboutHero from "~/components/about/about-hero.vue";

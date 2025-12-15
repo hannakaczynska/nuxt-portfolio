@@ -88,7 +88,7 @@
 <script setup>
 import ContactForm from "~/components/contact-form.vue";
 import LoadingSpinner from "~/components/loading-spinner.vue";
-import { useLanguage } from "~/composables/useLanguage";
+
 import { useRuntimeConfig } from "#app";
 
 const { lang } = useLanguage();

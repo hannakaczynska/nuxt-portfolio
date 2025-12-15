@@ -41,7 +41,7 @@
 import emblaCarouselVue from "embla-carousel-vue";
 import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
-import { useLanguage } from "~/composables/useLanguage";
+
 
 const route = useRoute();
 const projectTitle = route.params.title;

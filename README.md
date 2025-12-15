@@ -39,8 +39,8 @@ A modern, responsive portfolio website built with Nuxt 3, featuring server-side 
 │   └── ...
 ├── composables/         # Vue composables
 │   ├── useLanguage.ts   # Language management
-│   ├── validationSchema.ts # Form validation
-│   └── projectsData.ts  # Project data management
+│   ├── useValidationSchema.ts # Form validation
+│   └── useCreateCads.ts  # Project data management
 ├── pages/               # File-based routing
 │   ├── index.vue        # Homepage
 │   ├── about.vue        # About page

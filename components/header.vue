@@ -41,7 +41,7 @@
 
 <script setup>
 import MobileMenu from "~/components/mobile-menu.vue";
-  import { useLanguage } from "~/composables/useLanguage";
+  
 
 const isMenuOpen = ref(false);
 

@@ -107,7 +107,7 @@
 
 <script setup>
 import emailjs from "@emailjs/browser";
-import { useLanguage } from "~/composables/useLanguage";
+
 
 const { lang } = useLanguage();
 const config = useRuntimeConfig();

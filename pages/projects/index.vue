@@ -18,8 +18,6 @@
 </template>
 
 <script setup>
-import { useLanguage } from "~/composables/useLanguage";
-import { createCards } from "~/composables/projectsData";
 import ProjectCard from "~/components/project-card.vue";
 import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
@@ -46,7 +44,7 @@ useHead({
   link: [{ rel: "canonical", href: currentUrl.value }],
 });
 
-const projectData = computed(() => createCards());
+const projectData = computed(() => useCreateCards());
 const soloCards = computed(() => projectData.value.soloCards.value);
 const teamCards = computed(() => projectData.value.teamCards.value);
 

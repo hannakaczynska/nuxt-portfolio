@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import { useLanguage } from "~/composables/useLanguage";
+
 const { lang } = useLanguage();
 
 const route = useRoute();
