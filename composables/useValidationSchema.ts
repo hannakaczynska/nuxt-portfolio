@@ -1,6 +1,6 @@
 import Joi from "joi";
 
-export const createValidationSchema = (lang: string) => {
+export const useValidationSchema = (lang: string) => {
   return Joi.object({
     name: Joi.string().min(2).required().messages({
       "string.empty": lang === "en" ? "Name is required" : "Imię jest wymagane",

@@ -108,12 +108,11 @@
 <script setup>
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "~/composables/useLanguage";
-import { createValidationSchema } from "~/composables/validationSchema";
 
 const { lang } = useLanguage();
 const config = useRuntimeConfig();
 
-const schema = computed(() => createValidationSchema(lang.value));
+const schema = computed(() => useValidationSchema(lang.value));
 
 const status = ref("");
 

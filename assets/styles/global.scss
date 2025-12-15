@@ -6,6 +6,11 @@
   --ui-text: $text-color; 
   --ui-border: #e5e5e5;
   --ui-border-accented: #e5e5e5;
+  --ui-text-highlighted: $text-color;
+}
+
+.focus-visible\:ring-inverted:focus-visible {
+  --tw-ring-color: #e5e5e5 !important;
 }
 
 body {
