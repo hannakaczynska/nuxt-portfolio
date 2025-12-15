@@ -36,7 +36,6 @@
 </template>
 
 <script setup>
-import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
 
 const pageReady = ref(false);

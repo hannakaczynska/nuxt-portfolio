@@ -22,8 +22,6 @@
 </template>
 
 <script setup>
-
-
 const { lang } = useLanguage();
 const localePath = useLocalePath();
 </script>

@@ -17,7 +17,6 @@
 </template>
 
 <script setup>
-
 import plDataRaw from "~/i18n/locales/pl.json?raw";
 import enDataRaw from "~/i18n/locales/en.json?raw";
 

@@ -21,12 +21,6 @@
 </template>
 
 <script setup>
-
-import AboutStory from "~/components/about/about-story.vue";
-import AboutStack from "~/components/about/about-stack.vue";
-import AboutHero from "~/components/about/about-hero.vue";
-import AboutCta from "~/components/about/avout-cta.vue";
-import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
 
 const route = useRoute();

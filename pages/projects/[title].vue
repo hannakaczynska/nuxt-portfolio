@@ -10,7 +10,7 @@
             <ProjectOverview class="overview" />
           </div>
           <ProjectFeatures />
-          <ProjectResponsibility />
+          <ProjectResponsibilities />
           <ProjectStack />
           <ProjectNavigation />
           <ProjectCarousel
@@ -30,14 +30,6 @@
 </template>
 
 <script setup>
-import ProjectCarousel from "~/components/project/project-carousel.vue";
-import ProjectIntro from "~/components/project/project-intro.vue";
-import ProjectFeatures from "~/components/project/project-features";
-import ProjectStack from "~/components/project/project-stack";
-import ProjectOverview from "~/components/project/project-overview";
-import ProjectResponsibility from "~/components/project/project-responsibilities";
-import ProjectNavigation from "~/components/project/project-navigation.vue";
-import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
 
 const pageReady = ref(false);

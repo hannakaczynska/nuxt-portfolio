@@ -18,8 +18,6 @@
 </template>
 
 <script setup>
-import ProjectCard from "~/components/project-card.vue";
-import LoadingSpinner from "~/components/loading-spinner.vue";
 import { useRuntimeConfig } from "#app";
 
 const pageReady = ref(false);

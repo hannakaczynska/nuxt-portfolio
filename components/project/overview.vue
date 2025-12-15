@@ -1,17 +1,16 @@
 <template>
-        <section >
-      <h3 class="section_title">{{ lang === "en" ? "Overview" : "Opis" }}</h3>
-      <p class="break">{{ $t(`projects.${projectTitle}.description`) }}</p>
-    </section>
-    </template>
+  <section>
+    <h3 class="section_title">{{ lang === "en" ? "Overview" : "Opis" }}</h3>
+    <p class="break">{{ $t(`projects.${projectTitle}.description`) }}</p>
+  </section>
+</template>
 
-    <script setup>
-    
+<script setup>
 const { lang } = useLanguage();
 
 const route = useRoute();
 const projectTitle = route.params.title;
-    </script>
+</script>
 
 <style lang="scss" scoped>
 .break {
@@ -19,12 +18,12 @@ const projectTitle = route.params.title;
 }
 
 .section_title {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: $breakpoint-desktop) {
   .section_title {
     margin-bottom: 20px;
-}
+  }
 }
 </style>

@@ -59,7 +59,6 @@
 </template>
 
 <script setup>
-
 const { lang } = useLanguage();
 
 const route = useRoute();

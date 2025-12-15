@@ -40,8 +40,7 @@
 </template>
 
 <script setup>
-import MobileMenu from "~/components/mobile-menu.vue";
-  
+import MobileMenu from "~/components/mobile-menu.vue";  
 
 const isMenuOpen = ref(false);
 
