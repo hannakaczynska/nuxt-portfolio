@@ -3,7 +3,7 @@
 A modern, responsive portfolio website built with Nuxt 3, featuring server-side rendering, internationalization, and a contact form integration.
 
 This repository contains my personal portfolio website built with Nuxt 3. 
-It showcases my projects, skills, and experience as a **Frontend Developer**.
+It showcases my projects, skills, and experience as a **Fullstack Developer**.
 
 ## 🌐 Live Demo
 
