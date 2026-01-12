@@ -145,7 +145,7 @@
     "destillapp": {
       "title": "DestillApp",
       "demo": "https://destillapp.netlify.app/",
-      "github": "https://github.com/DestillApp/main",
+      "github": "https://github.com/DestillApp/destill-app-fullstack",
       "description": "Aplikacja full-stack zaprojektowana do zarządzania i dokumentowania destylacji roślin aromatycznych. \nSystem centralizuje dane o roślinach, partie destylacji, wyniki oraz ustawienia użytkowników — oferując efektywny workflow dla małoskalowych pracowni destylacyjnych lub środowisk badawczych. \nZbudowana z nowoczesnym frontendem w Vue 3 z TypeScript oraz backendem z API GraphQL, DestillationApp zapewnia przejrzyste, uporządkowane i niezawodne narzędzie do obsługi całego cyklu destylacji. \nProjekt i implementacja wykonane w pełni samodzielnie — od koncepcji i architektury, przez projekt API, rozwój interfejsu, dokumentację, aż po przygotowanie do wdrożenia.",
       "alt": "Widok strony logowania aplikacji DestillApp",
       "work": "solo",
@@ -299,7 +299,7 @@
     "wallet-app": {
       "title": "Wallet App",
       "demo": "https://wallet-app-project.netlify.app/login",
-      "github": "https://github.com/hannakaczynska/WalletApp-react-node",
+      "github": "https://github.com/hannakaczynska/wallet-app-fullstack",
       "description": "Full-stack menedżer finansów osobistych stworzony z myślą o wygodnym śledzeniu przychodów, wydatków i nawyków zakupowych w przejrzystym, intuicyjnym interfejsie. \nAplikacja oferuje bezpieczne logowanie, interaktywne wykresy, aktualne kursy walut oraz czytelny UX dostosowany do szybkiego, codziennego użytku. \nProjekt zrealizowany w ramach kursu GoIT, na podstawie dostarczonego projektu w Figma, a następnie samodzielnie rozwinięty jako kompletne rozwiązanie end-to-end — od architektury po wdrożenie.",
       "alt": "Widok strony logowania aplikacji Wallet App",
       "work": "solo",
