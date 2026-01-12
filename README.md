@@ -2,6 +2,10 @@
 
 A modern, responsive portfolio website built with Nuxt 3, featuring server-side rendering, internationalization, and a contact form integration.
 
+## 🌐 Live Demo
+
+Check out the live site: [hannakaczynskadevportfolio.vercel.app](https://hannakaczynskadevportfolio.vercel.app/)
+
 ## Features
 
 - 🌟 **Modern Stack**: Built with Nuxt 3
